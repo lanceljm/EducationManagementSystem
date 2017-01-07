@@ -1,0 +1,952 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0174A30A1B7D176022B4B4A1 /* libPods-EducationManagementSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7050075BC698E9A4C56BAC0 /* libPods-EducationManagementSystem.a */; };
+		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
+		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
+		CF59C1621E1F7EA40081833A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1611E1F7EA40081833A /* main.m */; };
+		CF59C1651E1F7EA40081833A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1641E1F7EA40081833A /* AppDelegate.m */; };
+		CF59C1681E1F7EA40081833A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1671E1F7EA40081833A /* ViewController.m */; };
+		CF59C16B1E1F7EA40081833A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59C1691E1F7EA40081833A /* Main.storyboard */; };
+		CF59C16D1E1F7EA40081833A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF59C16C1E1F7EA40081833A /* Assets.xcassets */; };
+		CF59C1701E1F7EA40081833A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59C16E1E1F7EA40081833A /* LaunchScreen.storyboard */; };
+		CF59C17B1E1F7EA40081833A /* EducationManagementSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C17A1E1F7EA40081833A /* EducationManagementSystemTests.m */; };
+		CF59C1861E1F7EA40081833A /* EducationManagementSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1851E1F7EA40081833A /* EducationManagementSystemUITests.m */; };
+		CF59C1A01E1F83DE0081833A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C19F1E1F83DE0081833A /* BaseViewController.m */; };
+		CF59C1A31E1F850A0081833A /* EMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1A21E1F850A0081833A /* EMTabBarController.m */; };
+		CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1A81E1F87600081833A /* EMLeaveViewController.m */; };
+		CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1AB1E1F87760081833A /* EMClassViewController.m */; };
+		CF59C1AF1E1F899B0081833A /* EMAttendanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1AE1E1F899B0081833A /* EMAttendanceController.m */; };
+		CF59C1B21E1F89D80081833A /* EMNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1B11E1F89D80081833A /* EMNoticeViewController.m */; };
+		CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1B41E1F8AB80081833A /* EMAboutMeViewController.m */; };
+		CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1B71E1F8C8A0081833A /* RootViewController.m */; };
+		CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1BA1E1F90700081833A /* EMLoginViewController.m */; };
+		CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1BD1E1F90D00081833A /* EMLuanchViewController.m */; };
+		CF59C1C31E1F95C50081833A /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1C01E1F95C50081833A /* Foundation+Log.m */; };
+		CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1CD1E1FAC830081833A /* NetRequest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF59C1771E1F7EA40081833A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF59C1551E1F7EA40081833A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF59C15C1E1F7EA40081833A;
+			remoteInfo = EducationManagementSystem;
+		};
+		CF59C1821E1F7EA40081833A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF59C1551E1F7EA40081833A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF59C15C1E1F7EA40081833A;
+			remoteInfo = EducationManagementSystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00898E5C5FFAA3DAC01F0937 /* Pods-EducationManagementSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem.debug.xcconfig"; sourceTree = "<group>"; };
+		1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests.release.xcconfig"; sourceTree = "<group>"; };
+		2ABB39BBFAD6962E81ACE2B3 /* Pods-EducationManagementSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem.release.xcconfig"; sourceTree = "<group>"; };
+		327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6407F571E50B68B4694E8498 /* Pods-EducationManagementSystemTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79CDD02F1747C54AF552E5F1 /* Pods-EducationManagementSystemUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A7050075BC698E9A4C56BAC0 /* libPods-EducationManagementSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADBA55640BD0B597751D549 /* Pods-EducationManagementSystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF59C15D1E1F7EA40081833A /* EducationManagementSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationManagementSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF59C1611E1F7EA40081833A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF59C1631E1F7EA40081833A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		CF59C1641E1F7EA40081833A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
+		CF59C1661E1F7EA40081833A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../ViewController.h; sourceTree = "<group>"; };
+		CF59C1671E1F7EA40081833A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../ViewController.m; sourceTree = "<group>"; };
+		CF59C16A1E1F7EA40081833A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF59C16C1E1F7EA40081833A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
+		CF59C16F1E1F7EA40081833A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF59C1711E1F7EA40081833A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		CF59C1761E1F7EA40081833A /* EducationManagementSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EducationManagementSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF59C17A1E1F7EA40081833A /* EducationManagementSystemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EducationManagementSystemTests.m; sourceTree = "<group>"; };
+		CF59C17C1E1F7EA40081833A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF59C1811E1F7EA40081833A /* EducationManagementSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EducationManagementSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF59C1851E1F7EA40081833A /* EducationManagementSystemUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EducationManagementSystemUITests.m; sourceTree = "<group>"; };
+		CF59C1871E1F7EA40081833A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF59C19E1E1F83DE0081833A /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		CF59C19F1E1F83DE0081833A /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		CF59C1A11E1F850A0081833A /* EMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTabBarController.h; sourceTree = "<group>"; };
+		CF59C1A21E1F850A0081833A /* EMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMTabBarController.m; sourceTree = "<group>"; };
+		CF59C1A71E1F87600081833A /* EMLeaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLeaveViewController.h; sourceTree = "<group>"; };
+		CF59C1A81E1F87600081833A /* EMLeaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLeaveViewController.m; sourceTree = "<group>"; };
+		CF59C1AA1E1F87760081833A /* EMClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClassViewController.h; sourceTree = "<group>"; };
+		CF59C1AB1E1F87760081833A /* EMClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMClassViewController.m; sourceTree = "<group>"; };
+		CF59C1AD1E1F899B0081833A /* EMAttendanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAttendanceController.h; sourceTree = "<group>"; };
+		CF59C1AE1E1F899B0081833A /* EMAttendanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAttendanceController.m; sourceTree = "<group>"; };
+		CF59C1B01E1F89D80081833A /* EMNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNoticeViewController.h; sourceTree = "<group>"; };
+		CF59C1B11E1F89D80081833A /* EMNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNoticeViewController.m; sourceTree = "<group>"; };
+		CF59C1B31E1F8AB80081833A /* EMAboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAboutMeViewController.h; sourceTree = "<group>"; };
+		CF59C1B41E1F8AB80081833A /* EMAboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAboutMeViewController.m; sourceTree = "<group>"; };
+		CF59C1B61E1F8C8A0081833A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		CF59C1B71E1F8C8A0081833A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		CF59C1B91E1F90700081833A /* EMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLoginViewController.h; sourceTree = "<group>"; };
+		CF59C1BA1E1F90700081833A /* EMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLoginViewController.m; sourceTree = "<group>"; };
+		CF59C1BC1E1F90D00081833A /* EMLuanchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLuanchViewController.h; sourceTree = "<group>"; };
+		CF59C1BD1E1F90D00081833A /* EMLuanchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLuanchViewController.m; sourceTree = "<group>"; };
+		CF59C1C01E1F95C50081833A /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		CF59C1C21E1F95C50081833A /* Adaption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adaption.h; sourceTree = "<group>"; };
+		CF59C1CC1E1FAC830081833A /* NetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequest.h; sourceTree = "<group>"; };
+		CF59C1CD1E1FAC830081833A /* NetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF59C15A1E1F7EA40081833A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0174A30A1B7D176022B4B4A1 /* libPods-EducationManagementSystem.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF59C1731E1F7EA40081833A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF59C17E1E1F7EA40081833A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EE61A05D3CF04EED1CDEDA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7050075BC698E9A4C56BAC0 /* libPods-EducationManagementSystem.a */,
+				1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */,
+				327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA88F611FA23D74BC283DAAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00898E5C5FFAA3DAC01F0937 /* Pods-EducationManagementSystem.debug.xcconfig */,
+				2ABB39BBFAD6962E81ACE2B3 /* Pods-EducationManagementSystem.release.xcconfig */,
+				6407F571E50B68B4694E8498 /* Pods-EducationManagementSystemTests.debug.xcconfig */,
+				260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */,
+				CADBA55640BD0B597751D549 /* Pods-EducationManagementSystemUITests.debug.xcconfig */,
+				79CDD02F1747C54AF552E5F1 /* Pods-EducationManagementSystemUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF59C1541E1F7EA40081833A = {
+			isa = PBXGroup;
+			children = (
+				CF59C15F1E1F7EA40081833A /* EducationManagementSystem */,
+				CF59C1791E1F7EA40081833A /* EducationManagementSystemTests */,
+				CF59C1841E1F7EA40081833A /* EducationManagementSystemUITests */,
+				CF59C15E1E1F7EA40081833A /* Products */,
+				AA88F611FA23D74BC283DAAA /* Pods */,
+				1EE61A05D3CF04EED1CDEDA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CF59C15E1E1F7EA40081833A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C15D1E1F7EA40081833A /* EducationManagementSystem.app */,
+				CF59C1761E1F7EA40081833A /* EducationManagementSystemTests.xctest */,
+				CF59C1811E1F7EA40081833A /* EducationManagementSystemUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF59C15F1E1F7EA40081833A /* EducationManagementSystem */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1931E1F80790081833A /* 功能部分 */,
+				CF59C1991E1F80790081833A /* 框架部分 */,
+				CF59C19D1E1F80790081833A /* 网络部分 */,
+				CF59C1601E1F7EA40081833A /* Supporting Files */,
+			);
+			path = EducationManagementSystem;
+			sourceTree = "<group>";
+		};
+		CF59C1601E1F7EA40081833A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1611E1F7EA40081833A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF59C1791E1F7EA40081833A /* EducationManagementSystemTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C17A1E1F7EA40081833A /* EducationManagementSystemTests.m */,
+				CF59C17C1E1F7EA40081833A /* Info.plist */,
+			);
+			path = EducationManagementSystemTests;
+			sourceTree = "<group>";
+		};
+		CF59C1841E1F7EA40081833A /* EducationManagementSystemUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1851E1F7EA40081833A /* EducationManagementSystemUITests.m */,
+				CF59C1871E1F7EA40081833A /* Info.plist */,
+			);
+			path = EducationManagementSystemUITests;
+			sourceTree = "<group>";
+		};
+		CF59C1931E1F80790081833A /* 功能部分 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1961E1F80790081833A /* 班级 */,
+				CF59C1951E1F80790081833A /* 批假 */,
+				CF59C1971E1F80790081833A /* 考勤 */,
+				CF59C1981E1F80790081833A /* 通知 */,
+				CF59C1941E1F80790081833A /* 我 */,
+			);
+			path = "功能部分";
+			sourceTree = "<group>";
+		};
+		CF59C1941E1F80790081833A /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1B31E1F8AB80081833A /* EMAboutMeViewController.h */,
+				CF59C1B41E1F8AB80081833A /* EMAboutMeViewController.m */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		CF59C1951E1F80790081833A /* 批假 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1A71E1F87600081833A /* EMLeaveViewController.h */,
+				CF59C1A81E1F87600081833A /* EMLeaveViewController.m */,
+			);
+			path = "批假";
+			sourceTree = "<group>";
+		};
+		CF59C1961E1F80790081833A /* 班级 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1AA1E1F87760081833A /* EMClassViewController.h */,
+				CF59C1AB1E1F87760081833A /* EMClassViewController.m */,
+			);
+			path = "班级";
+			sourceTree = "<group>";
+		};
+		CF59C1971E1F80790081833A /* 考勤 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1AD1E1F899B0081833A /* EMAttendanceController.h */,
+				CF59C1AE1E1F899B0081833A /* EMAttendanceController.m */,
+			);
+			path = "考勤";
+			sourceTree = "<group>";
+		};
+		CF59C1981E1F80790081833A /* 通知 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1B01E1F89D80081833A /* EMNoticeViewController.h */,
+				CF59C1B11E1F89D80081833A /* EMNoticeViewController.m */,
+			);
+			path = "通知";
+			sourceTree = "<group>";
+		};
+		CF59C1991E1F80790081833A /* 框架部分 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C19A1E1F80790081833A /* 公用 */,
+				CF59C19B1E1F80790081833A /* 系统 */,
+				CF59C19C1E1F80790081833A /* 自定义 */,
+			);
+			path = "框架部分";
+			sourceTree = "<group>";
+		};
+		CF59C19A1E1F80790081833A /* 公用 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1BF1E1F95C50081833A /* 控制台中文输出 */,
+				CF59C1C11E1F95C50081833A /* 适配 */,
+				CF59C19E1E1F83DE0081833A /* BaseViewController.h */,
+				CF59C19F1E1F83DE0081833A /* BaseViewController.m */,
+			);
+			path = "公用";
+			sourceTree = "<group>";
+		};
+		CF59C19B1E1F80790081833A /* 系统 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1631E1F7EA40081833A /* AppDelegate.h */,
+				CF59C1641E1F7EA40081833A /* AppDelegate.m */,
+				CF59C1661E1F7EA40081833A /* ViewController.h */,
+				CF59C1671E1F7EA40081833A /* ViewController.m */,
+				CF59C1691E1F7EA40081833A /* Main.storyboard */,
+				CF59C16C1E1F7EA40081833A /* Assets.xcassets */,
+				CF59C16E1E1F7EA40081833A /* LaunchScreen.storyboard */,
+				CF59C1711E1F7EA40081833A /* Info.plist */,
+			);
+			path = "系统";
+			sourceTree = "<group>";
+		};
+		CF59C19C1E1F80790081833A /* 自定义 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1A11E1F850A0081833A /* EMTabBarController.h */,
+				CF59C1A21E1F850A0081833A /* EMTabBarController.m */,
+				CF59C1B61E1F8C8A0081833A /* RootViewController.h */,
+				CF59C1B71E1F8C8A0081833A /* RootViewController.m */,
+				CF59C1B91E1F90700081833A /* EMLoginViewController.h */,
+				CF59C1BA1E1F90700081833A /* EMLoginViewController.m */,
+				CF59C1BC1E1F90D00081833A /* EMLuanchViewController.h */,
+				CF59C1BD1E1F90D00081833A /* EMLuanchViewController.m */,
+			);
+			path = "自定义";
+			sourceTree = "<group>";
+		};
+		CF59C19D1E1F80790081833A /* 网络部分 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1CC1E1FAC830081833A /* NetRequest.h */,
+				CF59C1CD1E1FAC830081833A /* NetRequest.m */,
+				CF59C1CB1E1F96C60081833A /* 我 */,
+				CF59C1CA1E1F96BD0081833A /* 通知 */,
+				CF59C1C91E1F96B40081833A /* 考勤 */,
+				CF59C1C81E1F96AC0081833A /* 批假 */,
+				CF59C1C71E1F969D0081833A /* 班级 */,
+			);
+			path = "网络部分";
+			sourceTree = "<group>";
+		};
+		CF59C1BF1E1F95C50081833A /* 控制台中文输出 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1C01E1F95C50081833A /* Foundation+Log.m */,
+			);
+			path = "控制台中文输出";
+			sourceTree = "<group>";
+		};
+		CF59C1C11E1F95C50081833A /* 适配 */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1C21E1F95C50081833A /* Adaption.h */,
+			);
+			path = "适配";
+			sourceTree = "<group>";
+		};
+		CF59C1C71E1F969D0081833A /* 班级 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "班级";
+			sourceTree = "<group>";
+		};
+		CF59C1C81E1F96AC0081833A /* 批假 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "批假";
+			sourceTree = "<group>";
+		};
+		CF59C1C91E1F96B40081833A /* 考勤 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "考勤";
+			sourceTree = "<group>";
+		};
+		CF59C1CA1E1F96BD0081833A /* 通知 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "通知";
+			sourceTree = "<group>";
+		};
+		CF59C1CB1E1F96C60081833A /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "我";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF59C15C1E1F7EA40081833A /* EducationManagementSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF59C18A1E1F7EA40081833A /* Build configuration list for PBXNativeTarget "EducationManagementSystem" */;
+			buildPhases = (
+				25AB8F971521494AE071215C /* [CP] Check Pods Manifest.lock */,
+				CF59C1591E1F7EA40081833A /* Sources */,
+				CF59C15A1E1F7EA40081833A /* Frameworks */,
+				CF59C15B1E1F7EA40081833A /* Resources */,
+				8E271811B4F5D9962C7CDF24 /* [CP] Embed Pods Frameworks */,
+				81D1C154D4E569F3DAC7964B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EducationManagementSystem;
+			productName = EducationManagementSystem;
+			productReference = CF59C15D1E1F7EA40081833A /* EducationManagementSystem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF59C1751E1F7EA40081833A /* EducationManagementSystemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF59C18D1E1F7EA40081833A /* Build configuration list for PBXNativeTarget "EducationManagementSystemTests" */;
+			buildPhases = (
+				4DFEF3A13BABFBEDAA1CC453 /* [CP] Check Pods Manifest.lock */,
+				CF59C1721E1F7EA40081833A /* Sources */,
+				CF59C1731E1F7EA40081833A /* Frameworks */,
+				CF59C1741E1F7EA40081833A /* Resources */,
+				823C412D52BF933B128D673D /* [CP] Embed Pods Frameworks */,
+				F73178381EFAA95B5057A79C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF59C1781E1F7EA40081833A /* PBXTargetDependency */,
+			);
+			name = EducationManagementSystemTests;
+			productName = EducationManagementSystemTests;
+			productReference = CF59C1761E1F7EA40081833A /* EducationManagementSystemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF59C1801E1F7EA40081833A /* EducationManagementSystemUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF59C1901E1F7EA40081833A /* Build configuration list for PBXNativeTarget "EducationManagementSystemUITests" */;
+			buildPhases = (
+				36617E6BCAAFD69CAC16F972 /* [CP] Check Pods Manifest.lock */,
+				CF59C17D1E1F7EA40081833A /* Sources */,
+				CF59C17E1E1F7EA40081833A /* Frameworks */,
+				CF59C17F1E1F7EA40081833A /* Resources */,
+				504EC59BC1E343C2A9B83940 /* [CP] Embed Pods Frameworks */,
+				F491F521CB0593983B8BDFCC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF59C1831E1F7EA40081833A /* PBXTargetDependency */,
+			);
+			name = EducationManagementSystemUITests;
+			productName = EducationManagementSystemUITests;
+			productReference = CF59C1811E1F7EA40081833A /* EducationManagementSystemUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF59C1551E1F7EA40081833A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EM;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = com.HuaHuaCai;
+				TargetAttributes = {
+					CF59C15C1E1F7EA40081833A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = Q87YBSMBE8;
+						ProvisioningStyle = Automatic;
+					};
+					CF59C1751E1F7EA40081833A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = Q87YBSMBE8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CF59C15C1E1F7EA40081833A;
+					};
+					CF59C1801E1F7EA40081833A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = Q87YBSMBE8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CF59C15C1E1F7EA40081833A;
+					};
+				};
+			};
+			buildConfigurationList = CF59C1581E1F7EA40081833A /* Build configuration list for PBXProject "EducationManagementSystem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF59C1541E1F7EA40081833A;
+			productRefGroup = CF59C15E1E1F7EA40081833A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF59C15C1E1F7EA40081833A /* EducationManagementSystem */,
+				CF59C1751E1F7EA40081833A /* EducationManagementSystemTests */,
+				CF59C1801E1F7EA40081833A /* EducationManagementSystemUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF59C15B1E1F7EA40081833A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF59C1701E1F7EA40081833A /* LaunchScreen.storyboard in Resources */,
+				CF59C16D1E1F7EA40081833A /* Assets.xcassets in Resources */,
+				CF59C16B1E1F7EA40081833A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF59C1741E1F7EA40081833A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF59C17F1E1F7EA40081833A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25AB8F971521494AE071215C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		36617E6BCAAFD69CAC16F972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4DFEF3A13BABFBEDAA1CC453 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		504EC59BC1E343C2A9B83940 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81D1C154D4E569F3DAC7964B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		823C412D52BF933B128D673D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E271811B4F5D9962C7CDF24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F491F521CB0593983B8BDFCC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F73178381EFAA95B5057A79C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF59C1591E1F7EA40081833A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF59C1681E1F7EA40081833A /* ViewController.m in Sources */,
+				CF59C1C31E1F95C50081833A /* Foundation+Log.m in Sources */,
+				CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */,
+				CF59C1A01E1F83DE0081833A /* BaseViewController.m in Sources */,
+				CF59C1AF1E1F899B0081833A /* EMAttendanceController.m in Sources */,
+				CF59C1651E1F7EA40081833A /* AppDelegate.m in Sources */,
+				CF59C1A31E1F850A0081833A /* EMTabBarController.m in Sources */,
+				CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */,
+				CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */,
+				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
+				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
+				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,
+				CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */,
+				CF59C1B21E1F89D80081833A /* EMNoticeViewController.m in Sources */,
+				CF59C1621E1F7EA40081833A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF59C1721E1F7EA40081833A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF59C17B1E1F7EA40081833A /* EducationManagementSystemTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF59C17D1E1F7EA40081833A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF59C1861E1F7EA40081833A /* EducationManagementSystemUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF59C1781E1F7EA40081833A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF59C15C1E1F7EA40081833A /* EducationManagementSystem */;
+			targetProxy = CF59C1771E1F7EA40081833A /* PBXContainerItemProxy */;
+		};
+		CF59C1831E1F7EA40081833A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF59C15C1E1F7EA40081833A /* EducationManagementSystem */;
+			targetProxy = CF59C1821E1F7EA40081833A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF59C1691E1F7EA40081833A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF59C16A1E1F7EA40081833A /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CF59C16E1E1F7EA40081833A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF59C16F1E1F7EA40081833A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF59C1881E1F7EA40081833A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF59C1891E1F7EA40081833A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF59C18B1E1F7EA40081833A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00898E5C5FFAA3DAC01F0937 /* Pods-EducationManagementSystem.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q87YBSMBE8;
+				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF59C18C1E1F7EA40081833A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ABB39BBFAD6962E81ACE2B3 /* Pods-EducationManagementSystem.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q87YBSMBE8;
+				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CF59C18E1E1F7EA40081833A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6407F571E50B68B4694E8498 /* Pods-EducationManagementSystemTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q87YBSMBE8;
+				INFOPLIST_FILE = EducationManagementSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EducationManagementSystem.app/EducationManagementSystem";
+			};
+			name = Debug;
+		};
+		CF59C18F1E1F7EA40081833A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q87YBSMBE8;
+				INFOPLIST_FILE = EducationManagementSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EducationManagementSystem.app/EducationManagementSystem";
+			};
+			name = Release;
+		};
+		CF59C1911E1F7EA40081833A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CADBA55640BD0B597751D549 /* Pods-EducationManagementSystemUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Q87YBSMBE8;
+				INFOPLIST_FILE = EducationManagementSystemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EducationManagementSystem;
+			};
+			name = Debug;
+		};
+		CF59C1921E1F7EA40081833A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79CDD02F1747C54AF552E5F1 /* Pods-EducationManagementSystemUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Q87YBSMBE8;
+				INFOPLIST_FILE = EducationManagementSystemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EducationManagementSystem;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF59C1581E1F7EA40081833A /* Build configuration list for PBXProject "EducationManagementSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF59C1881E1F7EA40081833A /* Debug */,
+				CF59C1891E1F7EA40081833A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF59C18A1E1F7EA40081833A /* Build configuration list for PBXNativeTarget "EducationManagementSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF59C18B1E1F7EA40081833A /* Debug */,
+				CF59C18C1E1F7EA40081833A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF59C18D1E1F7EA40081833A /* Build configuration list for PBXNativeTarget "EducationManagementSystemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF59C18E1E1F7EA40081833A /* Debug */,
+				CF59C18F1E1F7EA40081833A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF59C1901E1F7EA40081833A /* Build configuration list for PBXNativeTarget "EducationManagementSystemUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF59C1911E1F7EA40081833A /* Debug */,
+				CF59C1921E1F7EA40081833A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF59C1551E1F7EA40081833A /* Project object */;
+}
