@@ -50,14 +50,4 @@
     
 }
 
-- (void)addChildVcWithClassName:(NSString *)className andTitle:(NSString *)title {
-    UIViewController *vc = [[NSClassFromString(className) alloc] init];
-    vc.tabBarItem.title = title;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    vc.title = title;
-    [self addChildViewController:nav];
-    
-
-}
-
 @end
