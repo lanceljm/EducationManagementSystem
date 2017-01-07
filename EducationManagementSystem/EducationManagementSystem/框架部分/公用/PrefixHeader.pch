@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  EducationManagementSystem
+//
+//  Created by 花花蔡 on 2017/1/7.
+//  Copyright © 2017年 com.HuaHuaCai. All rights reserved.
+//
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
+
+#import "Adaption.h"
+#import "UIColor+CZAddition.h"
+
+
+#pragma mark - 颜色
+
+//登录框underLine颜色
+#define TextF_UNDERLINE [UIColor cz_colorWithHex:0x90b4e9]
+
+#endif /* PrefixHeader_pch */

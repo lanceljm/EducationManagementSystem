@@ -7,6 +7,7 @@
 //
 
 #import "EMLoginViewController.h"
+#import "EMIconUnderLineTextF.h"
 
 @interface EMLoginViewController ()
 
@@ -22,6 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tips.text = @"登录见面，点击消失";
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    /*
+     *  注释部分为测试代码 可删除
+     *
+    EMIconUnderLineTextF *count = [[EMIconUnderLineTextF alloc] initWithFrame:AAdaptionRect(120, 120, 300, 44) andImageName:@"User" withPlaceholder:@"请输入账号"];
+    [self.view addSubview:count];
+    */
+    
 }
 
 - (void)didReceiveMemoryWarning {

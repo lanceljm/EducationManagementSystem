@@ -10,6 +10,8 @@
 		0174A30A1B7D176022B4B4A1 /* libPods-EducationManagementSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7050075BC698E9A4C56BAC0 /* libPods-EducationManagementSystem.a */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
+		CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */; };
+		CF26F8E61E20E91700880FDF /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */; };
 		CF59C1621E1F7EA40081833A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1611E1F7EA40081833A /* main.m */; };
 		CF59C1651E1F7EA40081833A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1641E1F7EA40081833A /* AppDelegate.m */; };
 		CF59C1681E1F7EA40081833A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1671E1F7EA40081833A /* ViewController.m */; };
@@ -59,6 +61,11 @@
 		79CDD02F1747C54AF552E5F1 /* Pods-EducationManagementSystemUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7050075BC698E9A4C56BAC0 /* libPods-EducationManagementSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADBA55640BD0B597751D549 /* Pods-EducationManagementSystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF26F8DB1E20E22300880FDF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CF26F8E11E20E53300880FDF /* EMIconUnderLineTextF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMIconUnderLineTextF.h; sourceTree = "<group>"; };
+		CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconUnderLineTextF.m; sourceTree = "<group>"; };
+		CF26F8E41E20E91700880FDF /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
+		CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
 		CF59C15D1E1F7EA40081833A /* EducationManagementSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationManagementSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59C1611E1F7EA40081833A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF59C1631E1F7EA40081833A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +157,46 @@
 				79CDD02F1747C54AF552E5F1 /* Pods-EducationManagementSystemUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF26F8DC1E20E4CA00880FDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1A11E1F850A0081833A /* EMTabBarController.h */,
+				CF59C1A21E1F850A0081833A /* EMTabBarController.m */,
+				CF59C1B61E1F8C8A0081833A /* RootViewController.h */,
+				CF59C1B71E1F8C8A0081833A /* RootViewController.m */,
+				CF59C1B91E1F90700081833A /* EMLoginViewController.h */,
+				CF59C1BA1E1F90700081833A /* EMLoginViewController.m */,
+				CF59C1BC1E1F90D00081833A /* EMLuanchViewController.h */,
+				CF59C1BD1E1F90D00081833A /* EMLuanchViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CF26F8DE1E20E4F800880FDF /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CF26F8DF1E20E4FF00880FDF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CF26F8E11E20E53300880FDF /* EMIconUnderLineTextF.h */,
+				CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CF26F8E81E20E92C00880FDF /* 类目 */ = {
+			isa = PBXGroup;
+			children = (
+				CF26F8E41E20E91700880FDF /* UIColor+CZAddition.h */,
+				CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */,
+			);
+			name = "类目";
 			sourceTree = "<group>";
 		};
 		CF59C1541E1F7EA40081833A = {
@@ -281,10 +328,12 @@
 		CF59C19A1E1F80790081833A /* 公用 */ = {
 			isa = PBXGroup;
 			children = (
+				CF26F8E81E20E92C00880FDF /* 类目 */,
 				CF59C1BF1E1F95C50081833A /* 控制台中文输出 */,
 				CF59C1C11E1F95C50081833A /* 适配 */,
 				CF59C19E1E1F83DE0081833A /* BaseViewController.h */,
 				CF59C19F1E1F83DE0081833A /* BaseViewController.m */,
+				CF26F8DB1E20E22300880FDF /* PrefixHeader.pch */,
 			);
 			path = "公用";
 			sourceTree = "<group>";
@@ -307,14 +356,9 @@
 		CF59C19C1E1F80790081833A /* 自定义 */ = {
 			isa = PBXGroup;
 			children = (
-				CF59C1A11E1F850A0081833A /* EMTabBarController.h */,
-				CF59C1A21E1F850A0081833A /* EMTabBarController.m */,
-				CF59C1B61E1F8C8A0081833A /* RootViewController.h */,
-				CF59C1B71E1F8C8A0081833A /* RootViewController.m */,
-				CF59C1B91E1F90700081833A /* EMLoginViewController.h */,
-				CF59C1BA1E1F90700081833A /* EMLoginViewController.m */,
-				CF59C1BC1E1F90D00081833A /* EMLuanchViewController.h */,
-				CF59C1BD1E1F90D00081833A /* EMLuanchViewController.m */,
+				CF26F8DF1E20E4FF00880FDF /* view */,
+				CF26F8DE1E20E4F800880FDF /* model */,
+				CF26F8DC1E20E4CA00880FDF /* Controller */,
 			);
 			path = "自定义";
 			sourceTree = "<group>";
@@ -672,6 +716,7 @@
 				CF59C1C31E1F95C50081833A /* Foundation+Log.m in Sources */,
 				CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */,
 				CF59C1A01E1F83DE0081833A /* BaseViewController.m in Sources */,
+				CF26F8E61E20E91700880FDF /* UIColor+CZAddition.m in Sources */,
 				CF59C1AF1E1F899B0081833A /* EMAttendanceController.m in Sources */,
 				CF59C1651E1F7EA40081833A /* AppDelegate.m in Sources */,
 				CF59C1A31E1F850A0081833A /* EMTabBarController.m in Sources */,
@@ -681,6 +726,7 @@
 				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
 				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,
 				CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */,
+				CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */,
 				CF59C1B21E1F89D80081833A /* EMNoticeViewController.m in Sources */,
 				CF59C1621E1F7EA40081833A /* main.m in Sources */,
 			);
@@ -833,6 +879,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q87YBSMBE8;
+				GCC_PREFIX_HEADER = "/Users/apple/Desktop/EducationManagementSystem/EducationManagementSystem/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
 				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
@@ -846,6 +893,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q87YBSMBE8;
+				GCC_PREFIX_HEADER = "/Users/apple/Desktop/EducationManagementSystem/EducationManagementSystem/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
 				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;

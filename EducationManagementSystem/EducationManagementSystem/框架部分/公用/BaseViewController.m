@@ -18,6 +18,7 @@
     [super viewDidLoad];
     [self setTipsLabel];
     self.view.backgroundColor = [UIColor greenColor];
+
 }
 
 - (void)setTipsLabel {
