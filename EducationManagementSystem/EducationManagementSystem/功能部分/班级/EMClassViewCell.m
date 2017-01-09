@@ -36,6 +36,7 @@
     if (!cell) {
         cell = [[EMClassViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    
     return cell;
 }
 
