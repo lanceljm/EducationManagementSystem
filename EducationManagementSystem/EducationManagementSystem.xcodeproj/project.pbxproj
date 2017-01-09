@@ -32,8 +32,8 @@
 		CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1B71E1F8C8A0081833A /* RootViewController.m */; };
 		CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1BA1E1F90700081833A /* EMLoginViewController.m */; };
 		CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1BD1E1F90D00081833A /* EMLuanchViewController.m */; };
-		CF59C1C31E1F95C50081833A /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1C01E1F95C50081833A /* Foundation+Log.m */; };
 		CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1CD1E1FAC830081833A /* NetRequest.m */; };
+		CF5D4F091E238309004713A2 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D4F081E238309004713A2 /* LogCategory.m */; };
 		CFED49331E232EC500750CBA /* EMIconDirectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CFED49321E232EC500750CBA /* EMIconDirectionButton.m */; };
 		CFED49371E23622600750CBA /* EMClassViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFED49361E23622500750CBA /* EMClassViewCell.m */; };
 /* End PBXBuildFile section */
@@ -108,10 +108,11 @@
 		CF59C1BA1E1F90700081833A /* EMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLoginViewController.m; sourceTree = "<group>"; };
 		CF59C1BC1E1F90D00081833A /* EMLuanchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLuanchViewController.h; sourceTree = "<group>"; };
 		CF59C1BD1E1F90D00081833A /* EMLuanchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLuanchViewController.m; sourceTree = "<group>"; };
-		CF59C1C01E1F95C50081833A /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		CF59C1C21E1F95C50081833A /* Adaption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adaption.h; sourceTree = "<group>"; };
 		CF59C1CC1E1FAC830081833A /* NetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequest.h; sourceTree = "<group>"; };
 		CF59C1CD1E1FAC830081833A /* NetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequest.m; sourceTree = "<group>"; };
+		CF5D4F071E238309004713A2 /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
+		CF5D4F081E238309004713A2 /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
 		CFED49311E232EC500750CBA /* EMIconDirectionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMIconDirectionButton.h; sourceTree = "<group>"; };
 		CFED49321E232EC500750CBA /* EMIconDirectionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconDirectionButton.m; sourceTree = "<group>"; };
 		CFED49351E23622500750CBA /* EMClassViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClassViewCell.h; sourceTree = "<group>"; };
@@ -360,8 +361,8 @@
 		CF59C19A1E1F80790081833A /* 公用 */ = {
 			isa = PBXGroup;
 			children = (
+				CF5D4F061E238309004713A2 /* LogCategory */,
 				CF26F8E81E20E92C00880FDF /* 类目 */,
-				CF59C1BF1E1F95C50081833A /* 控制台中文输出 */,
 				CF59C1C11E1F95C50081833A /* 适配 */,
 				CF59C19E1E1F83DE0081833A /* BaseViewController.h */,
 				CF59C19F1E1F83DE0081833A /* BaseViewController.m */,
@@ -408,14 +409,6 @@
 			path = "网络部分";
 			sourceTree = "<group>";
 		};
-		CF59C1BF1E1F95C50081833A /* 控制台中文输出 */ = {
-			isa = PBXGroup;
-			children = (
-				CF59C1C01E1F95C50081833A /* Foundation+Log.m */,
-			);
-			path = "控制台中文输出";
-			sourceTree = "<group>";
-		};
 		CF59C1C11E1F95C50081833A /* 适配 */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,6 +450,15 @@
 			children = (
 			);
 			name = "我";
+			sourceTree = "<group>";
+		};
+		CF5D4F061E238309004713A2 /* LogCategory */ = {
+			isa = PBXGroup;
+			children = (
+				CF5D4F071E238309004713A2 /* LogCategory.h */,
+				CF5D4F081E238309004713A2 /* LogCategory.m */,
+			);
+			path = LogCategory;
 			sourceTree = "<group>";
 		};
 		CFED49341E23620200750CBA /* view */ = {
@@ -753,7 +755,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF59C1C31E1F95C50081833A /* Foundation+Log.m in Sources */,
 				CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */,
 				CFED49371E23622600750CBA /* EMClassViewCell.m in Sources */,
 				1A007EAF1E2363B2001907AE /* AppDelegate.m in Sources */,
@@ -766,6 +767,7 @@
 				CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */,
 				CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */,
 				1A007EA31E2330B2001907AE /* EMSysButton.m in Sources */,
+				CF5D4F091E238309004713A2 /* LogCategory.m in Sources */,
 				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
 				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
 				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,

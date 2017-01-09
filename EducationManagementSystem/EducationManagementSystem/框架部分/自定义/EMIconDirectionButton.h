@@ -19,8 +19,8 @@ typedef enum :NSUInteger {
 
 @interface EMIconDirectionButton : UIButton
 
-@property(nonatomic,copy) ButtomClicked block;
+@property(nonatomic,copy) ButtomClickedWithSender block;
 
-- (instancetype)initWithFrame:(CGRect)frame withTag:(NSInteger)BtnTag withTitle:(NSString *)title withTitleColor:(UIColor *)col withImage:(NSString *)image withFont:(CGFloat)font withDirection:(IconDirection)dir withBlock:(ButtomClicked)block;
+- (instancetype)initWithFrame:(CGRect)frame withTag:(NSInteger)BtnTag withTitle:(NSString *)title withTitleColor:(UIColor *)col withImage:(NSString *)image withFont:(CGFloat)font withDirection:(IconDirection)dir withBlock:(ButtomClickedWithSender)block;
 
 @end

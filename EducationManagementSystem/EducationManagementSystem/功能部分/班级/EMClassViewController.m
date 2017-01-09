@@ -8,6 +8,7 @@
 
 #import "EMClassViewController.h"
 #import "EMIconDirectionButton.h"
+#import "EMClassViewCell.h"
 
 @interface EMClassViewController ()
 
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
+    self.tableView.rowHeight = AAdaption(280);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,9 +33,16 @@
     return 10;
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    EMClassViewCell *cell = [EMClassViewCell loadCellWithTableView:tableView];
+        
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"选择%ld行",indexPath.row);
+}
 
 @end
