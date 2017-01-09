@@ -35,7 +35,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    EMClassViewCell *cell = [EMClassViewCell loadCellWithTableView:tableView];
+    EMClassViewCell *cell = [EMClassViewCell loadCellWithTableView:tableView Vc:self];
         
     return cell;
 }

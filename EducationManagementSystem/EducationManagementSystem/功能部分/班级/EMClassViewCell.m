@@ -8,6 +8,8 @@
 
 #import "EMClassViewCell.h"
 #import "EMIconDirectionButton.h"
+#import "EMStuOrTeacherViewController.h"
+
 @interface EMClassViewCell()
 
 @property(nonatomic,strong) UILabel *classNameL;
@@ -16,6 +18,7 @@
 //@property(nonatomic,strong) EMIconDirectionButton *signInBtn;
 //@property(nonatomic,strong) EMIconDirectionButton *signOutBtn;
 //@property(nonatomic,strong) EMIconDirectionButton *statisticsBtn;
+@property(nonatomic,strong) UITableViewController *classTableView;
 
 
 @end
@@ -32,21 +35,23 @@
 }
 
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier tableView:(UITableViewController *)TVC
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self creatCell];
+        _classTableView = TVC;
     }
     return self;
 }
 
-+ (instancetype)loadCellWithTableView:(UITableView *)tableView {
++ (instancetype)loadCellWithTableView:(UITableView *)tableView Vc:(UITableViewController *)vc {
     
     static NSString *identifier = @"classCellID";
     EMClassViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
     if (!cell) {
-        cell = [[EMClassViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[EMClassViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier tableView:vc];
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -54,7 +59,6 @@
     cell.separatorInset = UIEdgeInsetsZero;
     cell.layoutMargins = UIEdgeInsetsZero;
 
-    
     return cell;
 }
 
@@ -76,7 +80,7 @@
         int tag = index + 100;
         
         __weak typeof(self)weakSelf = self;
-        EMIconDirectionButton *btn = [[EMIconDirectionButton alloc] initWithFrame:AAdaptionRect(index * 150, 125, 150, 130) withTag:tag withTitle:btnNameArr[index] withTitleColor:[UIColor cz_colorWithHex:0x2269d5] withImage:btnImageArr[index] withFont:28 withDirection:top withBlock:^(id sender) {
+        EMIconDirectionButton *btn = [[EMIconDirectionButton alloc] initWithFrame:AAdaptionRect(index * 150, 125, 150, 130) withTag:tag withTitle:btnNameArr[index] withTitleColor:BLUE_COLOR withImage:btnImageArr[index] withFont:28 withDirection:top withBlock:^(id sender) {
             
             EMIconDirectionButton *btn = sender;
             
@@ -100,6 +104,8 @@
         case 100:{
             //学生界面
             NSLog(@"推出学生界面");
+            EMStuOrTeacherViewController *sTVc = [[EMStuOrTeacherViewController alloc] init];
+            [self.classTableView.navigationController pushViewController:sTVc animated:YES];
         }
             break;
         case 101:{

@@ -44,6 +44,9 @@
     UIViewController *vc = [[NSClassFromString(className) alloc] init];
     vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:imgName] selectedImage:[UIImage imageNamed:selectedImg]];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.navigationBar.barTintColor = BLUE_COLOR;
+    nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    nav.navigationBar.tintColor = [UIColor whiteColor];
     vc.title = title;
     [self addChildViewController:nav];
     

@@ -16,11 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"history"] style:UIBarButtonItemStyleDone target:self action:@selector(btnClicked)];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = btn;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (void)btnClicked {
+    NSLog(@"批假界面的历史记录");
+}
 
 @end

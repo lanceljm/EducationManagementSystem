@@ -1,5 +1,5 @@
 //
-//  EMClassViewCell.h
+//  EMSearchBarView.h
 //  EducationManagementSystem
 //
 //  Created by 花花蔡 on 2017/1/9.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EMClassViewCell : UITableViewCell
-
-
-+ (instancetype)loadCellWithTableView:(UITableView *)tableView Vc:(UITableViewController *)vc;
+@interface EMSearchBarView : UIView
 
 @end

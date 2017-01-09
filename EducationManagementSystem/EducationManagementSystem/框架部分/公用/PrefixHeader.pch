@@ -24,6 +24,9 @@ typedef void (^ButtomClickedWithSender)(id sender);
 //登录框underLine颜色
 #define TextF_UNDERLINE [UIColor cz_colorWithHex:0x90b4e9]
 
+#define BLUE_COLOR [UIColor cz_colorWithHex:0x2269d5]
+
+
 #define RANDOMCOLOR [UIColor colorWithHue:arc4random()%256/255.0 saturation:arc4random()%256/255.0 brightness:arc4random()%256/255.0 alpha:1]
 
 // ***************** 主题色 **********************
