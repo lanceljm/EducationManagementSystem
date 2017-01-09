@@ -11,7 +11,7 @@
 @implementation EMIconDirectionButton
 
 
-- (instancetype)initWithFrame:(CGRect)frame withTag:(NSInteger)BtnTag withTitle:(NSString *)title withTitleColor:(UIColor *)col withImage:(NSString *)image withFont:(CGFloat)font withDirection:(IconDirection)dir withBlock:(btnClicked)block
+- (instancetype)initWithFrame:(CGRect)frame withTag:(NSInteger)BtnTag withTitle:(NSString *)title withTitleColor:(UIColor *)col withImage:(NSString *)image withFont:(CGFloat)font withDirection:(IconDirection)dir withBlock:(ButtomClicked)block
 {
     self = [super initWithFrame:frame];
     if (self) {

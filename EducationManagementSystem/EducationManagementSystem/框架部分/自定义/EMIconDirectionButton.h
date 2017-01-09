@@ -15,12 +15,12 @@ typedef enum :NSUInteger {
     left,
 } IconDirection;
 
-typedef void(^btnClicked)(id sender);
+//typedef void(^btnClicked)(id sender);
 
 @interface EMIconDirectionButton : UIButton
 
-@property(nonatomic,copy) btnClicked block;
+@property(nonatomic,copy) ButtomClicked block;
 
-- (instancetype)initWithFrame:(CGRect)frame withTag:(NSInteger)BtnTag withTitle:(NSString *)title withTitleColor:(UIColor *)col withImage:(NSString *)image withFont:(CGFloat)font withDirection:(IconDirection)dir withBlock:(btnClicked)block;
+- (instancetype)initWithFrame:(CGRect)frame withTag:(NSInteger)BtnTag withTitle:(NSString *)title withTitleColor:(UIColor *)col withImage:(NSString *)image withFont:(CGFloat)font withDirection:(IconDirection)dir withBlock:(ButtomClicked)block;
 
 @end
