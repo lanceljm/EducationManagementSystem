@@ -11,19 +11,34 @@
 
 @interface EMLuanchViewController ()
 
+@property(nonatomic,strong)EMSysButton *inputBtn;
+
 @end
 
 @implementation EMLuanchViewController
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.view removeFromSuperview];
-    [self removeFromParentViewController];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tips.text = @"加载页面,点击消失";
+//    self.tips.text = @"加载页面,点击消失";
+    
+    UIImageView *launchView = [[UIImageView alloc]initWithFrame:self.view.frame];
+    [launchView setImage:[UIImage imageNamed:@"launch"]];
+    [self.view addSubview:launchView];
+    
+    [self.view addSubview:self.inputBtn];
 
+}
+
+-(EMSysButton *)inputBtn {
+    __weak typeof(self) weakself = self;
+    if (!_inputBtn) {
+        _inputBtn = [[EMSysButton alloc]initWithFrame:AAdaptionRect(200, 1050, 365, 80) withTag:1001 withTitle:@"" withTitleColor:[UIColor clearColor] withBackgrougdColor:[UIColor clearColor] withCornerRadious:0.5 withClickedBlock:^(id sender) {
+            //按钮的点击事件
+            [weakself.view removeFromSuperview];
+            [weakself removeFromParentViewController];
+        }];
+    }
+    return _inputBtn;
 }
 
 - (void)didReceiveMemoryWarning {
