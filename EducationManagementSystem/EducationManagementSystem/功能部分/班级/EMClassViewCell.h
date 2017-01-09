@@ -11,6 +11,6 @@
 @interface EMClassViewCell : UITableViewCell
 
 
-+ (void)loadCellWithTableView:(UITableViewController *)tableView;
++ (instancetype)loadCellWithTableView:(UITableView *)tableView;
 
 @end
