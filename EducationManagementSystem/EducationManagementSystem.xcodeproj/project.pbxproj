@@ -881,6 +881,7 @@
 				DEVELOPMENT_TEAM = Q87YBSMBE8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EducationManagementSystem/EducationManagementSystem/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
 				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
@@ -896,6 +897,7 @@
 				DEVELOPMENT_TEAM = Q87YBSMBE8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EducationManagementSystem/EducationManagementSystem/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
 				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
