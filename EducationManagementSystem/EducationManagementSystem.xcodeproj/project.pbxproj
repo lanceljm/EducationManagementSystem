@@ -755,11 +755,8 @@
 			files = (
 				CF59C1C31E1F95C50081833A /* Foundation+Log.m in Sources */,
 				CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */,
-<<<<<<< HEAD
 				CFED49371E23622600750CBA /* EMClassViewCell.m in Sources */,
-=======
 				1A007EAF1E2363B2001907AE /* AppDelegate.m in Sources */,
->>>>>>> 7f0ed3c2ab239523daadc6317ad52abf1b5814b9
 				CF59C1A01E1F83DE0081833A /* BaseViewController.m in Sources */,
 				CF26F8E61E20E91700880FDF /* UIColor+CZAddition.m in Sources */,
 				CF59C1AF1E1F899B0081833A /* EMAttendanceController.m in Sources */,
