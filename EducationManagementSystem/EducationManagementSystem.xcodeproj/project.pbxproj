@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0174A30A1B7D176022B4B4A1 /* libPods-EducationManagementSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7050075BC698E9A4C56BAC0 /* libPods-EducationManagementSystem.a */; };
+		1A007EA31E2330B2001907AE /* EMSysButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A007EA21E2330B2001907AE /* EMSysButton.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
 		CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		00898E5C5FFAA3DAC01F0937 /* Pods-EducationManagementSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem.debug.xcconfig"; sourceTree = "<group>"; };
+		1A007EA11E2330B2001907AE /* EMSysButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSysButton.h; sourceTree = "<group>"; };
+		1A007EA21E2330B2001907AE /* EMSysButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSysButton.m; sourceTree = "<group>"; };
 		1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests.release.xcconfig"; sourceTree = "<group>"; };
 		2ABB39BBFAD6962E81ACE2B3 /* Pods-EducationManagementSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 			children = (
 				CF26F8E11E20E53300880FDF /* EMIconUnderLineTextF.h */,
 				CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */,
+				1A007EA11E2330B2001907AE /* EMSysButton.h */,
+				1A007EA21E2330B2001907AE /* EMSysButton.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				CF59C1A31E1F850A0081833A /* EMTabBarController.m in Sources */,
 				CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */,
 				CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */,
+				1A007EA31E2330B2001907AE /* EMSysButton.m in Sources */,
 				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
 				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
 				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,

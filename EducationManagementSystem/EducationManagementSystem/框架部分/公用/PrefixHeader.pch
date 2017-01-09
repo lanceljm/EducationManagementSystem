@@ -17,6 +17,11 @@
 #import "UIColor+CZAddition.h"
 
 
+#pragma mark -- 定义UIButton公用的的block类型
+typedef void (^ButtomClicked)();
+typedef void (^ButtomClickedWithSender)(id sender);
+
+
 #pragma mark - 颜色
 
 //登录框underLine颜色
