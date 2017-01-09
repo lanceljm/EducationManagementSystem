@@ -61,11 +61,11 @@
 		79CDD02F1747C54AF552E5F1 /* Pods-EducationManagementSystemUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7050075BC698E9A4C56BAC0 /* libPods-EducationManagementSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADBA55640BD0B597751D549 /* Pods-EducationManagementSystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CF26F8DB1E20E22300880FDF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CF26F8E11E20E53300880FDF /* EMIconUnderLineTextF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMIconUnderLineTextF.h; sourceTree = "<group>"; };
 		CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconUnderLineTextF.m; sourceTree = "<group>"; };
 		CF26F8E41E20E91700880FDF /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
 		CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		CF37D5E61E231B6B0019E9A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CF59C15D1E1F7EA40081833A /* EducationManagementSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationManagementSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59C1611E1F7EA40081833A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF59C1631E1F7EA40081833A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 				CF59C1C11E1F95C50081833A /* 适配 */,
 				CF59C19E1E1F83DE0081833A /* BaseViewController.h */,
 				CF59C19F1E1F83DE0081833A /* BaseViewController.m */,
-				CF26F8DB1E20E22300880FDF /* PrefixHeader.pch */,
+				CF37D5E61E231B6B0019E9A0 /* PrefixHeader.pch */,
 			);
 			path = "公用";
 			sourceTree = "<group>";
@@ -879,7 +879,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q87YBSMBE8;
-				GCC_PREFIX_HEADER = "/Users/apple/Desktop/EducationManagementSystem/EducationManagementSystem/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
 				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
@@ -893,7 +894,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q87YBSMBE8;
-				GCC_PREFIX_HEADER = "/Users/apple/Desktop/EducationManagementSystem/EducationManagementSystem/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
 				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
