@@ -7,6 +7,7 @@
 //
 
 #import "EMLuanchViewController.h"
+#import "EMSysButton.h"
 
 @interface EMLuanchViewController ()
 
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tips.text = @"加载页面,点击消失";
+
 }
 
 - (void)didReceiveMemoryWarning {
