@@ -13,9 +13,10 @@
 @property(nonatomic,strong) UILabel *classNameL;
 @property(nonatomic,strong) EMIconDirectionButton *stuNumBtn;
 @property(nonatomic,strong) EMIconDirectionButton *teacherNumBtn;
-@property(nonatomic,strong) EMIconDirectionButton *signInBtn;
-@property(nonatomic,strong) EMIconDirectionButton *signOutBtn;
-@property(nonatomic,strong) EMIconDirectionButton *statisticsBtn;
+//@property(nonatomic,strong) EMIconDirectionButton *signInBtn;
+//@property(nonatomic,strong) EMIconDirectionButton *signOutBtn;
+//@property(nonatomic,strong) EMIconDirectionButton *statisticsBtn;
+
 
 @end
 
@@ -61,25 +62,70 @@
     _classNameL = [[UILabel alloc] initWithFrame:AAdaptionRect(16, 0, kwidth - 16, 100)];
     _classNameL.text = @"2013-1-1";
     _classNameL.font = AAFont(32);
+    _classNameL.textColor = [UIColor cz_colorWithHex:0x4f4f4f];
     [self.contentView addSubview:_classNameL];
     
     CGFloat classNameX = _classNameL.frame.origin.x;
-    UIView *grayLine = [[UIView alloc] initWithFrame:CGRectMake(classNameX, CGRectGetMaxY(_classNameL.frame), kwidth - classNameX, 1)];
-    grayLine.backgroundColor = [UIColor cz_colorWithHex:0x4f4f4f];
+    UIView *grayLine = [[UIView alloc] initWithFrame:CGRectMake(classNameX, CGRectGetMaxY(_classNameL.frame), kwidth - classNameX, 0.6)];
+    grayLine.backgroundColor = [UIColor lightGrayColor];
     [self.contentView addSubview:grayLine];
     
-    //NSArray *btnArr = @[_stuNumBtn,_teacherNumBtn,_signInBtn,_signOutBtn,_statisticsBtn];
-    
+    NSArray *btnImageArr = @[@"students",@"teacher",@"签到",@"签退",@"统计"];
+    NSArray *btnNameArr = @[@"0",@"0",@"签到",@"签退",@"统计"];
     for (int index = 0; index < 5; index ++) {
         int tag = index + 100;
-        EMIconDirectionButton *btn = [[EMIconDirectionButton alloc] initWithFrame:AAdaptionRect(index * 150, 120, 150, 130) withTag:tag withTitle:@"tag" withTitleColor:[UIColor cz_colorWithHex:0x2269d5] withImage:@"签退" withFont:28 withDirection:top withBlock:^(id sender) {
+        
+        __weak typeof(self)weakSelf = self;
+        EMIconDirectionButton *btn = [[EMIconDirectionButton alloc] initWithFrame:AAdaptionRect(index * 150, 125, 150, 130) withTag:tag withTitle:btnNameArr[index] withTitleColor:[UIColor cz_colorWithHex:0x2269d5] withImage:btnImageArr[index] withFont:28 withDirection:top withBlock:^(id sender) {
+            
             EMIconDirectionButton *btn = sender;
-            NSLog(@"----%ld",(long)btn.tag);
+            
+            [weakSelf loadVcWithBtnTag:btn.tag];
             
         }];
+        if (index == 0) {
+            _stuNumBtn = btn;
+        }
+        if (index == 1) {
+            _teacherNumBtn = btn;
+        }
         [self.contentView addSubview:btn];
     }
     
 }
+
+- (void)loadVcWithBtnTag:(NSInteger)tag {
+    
+    switch (tag) {
+        case 100:{
+            //学生界面
+            NSLog(@"推出学生界面");
+        }
+            break;
+        case 101:{
+            //统计界面
+        }
+            break;
+        case 102:{
+            //签到
+        }
+        case 103:{
+            //签退
+        }
+        default: {
+            //统计
+        }
+            break;
+    }
+
+}
+
+
+
+
+
+
+
+
 
 @end
