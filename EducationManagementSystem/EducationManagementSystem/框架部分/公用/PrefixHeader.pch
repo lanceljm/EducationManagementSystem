@@ -10,8 +10,6 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#define SCREEN_W [UIScreen mainScreen].bounds.size.width
-#define SCREEN_H [UIScreen mainScreen].bounds.size.height
 
 #import "Adaption.h"
 #import "UIColor+CZAddition.h"
