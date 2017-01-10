@@ -10,8 +10,9 @@
 #import "EMIconDirectionButton.h"
 #import "EMClassViewCell.h"
 #import "EMClassViewModel.h"
+#import "EMStuOrTeacherViewController.h"
 
-@interface EMClassViewController ()
+@interface EMClassViewController ()<cellBtnClickedDelegate>
 
 
 @end
@@ -41,6 +42,39 @@
 }
 
 
+-(void)cellBtnClick:(UIButton *)btn {
+    
+    EMClassViewCell *cell = (EMClassViewCell *)[btn superview];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    
+    switch (btn.tag) {
+        case 100:{
+            //学生界面
+            NSLog(@"推出学生界面");
+            EMStuOrTeacherViewController *sTVc = [[EMStuOrTeacherViewController alloc] init];
+            [self.navigationController pushViewController:sTVc animated:YES];
+        }
+            break;
+        case 101:{
+            //统计界面
+        }
+            break;
+        case 102:{
+            //签到
+        }
+        case 103:{
+            //签退
+        }
+        default: {
+            //统计
+        }
+            break;
+    }
+
+    
+}
+
+
 #pragma mark - tableview delegate and dataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;
@@ -49,7 +83,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     EMClassViewCell *cell = [EMClassViewCell loadCellWithTableView:tableView Vc:self];
-        
+    cell.delegate = self;
     return cell;
 }
 

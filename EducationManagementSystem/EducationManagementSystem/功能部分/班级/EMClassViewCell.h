@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol cellBtnClickedDelegate <NSObject>
+
+- (void)cellBtnClick:(UIButton *)btn;
+
+@end
+
 @interface EMClassViewCell : UITableViewCell
+
+@property(nonatomic,weak) id<cellBtnClickedDelegate>delegate;
 
 
 + (instancetype)loadCellWithTableView:(UITableView *)tableView Vc:(UITableViewController *)vc;
