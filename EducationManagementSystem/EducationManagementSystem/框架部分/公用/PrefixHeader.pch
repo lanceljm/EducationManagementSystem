@@ -34,7 +34,4 @@ typedef void (^ButtomClickedWithSender)(id sender);
 // ***************** 主背景色 **********************
 #define MainBgColor [UIColor colorWithRed:39 / 255.0 green:93 / 255.0 blue:216 / 255.0 alpha:1]
 
-
-
-
 #endif /* PrefixHeader_pch */

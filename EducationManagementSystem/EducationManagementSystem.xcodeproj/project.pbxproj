@@ -15,6 +15,8 @@
 		1A007EB21E2363B2001907AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EAA1E2363B2001907AE /* Main.storyboard */; };
 		1A007EB31E2363B2001907AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EAC1E2363B2001907AE /* Info.plist */; };
 		1A007EB41E2363B2001907AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A007EAE1E2363B2001907AE /* ViewController.m */; };
+		1A2092E61E24BE6400BEF63A /* EMMineAboutBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2092E51E24BE6400BEF63A /* EMMineAboutBtn.m */; };
+		1A2092E91E24D58400BEF63A /* EMLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2092E81E24D58400BEF63A /* EMLoginModel.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
 		CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */; };
@@ -72,6 +74,10 @@
 		1A007EAC1E2363B2001907AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A007EAD1E2363B2001907AE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1A007EAE1E2363B2001907AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1A2092E41E24BE6400BEF63A /* EMMineAboutBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMineAboutBtn.h; sourceTree = "<group>"; };
+		1A2092E51E24BE6400BEF63A /* EMMineAboutBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMineAboutBtn.m; sourceTree = "<group>"; };
+		1A2092E71E24D58400BEF63A /* EMLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLoginModel.h; sourceTree = "<group>"; };
+		1A2092E81E24D58400BEF63A /* EMLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLoginModel.m; sourceTree = "<group>"; };
 		1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests.release.xcconfig"; sourceTree = "<group>"; };
 		2ABB39BBFAD6962E81ACE2B3 /* Pods-EducationManagementSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +178,31 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
+		1A2092E11E24BE0200BEF63A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A2092E41E24BE6400BEF63A /* EMMineAboutBtn.h */,
+				1A2092E51E24BE6400BEF63A /* EMMineAboutBtn.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1A2092E21E24BE0F00BEF63A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1B31E1F8AB80081833A /* EMAboutMeViewController.h */,
+				CF59C1B41E1F8AB80081833A /* EMAboutMeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1A2092E31E24BE1800BEF63A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		1EE61A05D3CF04EED1CDEDA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +244,8 @@
 		CF26F8DE1E20E4F800880FDF /* model */ = {
 			isa = PBXGroup;
 			children = (
+				1A2092E71E24D58400BEF63A /* EMLoginModel.h */,
+				1A2092E81E24D58400BEF63A /* EMLoginModel.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -340,8 +373,9 @@
 		CF59C1941E1F80790081833A /* 我 */ = {
 			isa = PBXGroup;
 			children = (
-				CF59C1B31E1F8AB80081833A /* EMAboutMeViewController.h */,
-				CF59C1B41E1F8AB80081833A /* EMAboutMeViewController.m */,
+				1A2092E31E24BE1800BEF63A /* Model */,
+				1A2092E21E24BE0F00BEF63A /* Controller */,
+				1A2092E11E24BE0200BEF63A /* View */,
 			);
 			path = "我";
 			sourceTree = "<group>";
@@ -799,6 +833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */,
+				1A2092E61E24BE6400BEF63A /* EMMineAboutBtn.m in Sources */,
 				CFED49371E23622600750CBA /* EMClassViewCell.m in Sources */,
 				1A007EAF1E2363B2001907AE /* AppDelegate.m in Sources */,
 				CF59C1A01E1F83DE0081833A /* BaseViewController.m in Sources */,
@@ -810,6 +845,7 @@
 				CF2A38731E246CF100118059 /* NetRequest+getClassList.m in Sources */,
 				CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */,
 				CF5D4F0C1E23A508004713A2 /* EMStuOrTeacherViewController.m in Sources */,
+				1A2092E91E24D58400BEF63A /* EMLoginModel.m in Sources */,
 				CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */,
 				1A007EA31E2330B2001907AE /* EMSysButton.m in Sources */,
 				CF5D4F091E238309004713A2 /* LogCategory.m in Sources */,

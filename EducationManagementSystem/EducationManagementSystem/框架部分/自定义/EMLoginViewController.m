@@ -10,7 +10,6 @@
 #import "EMIconUnderLineTextF.h"
 #import "EMSysButton.h"
 #import "EMIconDirectionButton.h"
-#import "NetRequest.h"
 
 @interface EMLoginViewController ()
 
@@ -84,6 +83,7 @@
 -(EMIconUnderLineTextF *)accountTF{
     if (!_accountTF) {
         _accountTF = [[EMIconUnderLineTextF alloc]initWithFrame:AAdaptionRect(188, 540, 454, 60) andImageName:@"User" withPlaceholder:@"请输入工号"];
+        _accountTF.text = @"Q16078856";
     }
     return _accountTF;
 }
@@ -92,6 +92,7 @@
 -(EMIconUnderLineTextF *)passwordTF{
     if (!_passwordTF) {
         _passwordTF = [[EMIconUnderLineTextF alloc]initWithFrame:AAdaptionRect(188, 664, 454, 60) andImageName:@"Locked" withPlaceholder:@"请输入密码"];
+        _passwordTF.text = @"888888";
         _passwordTF.secureTextEntry = YES;
     }
     return _passwordTF;
@@ -100,7 +101,7 @@
 //登录
 -(EMSysButton *)loginBtn{
     if (!_loginBtn) {
-        _loginBtn = [[EMSysButton alloc]initWithFrame:AAdaptionRect(90, 810, 576, 80) withTag:1002 withTitle:@"登录" withTitleColor:[UIColor whiteColor] withBackgrougdColor:MainBgColor withCornerRadious:0.5 withClickedBlock:^(id sender) {
+        _loginBtn = [[EMSysButton alloc]initWithFrame:AAdaptionRect(90, 810, 576, 80) withTag:1002 withTitle:@"登录" withTitleColor:[UIColor whiteColor] withBackgrougdColor:MainBgColor withCornerRadious:0.1 withClickedBlock:^(id sender) {
             //
             if ([_accountTF.text  isEqualToString: @""]) {
                 NSLog(@"账号不能为空");
@@ -111,6 +112,13 @@
             NSString *urlStr = @"http://192.168.0.117/api/staff/login.html";
             NSDictionary *parm = @{@"account":_accountTF.text,@"password":_passwordTF.text};
             [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
+                NSDictionary *userInfo = responseObject[@"result"];
+                
+                //保存用户登录字典
+                [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:@"UserInfoSave"];
+                //保存登录状态
+                [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"isLogin"];
+                
                 if ([responseObject[@"message"] isEqualToString:@"Success"]) {
                     [self.view removeFromSuperview];
                     [self removeFromParentViewController];
