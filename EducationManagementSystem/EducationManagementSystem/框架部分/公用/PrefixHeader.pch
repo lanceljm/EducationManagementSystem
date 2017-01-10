@@ -15,7 +15,6 @@
 #import "UIColor+CZAddition.h"
 #import "NetRequest.h"
 
-
 #pragma mark -- 定义UIButton公用的的block类型
 typedef void (^ButtomClicked)();
 typedef void (^ButtomClickedWithSender)(id sender);
