@@ -76,15 +76,20 @@
     
     NSArray *btnImageArr = @[@"students",@"teacher",@"签到",@"签退",@"统计"];
     NSArray *btnNameArr = @[@"0",@"0",@"签到",@"签退",@"统计"];
+    
     for (int index = 0; index < 5; index ++) {
         int tag = index + 100;
         
         __weak typeof(self)weakSelf = self;
         EMIconDirectionButton *btn = [[EMIconDirectionButton alloc] initWithFrame:AAdaptionRect(index * 150, 125, 150, 130) withTag:tag withTitle:btnNameArr[index] withTitleColor:BLUE_COLOR withImage:btnImageArr[index] withFont:28 withDirection:top withBlock:^(id sender) {
             
-            EMIconDirectionButton *btn = sender;
+//            EMIconDirectionButton *btn = sender;
             
-            [weakSelf loadVcWithBtnTag:btn.tag];
+//            [weakSelf loadVcWithBtnTag:btn.tag];
+            
+            if (weakSelf.delegate) {
+                [weakSelf.delegate cellBtnClick:(UIButton *)sender];
+            }
             
         }];
         if (index == 0) {
@@ -97,38 +102,6 @@
     }
     
 }
-
-- (void)loadVcWithBtnTag:(NSInteger)tag {
-    
-    switch (tag) {
-        case 100:{
-            //学生界面
-            NSLog(@"推出学生界面");
-            EMStuOrTeacherViewController *sTVc = [[EMStuOrTeacherViewController alloc] init];
-            [self.classTableView.navigationController pushViewController:sTVc animated:YES];
-        }
-            break;
-        case 101:{
-            //统计界面
-        }
-            break;
-        case 102:{
-            //签到
-        }
-        case 103:{
-            //签退
-        }
-        default: {
-            //统计
-        }
-            break;
-    }
-
-}
-
-
-
-
 
 
 

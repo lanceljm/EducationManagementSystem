@@ -15,8 +15,6 @@
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,assign) CGFloat searchMaxY;
 
-
-
 @end
 
 @implementation EMStuOrTeacherViewController
@@ -28,7 +26,7 @@
     _searchMaxY = CGRectGetMaxY(searchV.frame);
     [self.view addSubview:searchV];
 
-    [self.view addSubview:self.tableView];
+    //[self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,9 +34,6 @@
 }
 
 #pragma mark - tableViewDataSource delegate
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return  1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return  10;
@@ -46,7 +41,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    EMStuCell *cell = [tableView dequeueReusableCellWithIdentifier:@"stuID"];
+    EMStuCell *cell = [EMStuCell loadCellWithTableView:tableView];
     
     return  cell;
 }
@@ -64,7 +59,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = AAdaption(100);
-        [_tableView registerClass:[EMStuCell class] forCellReuseIdentifier:@"stuID"];
+        
     }
     return _tableView;
 }

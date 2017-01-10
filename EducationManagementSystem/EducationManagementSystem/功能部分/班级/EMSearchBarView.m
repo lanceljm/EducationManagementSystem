@@ -29,7 +29,7 @@
         imageView.image = [UIImage imageNamed:@"search"];
         [self addSubview:imageView];
         
-        UITextField *textF = [[UITextField alloc] initWithFrame:AAdaptionRect(50, 20, 710, 75)];
+        UITextField *textF = [[UITextField alloc] initWithFrame:AAdaptionRect(95, 20, 710, 75)];
         textF.borderStyle = UITextBorderStyleNone;
         textF.backgroundColor = [UIColor clearColor];
         [self addSubview:textF];

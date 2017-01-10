@@ -19,9 +19,9 @@
 
 @implementation EMStuCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
+//- (void)awakeFromNib {
+//    [super awakeFromNib];
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -32,7 +32,18 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self creatCell];
+        
+        _nameLabel = [[UILabel alloc] initWithFrame:AAdaptionRect(20, 10, 200, 80)];
+        _nameLabel.text = @"王晓晓";
+        [self.contentView addSubview:_nameLabel];
+        
+        _sexImgV = [[UIImageView alloc] initWithFrame:AAdaptionRect(240, 20, 60, 60)];
+        _sexImgV.image = [UIImage imageNamed:@"men"];
+        [self.contentView addSubview:_sexImgV];
+        
+        _class = [[UILabel alloc] initWithFrame:AAdaptionRect(320, 10, 200, 80)];
+        _class.text = @"商务英语";
+        [self.contentView addSubview:_class];
     }
     return self;
 }
@@ -55,17 +66,7 @@
 
 
 - (void)creatCell {
-    _nameLabel = [[UILabel alloc] initWithFrame:AAdaptionRect(20, 10, 200, 80)];
-    _nameLabel.text = @"王晓晓";
-    [self.contentView addSubview:_nameLabel];
-    _sexImgV = [[UIImageView alloc] initWithFrame:AAdaptionRect(240, 20, 60, 60)];
-    _sexImgV.image = [UIImage imageNamed:@"men"];
-    [self.contentView addSubview:_sexImgV];
-    
-    _class = [[UILabel alloc] initWithFrame:AAdaptionRect(320, 10, 200, 80)];
-    _class.text = @"商务英语";
-    [self.contentView addSubview:_class];
-}
+   }
 
 
 @end
