@@ -19,6 +19,9 @@
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
 		CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */; };
 		CF26F8E61E20E91700880FDF /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */; };
+		CF2A38731E246CF100118059 /* NetRequest+getClassList.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38721E246CF100118059 /* NetRequest+getClassList.m */; };
+		CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38761E246DC800118059 /* EMClassViewModel.m */; };
+		CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A387A1E246E7200118059 /* EMClassModel.m */; };
 		CF59C1621E1F7EA40081833A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1611E1F7EA40081833A /* main.m */; };
 		CF59C17B1E1F7EA40081833A /* EducationManagementSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C17A1E1F7EA40081833A /* EducationManagementSystemTests.m */; };
 		CF59C1861E1F7EA40081833A /* EducationManagementSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1851E1F7EA40081833A /* EducationManagementSystemUITests.m */; };
@@ -81,6 +84,13 @@
 		CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconUnderLineTextF.m; sourceTree = "<group>"; };
 		CF26F8E41E20E91700880FDF /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
 		CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		CF2A38711E246CF100118059 /* NetRequest+getClassList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetRequest+getClassList.h"; sourceTree = "<group>"; };
+		CF2A38721E246CF100118059 /* NetRequest+getClassList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetRequest+getClassList.m"; sourceTree = "<group>"; };
+		CF2A38751E246DC800118059 /* EMClassViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClassViewModel.h; sourceTree = "<group>"; };
+		CF2A38761E246DC800118059 /* EMClassViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMClassViewModel.m; sourceTree = "<group>"; };
+		CF2A38791E246E7200118059 /* EMClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClassModel.h; sourceTree = "<group>"; };
+		CF2A387A1E246E7200118059 /* EMClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMClassModel.m; sourceTree = "<group>"; };
+		CF2A387F1E2474A800118059 /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
 		CF37D5E61E231B6B0019E9A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CF59C15D1E1F7EA40081833A /* EducationManagementSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationManagementSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59C1611E1F7EA40081833A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -229,6 +239,24 @@
 			name = "类目";
 			sourceTree = "<group>";
 		};
+		CF2A38741E246DA600118059 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF2A38751E246DC800118059 /* EMClassViewModel.h */,
+				CF2A38761E246DC800118059 /* EMClassViewModel.m */,
+			);
+			name = viewModel;
+			sourceTree = "<group>";
+		};
+		CF2A38781E246E5800118059 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CF2A38791E246E7200118059 /* EMClassModel.h */,
+				CF2A387A1E246E7200118059 /* EMClassModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		CF37D5E71E232CEF0019E9A0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +358,8 @@
 		CF59C1961E1F80790081833A /* 班级 */ = {
 			isa = PBXGroup;
 			children = (
+				CF2A38781E246E5800118059 /* model */,
+				CF2A38741E246DA600118059 /* viewModel */,
 				CFED49341E23620200750CBA /* view */,
 				CF37D5E71E232CEF0019E9A0 /* Controller */,
 				CF59C1AA1E1F87760081833A /* EMClassViewController.h */,
@@ -375,6 +405,7 @@
 				CF59C19E1E1F83DE0081833A /* BaseViewController.h */,
 				CF59C19F1E1F83DE0081833A /* BaseViewController.m */,
 				CF37D5E61E231B6B0019E9A0 /* PrefixHeader.pch */,
+				CF2A387F1E2474A800118059 /* URL.h */,
 			);
 			path = "公用";
 			sourceTree = "<group>";
@@ -428,6 +459,8 @@
 		CF59C1C71E1F969D0081833A /* 班级 */ = {
 			isa = PBXGroup;
 			children = (
+				CF2A38711E246CF100118059 /* NetRequest+getClassList.h */,
+				CF2A38721E246CF100118059 /* NetRequest+getClassList.m */,
 			);
 			name = "班级";
 			sourceTree = "<group>";
@@ -774,13 +807,16 @@
 				CF59C1A31E1F850A0081833A /* EMTabBarController.m in Sources */,
 				CFED49331E232EC500750CBA /* EMIconDirectionButton.m in Sources */,
 				1A007EB41E2363B2001907AE /* ViewController.m in Sources */,
+				CF2A38731E246CF100118059 /* NetRequest+getClassList.m in Sources */,
 				CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */,
 				CF5D4F0C1E23A508004713A2 /* EMStuOrTeacherViewController.m in Sources */,
 				CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */,
 				1A007EA31E2330B2001907AE /* EMSysButton.m in Sources */,
 				CF5D4F091E238309004713A2 /* LogCategory.m in Sources */,
 				CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */,
+				CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */,
 				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
+				CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */,
 				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
 				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,
 				CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */,
@@ -937,7 +973,7 @@
 				DEVELOPMENT_TEAM = Q87YBSMBE8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
-				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EducationManagementSystem/框架部分/系统/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -952,7 +988,7 @@
 				DEVELOPMENT_TEAM = Q87YBSMBE8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EducationManagementSystem/框架部分/公用/PrefixHeader.pch";
-				INFOPLIST_FILE = EducationManagementSystem/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EducationManagementSystem/框架部分/系统/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HuaHuaCai.EducationManagementSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";

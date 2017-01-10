@@ -13,6 +13,7 @@
 
 #import "Adaption.h"
 #import "UIColor+CZAddition.h"
+#import "NetRequest.h"
 
 #pragma mark -- 定义UIButton公用的的block类型
 typedef void (^ButtomClicked)();
@@ -32,6 +33,8 @@ typedef void (^ButtomClickedWithSender)(id sender);
 #define MainThemeColor [UIColor colorWithRed:0x22 / 255.0 green:0x69 / 255.0 blue:0xd5 / 255.0 alpha:1]
 // ***************** 主背景色 **********************
 #define MainBgColor [UIColor colorWithRed:39 / 255.0 green:93 / 255.0 blue:216 / 255.0 alpha:1]
+
+
 
 
 #endif /* PrefixHeader_pch */
