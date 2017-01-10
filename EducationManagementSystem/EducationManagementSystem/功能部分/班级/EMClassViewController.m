@@ -9,6 +9,7 @@
 #import "EMClassViewController.h"
 #import "EMIconDirectionButton.h"
 #import "EMClassViewCell.h"
+#import "EMClassViewModel.h"
 
 @interface EMClassViewController ()
 
@@ -21,10 +22,22 @@
     [super viewDidLoad];
 
     self.tableView.rowHeight = AAdaption(280);
+    [self downLoadData];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+
+- (void)downLoadData {
+    EMClassViewModel* viewModel = [[EMClassViewModel alloc] init];
+    [viewModel loadDataWithFinish:^(BOOL isok) {
+        if (isok) {
+            NSLog(@"请求成功");
+        }
+    }];
 }
 
 
