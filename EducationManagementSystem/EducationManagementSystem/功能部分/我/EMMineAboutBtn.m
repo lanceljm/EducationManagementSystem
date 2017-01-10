@@ -39,7 +39,7 @@
         
         //分割线
         UILabel *lineLabel = [[UILabel alloc] initWithFrame:AAdaptionRect(0, self.frame.size.height/AAdaptionWidth() - 2 , self.frame.size.width/AAdaptionWidth(), 2)];
-        lineLabel.backgroundColor = [UIColor grayColor];
+        lineLabel.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:lineLabel];
         
         //设置背景颜色的时候可能会影响各个空间的尺寸

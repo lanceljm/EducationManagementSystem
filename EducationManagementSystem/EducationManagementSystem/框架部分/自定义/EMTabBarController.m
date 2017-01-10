@@ -14,8 +14,6 @@
 
 @implementation EMTabBarController
 
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

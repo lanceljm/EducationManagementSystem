@@ -86,7 +86,7 @@
 //意见反馈
 -(EMMineAboutBtn *)adviceFeedback {
     if (!_adviceFeedback) {
-        _adviceFeedback = [[EMMineAboutBtn alloc]initWithFrame:AAdaptionRect(0, 700, kBaseWidth, 100) withTag:1006 withLeftImageName:@"Mail02" withTextLabel:@"意见反馈" withTextColor:[UIColor cz_colorWithHex:0x4f4f4f] withTextFontSize:18 withRightName:@"向右箭头" withClickedBlock:^(id sender) {
+        _adviceFeedback = [[EMMineAboutBtn alloc]initWithFrame:AAdaptionRect(0, 700, kBaseWidth, 100) withTag:1006 withLeftImageName:@"feedBack" withTextLabel:@"意见反馈" withTextColor:[UIColor cz_colorWithHex:0x4f4f4f] withTextFontSize:18 withRightName:@"向右箭头" withClickedBlock:^(id sender) {
             
         }];
     }
@@ -95,12 +95,22 @@
 
 //退出登录
 -(EMSysButton *)logoutBtn {
-    __weak typeof(self) weakself = self;
     if (!_logoutBtn) {
         _logoutBtn = [[EMSysButton alloc]initWithFrame:AAdaptionRect(40, 990, 672, 90) withTag:1004 withTitle:@"退出登录" withTitleColor:[UIColor whiteColor] withBackgrougdColor:MainBgColor withCornerRadious:0.1 withClickedBlock:^(id sender) {
            //
-            [weakself.view removeFromSuperview];
-            [weakself removeFromParentViewController];
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"退出登录" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //确定退出
+                //发送通知
+                [[NSNotificationCenter defaultCenter]postNotificationName:@"setLoginVc" object:nil];
+                
+            }]];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                //取消
+            }]];
+            
+            [self presentViewController:alertVC animated:YES completion:nil];
+            
         }];
     }
     return _logoutBtn;
