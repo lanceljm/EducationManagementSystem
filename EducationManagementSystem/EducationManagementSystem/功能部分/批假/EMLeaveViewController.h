@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface EMLeaveViewController : BaseViewController
+@interface EMLeaveViewController : UITableViewController
 
 @end

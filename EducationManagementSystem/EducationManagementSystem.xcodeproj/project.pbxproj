@@ -13,8 +13,6 @@
 		1A007EB01E2363B2001907AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EA61E2363B2001907AE /* Assets.xcassets */; };
 		1A007EB11E2363B2001907AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EA81E2363B2001907AE /* LaunchScreen.storyboard */; };
 		1A007EB21E2363B2001907AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EAA1E2363B2001907AE /* Main.storyboard */; };
-		1A007EB31E2363B2001907AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EAC1E2363B2001907AE /* Info.plist */; };
-		1A007EB41E2363B2001907AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A007EAE1E2363B2001907AE /* ViewController.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
 		CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */; };
@@ -22,6 +20,7 @@
 		CF2A38731E246CF100118059 /* NetRequest+getClassList.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38721E246CF100118059 /* NetRequest+getClassList.m */; };
 		CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38761E246DC800118059 /* EMClassViewModel.m */; };
 		CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A387A1E246E7200118059 /* EMClassModel.m */; };
+		CF2A38861E24B14700118059 /* EMStuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38851E24B14700118059 /* EMStuCell.m */; };
 		CF59C1621E1F7EA40081833A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1611E1F7EA40081833A /* main.m */; };
 		CF59C17B1E1F7EA40081833A /* EducationManagementSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C17A1E1F7EA40081833A /* EducationManagementSystemTests.m */; };
 		CF59C1861E1F7EA40081833A /* EducationManagementSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59C1851E1F7EA40081833A /* EducationManagementSystemUITests.m */; };
@@ -70,8 +69,6 @@
 		1A007EA91E2363B2001907AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A007EAB1E2363B2001907AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		1A007EAC1E2363B2001907AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A007EAD1E2363B2001907AE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1A007EAE1E2363B2001907AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests.release.xcconfig"; sourceTree = "<group>"; };
 		2ABB39BBFAD6962E81ACE2B3 /* Pods-EducationManagementSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +88,8 @@
 		CF2A38791E246E7200118059 /* EMClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClassModel.h; sourceTree = "<group>"; };
 		CF2A387A1E246E7200118059 /* EMClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMClassModel.m; sourceTree = "<group>"; };
 		CF2A387F1E2474A800118059 /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
+		CF2A38841E24B14700118059 /* EMStuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStuCell.h; sourceTree = "<group>"; };
+		CF2A38851E24B14700118059 /* EMStuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStuCell.m; sourceTree = "<group>"; };
 		CF37D5E61E231B6B0019E9A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CF59C15D1E1F7EA40081833A /* EducationManagementSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationManagementSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59C1611E1F7EA40081833A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -418,8 +417,6 @@
 				1A007EA61E2363B2001907AE /* Assets.xcassets */,
 				1A007EA71E2363B2001907AE /* Base.lproj */,
 				1A007EAC1E2363B2001907AE /* Info.plist */,
-				1A007EAD1E2363B2001907AE /* ViewController.h */,
-				1A007EAE1E2363B2001907AE /* ViewController.m */,
 			);
 			path = "系统";
 			sourceTree = "<group>";
@@ -509,6 +506,8 @@
 				CFED49361E23622500750CBA /* EMClassViewCell.m */,
 				CF5D4F0D1E23A6DD004713A2 /* EMSearchBarView.h */,
 				CF5D4F0E1E23A6DD004713A2 /* EMSearchBarView.m */,
+				CF2A38841E24B14700118059 /* EMStuCell.h */,
+				CF2A38851E24B14700118059 /* EMStuCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -632,7 +631,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A007EB31E2363B2001907AE /* Info.plist in Resources */,
 				1A007EB21E2363B2001907AE /* Main.storyboard in Resources */,
 				1A007EB01E2363B2001907AE /* Assets.xcassets in Resources */,
 				1A007EB11E2363B2001907AE /* LaunchScreen.storyboard in Resources */,
@@ -806,7 +804,6 @@
 				CF59C1AF1E1F899B0081833A /* EMAttendanceController.m in Sources */,
 				CF59C1A31E1F850A0081833A /* EMTabBarController.m in Sources */,
 				CFED49331E232EC500750CBA /* EMIconDirectionButton.m in Sources */,
-				1A007EB41E2363B2001907AE /* ViewController.m in Sources */,
 				CF2A38731E246CF100118059 /* NetRequest+getClassList.m in Sources */,
 				CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */,
 				CF5D4F0C1E23A508004713A2 /* EMStuOrTeacherViewController.m in Sources */,
@@ -822,6 +819,7 @@
 				CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */,
 				CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */,
 				CF59C1B21E1F89D80081833A /* EMNoticeViewController.m in Sources */,
+				CF2A38861E24B14700118059 /* EMStuCell.m in Sources */,
 				CF59C1621E1F7EA40081833A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
