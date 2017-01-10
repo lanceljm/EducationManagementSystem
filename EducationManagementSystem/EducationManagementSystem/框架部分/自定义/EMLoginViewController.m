@@ -10,6 +10,7 @@
 #import "EMIconUnderLineTextF.h"
 #import "EMSysButton.h"
 #import "EMIconDirectionButton.h"
+#import "NetRequest.h"
 
 @interface EMLoginViewController ()
 
@@ -91,6 +92,7 @@
 -(EMIconUnderLineTextF *)passwordTF{
     if (!_passwordTF) {
         _passwordTF = [[EMIconUnderLineTextF alloc]initWithFrame:AAdaptionRect(188, 664, 454, 60) andImageName:@"Locked" withPlaceholder:@"请输入密码"];
+        _passwordTF.secureTextEntry = YES;
     }
     return _passwordTF;
 }
@@ -98,12 +100,31 @@
 //登录
 -(EMSysButton *)loginBtn{
     
-    __weak typeof(self) weakself = self;
+//    __weak typeof(self) weakself = self;
     if (!_loginBtn) {
         _loginBtn = [[EMSysButton alloc]initWithFrame:AAdaptionRect(90, 810, 576, 80) withTag:1002 withTitle:@"登录" withTitleColor:[UIColor whiteColor] withBackgrougdColor:MainBgColor withCornerRadious:0.5 withClickedBlock:^(id sender) {
             //
-            [weakself.view removeFromSuperview];
-            [weakself removeFromParentViewController];
+            if ([_accountTF.text  isEqualToString: @""]) {
+                NSLog(@"账号不能为空");
+            }else if ([_passwordTF.text isEqualToString:@""]) {
+                NSLog(@"密码不能为空");
+            }else{
+                
+                //网络请求
+                NSString *urlStr = @"http://192.168.0.117/api/staff/login.html";
+                NSDictionary *parm = @{@"account":self.accountTF.text,@"password":self.passwordTF.text};
+                [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
+                    NSLog(@"-----------%@----------",responseObject);
+                    if (responseObject[@"status"] == 0) {
+                        [self.view removeFromSuperview];
+                        [self removeFromParentViewController];
+                        NSLog(@"登录成功");
+                    }
+                } failture:^(NSError *error) {
+                    NSLog(@"error:%@,登录失败",error);
+                }];
+                
+            }
         }];
     }
     return _loginBtn;
@@ -114,6 +135,11 @@
     if (!_forgetBtn) {
         _forgetBtn = [[EMIconDirectionButton alloc]initWithFrame:AAdaptionRect(296, 926, 160, 40) withTag:1003 withTitle:@"忘记密码" withTitleColor:MainThemeColor withImage:@"ic" withFont:28 withDirection:right withBlock:^(id sender) {
             //
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请联系管理员重置密码" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //
+            }]];
+            [self presentViewController:alertVC animated:YES completion:nil];
             
         }];
     }
