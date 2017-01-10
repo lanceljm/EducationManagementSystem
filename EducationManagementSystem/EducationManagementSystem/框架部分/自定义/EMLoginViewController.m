@@ -99,8 +99,6 @@
 
 //登录
 -(EMSysButton *)loginBtn{
-    
-//    __weak typeof(self) weakself = self;
     if (!_loginBtn) {
         _loginBtn = [[EMSysButton alloc]initWithFrame:AAdaptionRect(90, 810, 576, 80) withTag:1002 withTitle:@"登录" withTitleColor:[UIColor whiteColor] withBackgrougdColor:MainBgColor withCornerRadious:0.5 withClickedBlock:^(id sender) {
             //
@@ -109,21 +107,18 @@
             }else if ([_passwordTF.text isEqualToString:@""]) {
                 NSLog(@"密码不能为空");
             }else{
-                
-                //网络请求
-                NSString *urlStr = @"http://192.168.0.117/api/staff/login.html";
-                NSDictionary *parm = @{@"account":self.accountTF.text,@"password":self.passwordTF.text};
-                [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
-                    NSLog(@"-----------%@----------",responseObject);
-                    if (responseObject[@"status"] == 0) {
-                        [self.view removeFromSuperview];
-                        [self removeFromParentViewController];
-                        NSLog(@"登录成功");
-                    }
-                } failture:^(NSError *error) {
-                    NSLog(@"error:%@,登录失败",error);
-                }];
-                
+            //网络请求
+            NSString *urlStr = @"http://192.168.0.117/api/staff/login.html";
+            NSDictionary *parm = @{@"account":_accountTF.text,@"password":_passwordTF.text};
+            [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
+                if ([responseObject[@"message"] isEqualToString:@"Success"]) {
+                    [self.view removeFromSuperview];
+                    [self removeFromParentViewController];
+                    NSLog(@"登录成功");
+                }
+            } failture:^(NSError *error) {
+                NSLog(@"error:%@,登录失败",error);
+            }];
             }
         }];
     }

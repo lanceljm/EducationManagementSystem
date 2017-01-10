@@ -6,6 +6,7 @@ target 'EducationManagementSystem' do
   # use_frameworks!
 
 pod "AFNetworking"
+pod 'BFKit'
   # Pods for EducationManagementSystem
 
   target 'EducationManagementSystemTests' do
