@@ -21,15 +21,12 @@
     
 }
 
-
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     //注册通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(setLoginVc) name:@"setLoginVc" object:nil];
 }
-
--(void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+-(void)dealloc {
     //移除通知
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
@@ -42,9 +39,7 @@
     [self setTabVc];
     [self setLoginVc];
     [self setLuanchVc];
-    
 }
-
 
 - (void)setLoginVc {
     EMLoginViewController *login = [[EMLoginViewController alloc] init];

@@ -100,8 +100,8 @@
            //
             UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"退出登录" message:nil preferredStyle:UIAlertControllerStyleAlert];
             [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                NSLog(@"这是单例用户信息%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"]);
                 //确定退出
-                //发送通知
                 [[NSNotificationCenter defaultCenter]postNotificationName:@"setLoginVc" object:nil];
                 
             }]];
