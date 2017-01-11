@@ -8,9 +8,9 @@
 
 #import "EMStuOrTeacherViewController.h"
 #import "EMSearchBarView.h"
-#import "EMStuCell.h"
+#import "EMSTCell.h"
 
-@interface EMStuOrTeacherViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface EMStuOrTeacherViewController ()<UITableViewDelegate,UITableViewDataSource,cellBtnClickedDelegate>
 
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,assign) CGFloat searchMaxY;
@@ -26,11 +26,22 @@
     _searchMaxY = CGRectGetMaxY(searchV.frame);
     [self.view addSubview:searchV];
 
-    //[self.view addSubview:self.tableView];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+
+#pragma mark - 自定义cell的代理方法
+-(void)cellBtnClick:(UIButton *)btn {
+    
+    EMSTCell *cell = (EMSTCell *)[[btn superview] superview];
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    
+    NSLog(@"被点击的cell在%ld行",indexPath.row);
 }
 
 #pragma mark - tableViewDataSource delegate
@@ -41,7 +52,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    EMStuCell *cell = [EMStuCell loadCellWithTableView:tableView];
+    static NSString *cellID = @"STCELL_ID";
+    
+    EMSTCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[EMSTCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    cell.delegate = self;
     
     return  cell;
 }

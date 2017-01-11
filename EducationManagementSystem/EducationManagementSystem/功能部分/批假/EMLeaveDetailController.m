@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"批假";
+    self.view.backgroundColor = [UIColor lightGrayColor];
     [self setupUI];
 }
 

@@ -44,9 +44,10 @@
 
 -(void)cellBtnClick:(UIButton *)btn {
     
-    EMClassViewCell *cell = (EMClassViewCell *)[btn superview];
+    EMClassViewCell *cell = (EMClassViewCell *)[[btn superview] superview];
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     
+    NSLog(@"我在第%ld行",(long)indexPath.row);
     switch (btn.tag) {
         case 100:{
             //学生界面
@@ -56,7 +57,9 @@
         }
             break;
         case 101:{
-            //统计界面
+            //老师界面
+            EMStuOrTeacherViewController *sTVc = [[EMStuOrTeacherViewController alloc] init];
+            [self.navigationController pushViewController:sTVc animated:YES];
         }
             break;
         case 102:{

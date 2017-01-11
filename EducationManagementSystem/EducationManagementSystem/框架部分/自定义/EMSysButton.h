@@ -14,4 +14,6 @@
 
 -(instancetype)initWithFrame:(CGRect)frame withTag:(NSInteger)tag withTitle:(NSString *)title withTitleColor:(UIColor *)titleColor withBackgrougdColor:(UIColor *)bgColor withCornerRadious:(CGFloat)corner withClickedBlock:(ButtomClickedWithSender)clicked;
 
+-(instancetype)initWithFrame:(CGRect)frame withImgName:(NSString*)img withClickedBlock:(ButtomClickedWithSender)clicked;
+
 @end

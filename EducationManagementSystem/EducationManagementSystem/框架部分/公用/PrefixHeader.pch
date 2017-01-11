@@ -19,6 +19,12 @@
 typedef void (^ButtomClicked)();
 typedef void (^ButtomClickedWithSender)(id sender);
 
+#pragma mark - 传出cell里面的btn
+@protocol cellBtnClickedDelegate <NSObject>
+
+- (void)cellBtnClick:(UIButton *)btn;
+
+@end
 
 #pragma mark - 颜色
 //登录框underLine颜色

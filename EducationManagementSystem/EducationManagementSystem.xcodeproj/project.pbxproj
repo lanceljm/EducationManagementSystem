@@ -13,8 +13,6 @@
 		1A007EB01E2363B2001907AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EA61E2363B2001907AE /* Assets.xcassets */; };
 		1A007EB11E2363B2001907AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EA81E2363B2001907AE /* LaunchScreen.storyboard */; };
 		1A007EB21E2363B2001907AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EAA1E2363B2001907AE /* Main.storyboard */; };
-		1A007EB31E2363B2001907AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EAC1E2363B2001907AE /* Info.plist */; };
-		1A007EB41E2363B2001907AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A007EAE1E2363B2001907AE /* ViewController.m */; };
 		1A2092E61E24BE6400BEF63A /* EMMineAboutBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2092E51E24BE6400BEF63A /* EMMineAboutBtn.m */; };
 		1A2092E91E24D58400BEF63A /* EMLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2092E81E24D58400BEF63A /* EMLoginModel.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
@@ -24,7 +22,6 @@
 		CF2A38731E246CF100118059 /* NetRequest+getClassList.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38721E246CF100118059 /* NetRequest+getClassList.m */; };
 		CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38761E246DC800118059 /* EMClassViewModel.m */; };
 		CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A387A1E246E7200118059 /* EMClassModel.m */; };
-		CF2A38861E24B14700118059 /* EMStuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38851E24B14700118059 /* EMStuCell.m */; };
 		CF5110C21E24C25C007062C5 /* EMLeaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5110C11E24C25C007062C5 /* EMLeaveCell.m */; };
 		CF5110C51E24CB15007062C5 /* EMHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5110C41E24CB15007062C5 /* EMHistoryController.m */; };
 		CF5110C81E24D174007062C5 /* EMLeaveDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5110C71E24D174007062C5 /* EMLeaveDetailController.m */; };
@@ -46,6 +43,8 @@
 		CF5D4F091E238309004713A2 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D4F081E238309004713A2 /* LogCategory.m */; };
 		CF5D4F0C1E23A508004713A2 /* EMStuOrTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D4F0B1E23A508004713A2 /* EMStuOrTeacherViewController.m */; };
 		CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D4F0E1E23A6DD004713A2 /* EMSearchBarView.m */; };
+		CFAFBC781E25CEEF00F4A020 /* EMSTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */; };
+		CFAFBC7E1E25DBFD00F4A020 /* EMBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAFBC7D1E25DBFD00F4A020 /* EMBaseCell.m */; };
 		CFED49331E232EC500750CBA /* EMIconDirectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CFED49321E232EC500750CBA /* EMIconDirectionButton.m */; };
 		CFED49371E23622600750CBA /* EMClassViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFED49361E23622500750CBA /* EMClassViewCell.m */; };
 /* End PBXBuildFile section */
@@ -77,8 +76,6 @@
 		1A007EA91E2363B2001907AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A007EAB1E2363B2001907AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		1A007EAC1E2363B2001907AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A007EAD1E2363B2001907AE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1A007EAE1E2363B2001907AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A2092E41E24BE6400BEF63A /* EMMineAboutBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMineAboutBtn.h; sourceTree = "<group>"; };
 		1A2092E51E24BE6400BEF63A /* EMMineAboutBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMineAboutBtn.m; sourceTree = "<group>"; };
 		1A2092E71E24D58400BEF63A /* EMLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLoginModel.h; sourceTree = "<group>"; };
@@ -102,8 +99,6 @@
 		CF2A38791E246E7200118059 /* EMClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClassModel.h; sourceTree = "<group>"; };
 		CF2A387A1E246E7200118059 /* EMClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMClassModel.m; sourceTree = "<group>"; };
 		CF2A387F1E2474A800118059 /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
-		CF2A38841E24B14700118059 /* EMStuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStuCell.h; sourceTree = "<group>"; };
-		CF2A38851E24B14700118059 /* EMStuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStuCell.m; sourceTree = "<group>"; };
 		CF37D5E61E231B6B0019E9A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CF5110C01E24C25C007062C5 /* EMLeaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLeaveCell.h; sourceTree = "<group>"; };
 		CF5110C11E24C25C007062C5 /* EMLeaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLeaveCell.m; sourceTree = "<group>"; };
@@ -150,6 +145,10 @@
 		CF5D4F0B1E23A508004713A2 /* EMStuOrTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStuOrTeacherViewController.m; sourceTree = "<group>"; };
 		CF5D4F0D1E23A6DD004713A2 /* EMSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSearchBarView.h; sourceTree = "<group>"; };
 		CF5D4F0E1E23A6DD004713A2 /* EMSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSearchBarView.m; sourceTree = "<group>"; };
+		CFAFBC761E25CEEF00F4A020 /* EMSTCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSTCell.h; sourceTree = "<group>"; };
+		CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSTCell.m; sourceTree = "<group>"; };
+		CFAFBC7C1E25DBFD00F4A020 /* EMBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBaseCell.h; path = ../EMBaseCell.h; sourceTree = "<group>"; };
+		CFAFBC7D1E25DBFD00F4A020 /* EMBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBaseCell.m; path = ../EMBaseCell.m; sourceTree = "<group>"; };
 		CFED49311E232EC500750CBA /* EMIconDirectionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMIconDirectionButton.h; sourceTree = "<group>"; };
 		CFED49321E232EC500750CBA /* EMIconDirectionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconDirectionButton.m; sourceTree = "<group>"; };
 		CFED49351E23622500750CBA /* EMClassViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClassViewCell.h; sourceTree = "<group>"; };
@@ -310,6 +309,8 @@
 			children = (
 				CF5D4F0A1E23A508004713A2 /* EMStuOrTeacherViewController.h */,
 				CF5D4F0B1E23A508004713A2 /* EMStuOrTeacherViewController.m */,
+				CFAFBC761E25CEEF00F4A020 /* EMSTCell.h */,
+				CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -463,6 +464,8 @@
 				CF59C19F1E1F83DE0081833A /* BaseViewController.m */,
 				CF37D5E61E231B6B0019E9A0 /* PrefixHeader.pch */,
 				CF2A387F1E2474A800118059 /* URL.h */,
+				CFAFBC7C1E25DBFD00F4A020 /* EMBaseCell.h */,
+				CFAFBC7D1E25DBFD00F4A020 /* EMBaseCell.m */,
 			);
 			path = "公用";
 			sourceTree = "<group>";
@@ -564,8 +567,6 @@
 				CFED49361E23622500750CBA /* EMClassViewCell.m */,
 				CF5D4F0D1E23A6DD004713A2 /* EMSearchBarView.h */,
 				CF5D4F0E1E23A6DD004713A2 /* EMSearchBarView.m */,
-				CF2A38841E24B14700118059 /* EMStuCell.h */,
-				CF2A38851E24B14700118059 /* EMStuCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -874,6 +875,7 @@
 				CF5D4F091E238309004713A2 /* LogCategory.m in Sources */,
 				CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */,
 				CF5110CB1E24DAD7007062C5 /* EMLikeCellView.m in Sources */,
+				CFAFBC7E1E25DBFD00F4A020 /* EMBaseCell.m in Sources */,
 				CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */,
 				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
 				CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */,
@@ -882,9 +884,9 @@
 				CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */,
 				CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */,
 				CF59C1B21E1F89D80081833A /* EMNoticeViewController.m in Sources */,
-				CF2A38861E24B14700118059 /* EMStuCell.m in Sources */,
 				CF5110C81E24D174007062C5 /* EMLeaveDetailController.m in Sources */,
 				CF59C1621E1F7EA40081833A /* main.m in Sources */,
+				CFAFBC781E25CEEF00F4A020 /* EMSTCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
