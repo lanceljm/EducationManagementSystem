@@ -46,7 +46,6 @@
         self.backgroundColor = [UIColor clearColor];
         self.titleLabel.backgroundColor = [UIColor clearColor];
         self.imageView.backgroundColor = [UIColor clearColor];
-    
     }
     return self;
 }
