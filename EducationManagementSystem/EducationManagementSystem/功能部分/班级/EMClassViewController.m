@@ -23,7 +23,8 @@
     [super viewDidLoad];
 
     self.tableView.rowHeight = AAdaption(280);
-    [self downLoadData];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(downLoadData) name:@"networking" object:nil];
+//    [self downLoadData];
 }
 
 
@@ -53,6 +54,7 @@
             //学生界面
             NSLog(@"推出学生界面");
             EMStuOrTeacherViewController *sTVc = [[EMStuOrTeacherViewController alloc] init];
+            
             [self.navigationController pushViewController:sTVc animated:YES];
         }
             break;

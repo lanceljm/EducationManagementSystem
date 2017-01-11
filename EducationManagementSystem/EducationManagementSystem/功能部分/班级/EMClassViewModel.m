@@ -14,14 +14,16 @@
 
 - (void)loadDataWithFinish:(void(^)(BOOL))isSuccess {
 
-    NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:UserInfoKey];
+    NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
     NSNumber *staffId = userInfo[@"staffId"];
     NSNumber *administrationId = userInfo[@"administrationId"];
     NSString *token = userInfo[@"token"];
-    NSLog(@"%@",token);
+    
     NSDictionary *paramters = @{@"staffId":staffId,@"teacher":administrationId,@"token":token};
     [NetRequest GET:getClassList parameters:paramters success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
+        NSArray *result = responseObject[@"result"];
+        NSLog(@"%@",result);
         isSuccess(YES);
     } failture:^(NSError *error) {
         isSuccess(NO);
