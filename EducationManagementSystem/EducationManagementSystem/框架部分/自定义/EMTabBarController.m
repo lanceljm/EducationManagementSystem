@@ -7,12 +7,14 @@
 //
 
 #import "EMTabBarController.h"
+#import "RootViewController.h"
 
 @interface EMTabBarController ()
 
 @end
 
 @implementation EMTabBarController
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -51,14 +53,5 @@
     
 }
 
-- (void)addChildVcWithClassName:(NSString *)className andTitle:(NSString *)title {
-    UIViewController *vc = [[NSClassFromString(className) alloc] init];
-    vc.tabBarItem.title = title;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    vc.title = title;
-    [self addChildViewController:nav];
-    
-
-}
 
 @end

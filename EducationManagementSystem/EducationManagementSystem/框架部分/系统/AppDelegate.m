@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
-#import "EMTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,18 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //获得保存的登录状态
-    NSString *login = [[NSUserDefaults standardUserDefaults]objectForKey:@"isLogin"];
-    if (login) {
-        self.window.rootViewController = [[EMTabBarController alloc]init];
-    }else {
-        self.window.rootViewController = [[RootViewController alloc] init];
-    }
+    self.window.rootViewController = [[RootViewController alloc]init];
     [self.window makeKeyAndVisible];
-    
     
     return YES;
 }
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -13,8 +13,6 @@
 		1A007EB01E2363B2001907AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EA61E2363B2001907AE /* Assets.xcassets */; };
 		1A007EB11E2363B2001907AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EA81E2363B2001907AE /* LaunchScreen.storyboard */; };
 		1A007EB21E2363B2001907AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EAA1E2363B2001907AE /* Main.storyboard */; };
-		1A007EB31E2363B2001907AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A007EAC1E2363B2001907AE /* Info.plist */; };
-		1A007EB41E2363B2001907AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A007EAE1E2363B2001907AE /* ViewController.m */; };
 		1A2092E61E24BE6400BEF63A /* EMMineAboutBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2092E51E24BE6400BEF63A /* EMMineAboutBtn.m */; };
 		1A2092E91E24D58400BEF63A /* EMLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2092E81E24D58400BEF63A /* EMLoginModel.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
@@ -77,8 +75,6 @@
 		1A007EA91E2363B2001907AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A007EAB1E2363B2001907AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		1A007EAC1E2363B2001907AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A007EAD1E2363B2001907AE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1A007EAE1E2363B2001907AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A2092E41E24BE6400BEF63A /* EMMineAboutBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMineAboutBtn.h; sourceTree = "<group>"; };
 		1A2092E51E24BE6400BEF63A /* EMMineAboutBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMineAboutBtn.m; sourceTree = "<group>"; };
 		1A2092E71E24D58400BEF63A /* EMLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLoginModel.h; sourceTree = "<group>"; };

@@ -83,7 +83,10 @@
 -(EMIconUnderLineTextF *)accountTF{
     if (!_accountTF) {
         _accountTF = [[EMIconUnderLineTextF alloc]initWithFrame:AAdaptionRect(188, 540, 454, 60) andImageName:@"User" withPlaceholder:@"请输入工号"];
-        _accountTF.text = @"Q16078856";
+        NSString *isLogin = [[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"];
+        if (isLogin) {
+            _accountTF.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"saveAccount"];
+        }
     }
     return _accountTF;
 }
@@ -92,7 +95,10 @@
 -(EMIconUnderLineTextF *)passwordTF{
     if (!_passwordTF) {
         _passwordTF = [[EMIconUnderLineTextF alloc]initWithFrame:AAdaptionRect(188, 664, 454, 60) andImageName:@"Locked" withPlaceholder:@"请输入密码"];
-        _passwordTF.text = @"888888";
+        NSString *isLogin = [[NSUserDefaults standardUserDefaults]objectForKey:@"isLogin"];
+        if (isLogin) {
+            _passwordTF.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"savePassword"];
+        }
         _passwordTF.secureTextEntry = YES;
     }
     return _passwordTF;
@@ -115,7 +121,7 @@
                 NSDictionary *userInfo = responseObject[@"result"];
                 
                 //保存用户登录字典
-                [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:@"UserInfoSave"];
+                [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:@"UserInfo"];
                 //保存登录状态
                 [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"isLogin"];
                 
@@ -123,6 +129,12 @@
                     [self.view removeFromSuperview];
                     [self removeFromParentViewController];
                     NSLog(@"登录成功");
+                    
+                    //保存账号
+                    [[NSUserDefaults standardUserDefaults]setValue:_accountTF.text forKey:@"saveAccount"];
+                    //保存密码
+                    [[NSUserDefaults standardUserDefaults]setValue:_passwordTF.text forKey:@"savePassword"];
+                    
                 }
             } failture:^(NSError *error) {
                 NSLog(@"error:%@,登录失败",error);
