@@ -6,8 +6,7 @@
 //  Copyright © 2017年 com.HuaHuaCai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface EMLeaveCell : UITableViewCell
+#import "EMBaseCell.h"
+@interface EMLeaveCell : EMBaseCell
 
 @end

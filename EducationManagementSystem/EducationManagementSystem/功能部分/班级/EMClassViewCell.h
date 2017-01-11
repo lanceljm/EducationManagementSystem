@@ -6,15 +6,9 @@
 //  Copyright © 2017年 com.HuaHuaCai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "EMBaseCell.h"
 
-@protocol cellBtnClickedDelegate <NSObject>
-
-- (void)cellBtnClick:(UIButton *)btn;
-
-@end
-
-@interface EMClassViewCell : UITableViewCell
+@interface EMClassViewCell : EMBaseCell
 
 @property(nonatomic,weak) id<cellBtnClickedDelegate>delegate;
 

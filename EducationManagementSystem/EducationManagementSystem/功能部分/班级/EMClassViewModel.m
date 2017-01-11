@@ -14,18 +14,28 @@
 
 - (void)loadDataWithFinish:(void(^)(BOOL))isSuccess {
 
-//    NSString *urlStr = @"http://192.168.0.117/api/staff/login.html";
-//    NSDictionary *para = @{@"account":@"Q16078856",@"password":@"888888"};
-    NSString *urlStr = @"http://192.168.0.117/api/staff/getClassList.html";
-    NSDictionary *paramters = @{@"staffId":@232,@"teacher":@1,@"token":@"b6d4d0358d344184884247420183a85f"};
-    [NetRequest GET:urlStr parameters:paramters success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
+    NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
+    NSNumber *staffId = userInfo[@"staffId"];
+    NSNumber *administrationId = userInfo[@"administrationId"];
+    NSString *token = userInfo[@"token"];
+    
+    NSDictionary *paramters = @{@"staffId":staffId,@"teacher":administrationId,@"token":token};
+    [NetRequest GET:getClassList parameters:paramters success:^(id responseObject) {
+//        NSLog(@"%@",responseObject);
+        NSArray *result = responseObject[@"result"];
+        NSLog(@"%@",result);
         isSuccess(YES);
     } failture:^(NSError *error) {
-        NSLog(@"%@",error);
         isSuccess(NO);
+
     }];
     
+    
+    //    NSString *urlStr = @"http://192.168.0.117/api/staff/login.html";
+    //    NSDictionary *para = @{@"account":@"Q16078856",@"password":@"888888"};
+    //    NSString *urlStr = @"http://192.168.0.117/api/staff/getClassList.html";
+    //UserInfoSave
+
     //232,a230ff516bac4cf6b921e363e1315b8a
     //
     

@@ -54,10 +54,10 @@
         cell = [[EMClassViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier tableView:vc];
     }
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.preservesSuperviewLayoutMargins = NO;
-    cell.separatorInset = UIEdgeInsetsZero;
-    cell.layoutMargins = UIEdgeInsetsZero;
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    cell.preservesSuperviewLayoutMargins = NO;
+//    cell.separatorInset = UIEdgeInsetsZero;
+//    cell.layoutMargins = UIEdgeInsetsZero;
 
     return cell;
 }

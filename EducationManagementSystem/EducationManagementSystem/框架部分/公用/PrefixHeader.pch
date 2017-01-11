@@ -19,12 +19,20 @@
 typedef void (^ButtomClicked)();
 typedef void (^ButtomClickedWithSender)(id sender);
 
+#pragma mark - 传出cell里面的btn
+@protocol cellBtnClickedDelegate <NSObject>
+
+- (void)cellBtnClick:(UIButton *)btn;
+
+@end
 
 #pragma mark - 颜色
 //登录框underLine颜色
 #define TextF_UNDERLINE [UIColor cz_colorWithHex:0x90b4e9]
 
 #define BLUE_COLOR [UIColor cz_colorWithHex:0x2269d5]
+
+#define Color_4F4F4F [UIColor cz_colorWithHex:0x4f4f4f] 
 
 
 #define RANDOMCOLOR [UIColor colorWithHue:arc4random()%256/255.0 saturation:arc4random()%256/255.0 brightness:arc4random()%256/255.0 alpha:1]

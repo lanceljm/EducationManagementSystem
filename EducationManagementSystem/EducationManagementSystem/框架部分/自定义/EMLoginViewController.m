@@ -119,7 +119,6 @@
             NSDictionary *parm = @{@"account":_accountTF.text,@"password":_passwordTF.text};
             [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
                 NSDictionary *userInfo = responseObject[@"result"];
-                
                 //保存用户登录字典
                 [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:@"UserInfo"];
                 //保存登录状态
@@ -134,6 +133,8 @@
                     [[NSUserDefaults standardUserDefaults]setValue:_accountTF.text forKey:@"saveAccount"];
                     //保存密码
                     [[NSUserDefaults standardUserDefaults]setValue:_passwordTF.text forKey:@"savePassword"];
+                    
+                    [[NSNotificationCenter defaultCenter]postNotificationName:@"networking" object:nil];
                     
                 }
             } failture:^(NSError *error) {

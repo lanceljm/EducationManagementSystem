@@ -27,6 +27,20 @@
     return self;
 }
 
+
+-(instancetype)initWithFrame:(CGRect)frame withImgName:(NSString*)img withClickedBlock:(ButtomClickedWithSender)clicked{
+    self = [super initWithFrame:frame];
+    if (self) {
+        if (clicked) {
+            self.btnClicked = clicked;
+            [self addTarget:self action:@selector(btnTouchupInside:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        [self setImage:[UIImage imageNamed:img] forState:normal];
+
+    }
+    return self;
+}
+
 -(void)btnTouchupInside:(UIButton *)sender {
     self.btnClicked(sender);
 }
