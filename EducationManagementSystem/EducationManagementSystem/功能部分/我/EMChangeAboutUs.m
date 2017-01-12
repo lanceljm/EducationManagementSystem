@@ -14,6 +14,16 @@
 
 @implementation EMChangeAboutUs
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -22,6 +32,7 @@
     leftBtn.frame = CGRectMake(0, 0, 40, 40);
     [leftBtn setTitle:@"" forState:UIControlStateNormal];
     [leftBtn setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
+    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
     [leftBtn addTarget:self action:@selector(dismissVC) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = btn;

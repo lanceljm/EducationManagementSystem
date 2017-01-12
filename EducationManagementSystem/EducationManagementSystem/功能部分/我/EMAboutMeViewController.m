@@ -68,6 +68,7 @@
             iconVC.title = @"个人信息";
             [self.navigationController pushViewController:iconVC animated:YES];
         }];
+        
         NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
         if ([staffDic[@"staffPicture"] isEqualToString:@""]) {
             if ([staffDic[@"staffSex"] isEqualToString:@"男"]) {
@@ -150,7 +151,6 @@
            //
             UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"退出登录" message:nil preferredStyle:UIAlertControllerStyleAlert];
             [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                NSLog(@"这是单例用户信息%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"]);
                 //确定退出
                 [[NSNotificationCenter defaultCenter]postNotificationName:@"setLoginVc" object:nil];
                 

@@ -1,14 +1,13 @@
 //
-//  EMChangePassword.h
+//  EMIconView.m
 //  EducationManagementSystem
 //
 //  Created by ljm on 2017/1/11.
 //  Copyright © 2017年 com.HuaHuaCai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "EMIconView.h"
 
-@interface EMChangePassword : UIViewController
-
+@implementation EMIconView
 
 @end

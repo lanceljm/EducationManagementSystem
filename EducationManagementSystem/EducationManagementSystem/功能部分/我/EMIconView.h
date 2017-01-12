@@ -1,5 +1,5 @@
 //
-//  EMChangePassword.h
+//  EMIconView.h
 //  EducationManagementSystem
 //
 //  Created by ljm on 2017/1/11.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EMChangePassword : UIViewController
+@interface EMIconView : UIImageView
 
+-(instancetype)initWithImage:(UIImage *)image;
 
 @end
