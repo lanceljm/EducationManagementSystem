@@ -23,6 +23,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = btn;
     
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.rowHeight = AAdaption(140);
 }
 

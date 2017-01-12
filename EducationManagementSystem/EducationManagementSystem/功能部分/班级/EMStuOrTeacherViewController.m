@@ -9,6 +9,9 @@
 #import "EMStuOrTeacherViewController.h"
 #import "EMSearchBarView.h"
 #import "EMSTCell.h"
+#import "EMTeacherList.h"
+#import "URL.h"
+#import <MJExtension.h>
 
 @interface EMStuOrTeacherViewController ()<UITableViewDelegate,UITableViewDataSource,cellBtnClickedDelegate>
 
@@ -22,8 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+
+    [self addSearchView];
     [self.view addSubview:self.tableView];
+    //隐藏多余cell
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,8 +38,23 @@
 
 
 - (void)addSearchView {
-    
+
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:self.param];
     EMSearchBarView *searchV = [[EMSearchBarView alloc] initWithFrame:CGRectMake(0, 64/AAdaptionWidth(), 750, 120) WithTextChangeBlock:^(NSString *text) {
+        [dict setObject:text forKey:@"studentName"];
+        [self.stuModelArr removeAllObjects];
+        [NetRequest GET:getStudentByName parameters:dict success:^(id responseObject) {
+            NSLog(@"- - - -  - -  -%@",responseObject);
+            NSArray *result = responseObject[@"result"];
+            for (NSDictionary *dict in result) {
+                EMStuModel *model = [EMStuModel mj_objectWithKeyValues:dict];
+                [self.stuModelArr addObject:model];
+            }
+            [self.tableView reloadData];
+            
+        } failture:^(NSError *error) {
+            
+        }];
         //搜索的网络请求
         NSLog(@"%@",text);
     }];
@@ -56,7 +77,11 @@
 #pragma mark - tableViewDataSource delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return  10;
+    
+    if (self.btnTag != 100) {
+        return  self.staffList.count;
+    }
+    return self.stuModelArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -69,6 +94,14 @@
     }
     cell.delegate = self;
     
+    if (self.btnTag != 100) {
+        EMTeacherList *tModel = self.staffList[indexPath.row];
+        cell.model = tModel;
+    }else{
+        EMStuModel *model = self.stuModelArr[indexPath.row];
+        cell.stuModel = model;
+    }
+        
     return  cell;
 }
 

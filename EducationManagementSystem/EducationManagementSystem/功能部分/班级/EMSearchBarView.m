@@ -12,6 +12,7 @@
 
 @property(nonatomic,strong) UITextField *textF;
 
+
 @end
 
 @implementation EMSearchBarView

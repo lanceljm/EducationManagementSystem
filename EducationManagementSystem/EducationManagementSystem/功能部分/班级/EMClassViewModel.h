@@ -10,6 +10,9 @@
 
 @interface EMClassViewModel : NSObject
 
+@property(nonatomic,strong) NSMutableArray *viewModelArr;
+
+
 - (void)loadDataWithFinish:(void(^)(BOOL))isSuccess;
 
 @end
