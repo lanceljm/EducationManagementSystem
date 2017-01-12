@@ -19,6 +19,28 @@
 
 @implementation EMSTCell
 
+- (void)setModel:(EMTeacherList *)model {
+    _teaNaame.text = model.staffName;
+    if ([model.staffSex isEqualToString:@"男"]) {
+        _iconImgV.image = [UIImage imageNamed:@"men"];
+    }else
+        _iconImgV.image = [UIImage imageNamed:@"women"];
+    
+    _sourceOrClassName.text = model.curriculum[@"curriculumName"];
+}
+
+- (void)setStuModel:(EMStuModel *)stuModel {
+    _teaNaame.text = stuModel.studentName;
+    if ([stuModel.studentSex isEqualToString:@"男"]) {
+        _iconImgV.image = [UIImage imageNamed:@"men"];
+    }else
+        _iconImgV.image = [UIImage imageNamed:@"women"];
+    
+    _sourceOrClassName.text = [NSString stringWithFormat:@"%@",stuModel.scoll[@"scoll"]];
+
+    
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -42,19 +64,20 @@
 
 - (void)creatCell {
     
-    _teaNaame = [[UILabel alloc] initWithFrame:AAdaptionRect(40, 20, 90, 60)];
-    _teaNaame.text = @"王晓晓";
+    _teaNaame = [[UILabel alloc] initWithFrame:AAdaptionRect(40, 20, 130, 60)];
     _teaNaame.font = AAFont(24);
     [self.contentView addSubview:_teaNaame];
     
-    _iconImgV = [[UIImageView alloc] initWithFrame:AAdaptionRect(150, 25, 40, 50)];
-    _iconImgV.image = [UIImage imageNamed:@"men"];
+    _iconImgV = [[UIImageView alloc] initWithFrame:AAdaptionRect(190, 25, 40, 50)];
     [self.contentView addSubview:_iconImgV];
     
-    _sourceOrClassName = [[UILabel alloc] initWithFrame:AAdaptionRect(226, 20, 120, 60)];
-    _sourceOrClassName.text = @"商务英语";
+    _sourceOrClassName = [[UILabel alloc] initWithFrame:AAdaptionRect(266, 20, 180, 60)];
     _sourceOrClassName.font = _teaNaame.font;
     [self.contentView addSubview:_sourceOrClassName];
+    
+    //    _teaNaame.text = @"王晓晓";
+    //  _iconImgV.image = [UIImage imageNamed:@"men"];
+    //_sourceOrClassName.text = @"商务英语";
     
     EMSysButton *callBtn = [[EMSysButton alloc] initWithFrame:AAdaptionRect(750 - 102, 18, 64, 64) withImgName:@"tel" withClickedBlock:^(id sender) {
         

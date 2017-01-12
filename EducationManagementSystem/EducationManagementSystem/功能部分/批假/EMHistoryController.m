@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.rowHeight = AAdaption(140);
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     }
 
 - (void)didReceiveMemoryWarning {

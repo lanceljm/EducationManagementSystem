@@ -54,6 +54,8 @@
 		CF5D4F091E238309004713A2 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D4F081E238309004713A2 /* LogCategory.m */; };
 		CF5D4F0C1E23A508004713A2 /* EMStuOrTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D4F0B1E23A508004713A2 /* EMStuOrTeacherViewController.m */; };
 		CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D4F0E1E23A6DD004713A2 /* EMSearchBarView.m */; };
+		CF89E1781E275BD70085F664 /* EMTeacherList.m in Sources */ = {isa = PBXBuildFile; fileRef = CF89E1771E275BD70085F664 /* EMTeacherList.m */; };
+		CF89E17B1E2770660085F664 /* EMStuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF89E17A1E2770660085F664 /* EMStuModel.m */; };
 		CFAFBC781E25CEEF00F4A020 /* EMSTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */; };
 		CFAFBC7E1E25DBFD00F4A020 /* EMBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAFBC7D1E25DBFD00F4A020 /* EMBaseCell.m */; };
 		CFAFBC811E260F2800F4A020 /* EMTwoBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAFBC801E260F2800F4A020 /* EMTwoBtnView.m */; };
@@ -180,6 +182,10 @@
 		CF5D4F0B1E23A508004713A2 /* EMStuOrTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStuOrTeacherViewController.m; sourceTree = "<group>"; };
 		CF5D4F0D1E23A6DD004713A2 /* EMSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSearchBarView.h; sourceTree = "<group>"; };
 		CF5D4F0E1E23A6DD004713A2 /* EMSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSearchBarView.m; sourceTree = "<group>"; };
+		CF89E1761E275BD70085F664 /* EMTeacherList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTeacherList.h; sourceTree = "<group>"; };
+		CF89E1771E275BD70085F664 /* EMTeacherList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMTeacherList.m; sourceTree = "<group>"; };
+		CF89E1791E2770660085F664 /* EMStuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStuModel.h; sourceTree = "<group>"; };
+		CF89E17A1E2770660085F664 /* EMStuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStuModel.m; sourceTree = "<group>"; };
 		CFAFBC761E25CEEF00F4A020 /* EMSTCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSTCell.h; sourceTree = "<group>"; };
 		CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSTCell.m; sourceTree = "<group>"; };
 		CFAFBC7C1E25DBFD00F4A020 /* EMBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBaseCell.h; path = ../EMBaseCell.h; sourceTree = "<group>"; };
@@ -371,6 +377,8 @@
 			children = (
 				CF2A38791E246E7200118059 /* EMClassModel.h */,
 				CF2A387A1E246E7200118059 /* EMClassModel.m */,
+				CF89E1761E275BD70085F664 /* EMTeacherList.h */,
+				CF89E1771E275BD70085F664 /* EMTeacherList.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -382,6 +390,8 @@
 				CF5D4F0B1E23A508004713A2 /* EMStuOrTeacherViewController.m */,
 				CFAFBC761E25CEEF00F4A020 /* EMSTCell.h */,
 				CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */,
+				CF89E1791E2770660085F664 /* EMStuModel.h */,
+				CF89E17A1E2770660085F664 /* EMStuModel.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -917,7 +927,11 @@
 				CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */,
 				CF5110CB1E24DAD7007062C5 /* EMLikeCellView.m in Sources */,
 				1A2093041E263B6E00BEF63A /* EMChangeIconView.m in Sources */,
+
 				1A2093191E27A58300BEF63A /* EMBaseInfoLabel.m in Sources */,
+
+				CF89E17B1E2770660085F664 /* EMStuModel.m in Sources */,
+
 				CFAFBC811E260F2800F4A020 /* EMTwoBtnView.m in Sources */,
 				CFAFBC7E1E25DBFD00F4A020 /* EMBaseCell.m in Sources */,
 				CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */,
@@ -932,6 +946,7 @@
 				1A2092F41E2627F900BEF63A /* EMIconViewBtn.m in Sources */,
 				CF5110C81E24D174007062C5 /* EMLeaveDetailController.m in Sources */,
 				CF59C1621E1F7EA40081833A /* main.m in Sources */,
+				CF89E1781E275BD70085F664 /* EMTeacherList.m in Sources */,
 				CFAFBC781E25CEEF00F4A020 /* EMSTCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

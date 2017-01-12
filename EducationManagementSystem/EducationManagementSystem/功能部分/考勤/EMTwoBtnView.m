@@ -33,7 +33,10 @@
                 
                 btn(btnS);
             }];
-            
+            if (i == 0) {
+                leftBtn.selected = YES;
+                [leftBtn setTitleColor:[UIColor cz_colorWithHex:0x2269d5] forState:UIControlStateSelected];
+            }
             [self addSubview:leftBtn];
         }
         

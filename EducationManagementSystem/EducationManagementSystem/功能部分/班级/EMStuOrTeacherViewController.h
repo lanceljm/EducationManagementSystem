@@ -7,7 +7,14 @@
 //
 
 #import "BaseViewController.h"
-
+#import "EMTeacherList.h"
+#import "EMStuModel.h"
 @interface EMStuOrTeacherViewController : BaseViewController
+
+@property(nonatomic,strong) NSArray<EMTeacherList*> *staffList;
+@property(nonatomic,assign) NSInteger btnTag;
+@property(nonatomic,strong) NSMutableArray<EMStuModel*> *stuModelArr;
+@property(nonatomic,strong) NSDictionary *param;
+
 
 @end

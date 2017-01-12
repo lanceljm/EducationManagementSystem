@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[RootViewController alloc]init];
     [self.window makeKeyAndVisible];
+    
+    [AMapServices sharedServices].apiKey = @"4cf61caa3709d177eb7bbe9683f8b36c";
     
     return YES;
 }

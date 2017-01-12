@@ -7,7 +7,12 @@
 //
 
 #import "EMClassModel.h"
-
+#import <MJExtension.h>
 @implementation EMClassModel
+
++ (NSDictionary *)mj_objectClassInArray {
+  
+    return @{@"staffList":@"EMTeacherList"};
+}
 
 @end

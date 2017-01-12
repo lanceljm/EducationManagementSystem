@@ -25,6 +25,13 @@
 
 @implementation EMClassViewCell
 
+-(void)setModel:(EMClassModel *)model {
+    
+    [_stuNumBtn setTitle:model.classSum forState:normal];
+    [_teacherNumBtn setTitle:[NSString stringWithFormat:@"%ld",model.staffList.count] forState:normal];
+    _classNameL.text = model.className;
+}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -53,12 +60,6 @@
     if (!cell) {
         cell = [[EMClassViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier tableView:vc];
     }
-    
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    cell.preservesSuperviewLayoutMargins = NO;
-//    cell.separatorInset = UIEdgeInsetsZero;
-//    cell.layoutMargins = UIEdgeInsetsZero;
-
     return cell;
 }
 
