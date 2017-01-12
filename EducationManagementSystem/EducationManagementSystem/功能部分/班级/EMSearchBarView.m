@@ -8,12 +8,20 @@
 
 #import "EMSearchBarView.h"
 
+@interface EMSearchBarView ()<UITextFieldDelegate>
+
+@property(nonatomic,strong) UITextField *textF;
+
+@end
+
 @implementation EMSearchBarView
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame WithTextChangeBlock:(textChangeBlock)block
 {
     self = [super initWithFrame:AAdaptionRectFromFrame(frame)];
     if (self) {
+        
+        self.textBlock = block;
         self.backgroundColor = [UIColor cz_colorWithHex:0xedeff1];
         
         UIButton *btn = [[UIButton alloc] initWithFrame:AAdaptionRect(20, 20, 710,75)];
@@ -29,13 +37,27 @@
         imageView.image = [UIImage imageNamed:@"search"];
         [self addSubview:imageView];
         
-        UITextField *textF = [[UITextField alloc] initWithFrame:AAdaptionRect(95, 22, 710, 71)];
-        textF.borderStyle = UITextBorderStyleNone;
-        textF.backgroundColor = [UIColor clearColor];
-        [self addSubview:textF];
+        _textF = [[UITextField alloc] initWithFrame:AAdaptionRect(95, 22, 710, 71)];
+        _textF.borderStyle = UITextBorderStyleNone;
+        _textF.backgroundColor = [UIColor clearColor];
+        _textF.delegate = self;
+        _textF.clearButtonMode = UITextBorderStyleNone;
+        [self addSubview:_textF];
         
     }
     return self;
 }
+
+#pragma mark - textF 代理
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    if (self.textBlock) {
+        NSString *str = [NSString stringWithFormat:@"%@%@",_textF.text,string];
+        self.textBlock(str);
+    }
+    
+    return YES;
+}
+
 
 @end

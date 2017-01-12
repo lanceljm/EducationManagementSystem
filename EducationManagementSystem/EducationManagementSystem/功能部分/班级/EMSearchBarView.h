@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^textChangeBlock)(NSString* text);
+
 @interface EMSearchBarView : UIView
+
+@property(nonatomic,copy) textChangeBlock textBlock;
+
+- (instancetype)initWithFrame:(CGRect)frame WithTextChangeBlock:(textChangeBlock)block;
 
 @end
