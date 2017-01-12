@@ -119,6 +119,7 @@
             NSDictionary *parm = @{@"account":_accountTF.text,@"password":_passwordTF.text};
             [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
                 NSDictionary *userInfo = responseObject[@"result"];
+                NSLog(@"用户信息：%@",userInfo);
                 //保存用户登录字典
                 [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:@"UserInfo"];
                 //保存登录状态

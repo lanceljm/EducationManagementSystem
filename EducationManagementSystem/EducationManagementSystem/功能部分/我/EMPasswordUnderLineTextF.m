@@ -32,7 +32,7 @@
         UILabel *lineLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(0, 100, kBaseWidth, 2)];
         lineLabel.backgroundColor = [UIColor cz_colorWithHex:0xf4f4f4];
         [self addSubview:lineLabel];
-        
+        self.delegate = self;
        
     }
     return self;

@@ -83,6 +83,7 @@
             iconImage.layer.cornerRadius = 85/2;
             iconImage.layer.masksToBounds = YES;
             [iconImage setImageWithURL:picUrl];
+            
             [_iconImageBtn addSubview:iconImage];
         }
     }

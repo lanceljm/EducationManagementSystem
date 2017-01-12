@@ -10,6 +10,7 @@
 #import "EMPasswordUnderLineTextF.h"
 #import "EMSysButton.h"
 #import "NetRequest.h"
+#import <MBProgressHUD.h> 
 
 @interface EMChangePassword ()
 
@@ -72,13 +73,6 @@
     if (!_oldPD) {
         _oldPD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, 60*2, kBaseWidth, 102) withTitle:@"旧密码" withTitleColor:[UIColor blackColor] withTitleFontSize:20];
         _oldPD.secureTextEntry = YES;
-        NSDictionary *userInfoDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
-        NSLog(@"用户信息%@",userInfoDic);
-        _oldPD.text = userInfoDic[@"staffPassword"];
-        //判断你输入的密码是否正确
-        if (![_oldPD.text isEqualToString:userInfoDic[@"staffPassword"]]) {
-            NSLog(@"请输入正确的密码");
-        }
     }
     return _oldPD;
 }
@@ -87,9 +81,7 @@
     if (!_newPD) {
         _newPD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, 62*2 + 100, kBaseWidth, 102) withTitle:@"新密码" withTitleColor:[UIColor blackColor] withTitleFontSize:20];
         _newPD.secureTextEntry = YES;
-        if ([_newPD.text isEqualToString:_oldPD.text]) {
-            NSLog(@"新密码不能和旧密码相同");
-        }
+
     }
     return _newPD;
 }
@@ -98,9 +90,7 @@
     if (!_surePD) {
         _surePD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, 64*2 + 200, kBaseWidth, 102) withTitle:@"确认密码" withTitleColor:[UIColor blackColor] withTitleFontSize:20];
         _surePD.secureTextEntry = YES;
-        if (![_surePD.text isEqualToString:_newPD.text]) {
-            NSLog(@"请输入相同的密码");
-        }
+
     }
     return _surePD;
 }
@@ -108,19 +98,64 @@
 -(EMSysButton *)sureBtn {
     if (!_sureBtn) {
         _sureBtn = [[EMSysButton alloc]initWithFrame:AAdaptionRect(20, 520, kBaseWidth - 40, 90) withTag:10001 withTitle:@"确认修改" withTitleColor:[UIColor whiteColor] withBackgrougdColor:MainBgColor withCornerRadious:0.1 withClickedBlock:^(id sender) {
-           //上传数据
-            if ((![_newPD.text isEqualToString:_oldPD.text])&&[_surePD.text isEqualToString:_newPD.text]) {
-                //可以修改
+            NSString *oldPDs = [[NSUserDefaults standardUserDefaults]objectForKey:@"savePassword"];
+            if (![_oldPD.text isEqualToString:oldPDs]) {
+                NSLog(@"旧密码错误");
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                hud.mode = MBProgressHUDModeAnnularDeterminate;
+                hud.label.text = @"旧密码错误";
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    hud.hidden = YES;
+                });
+            }else if([_newPD.text isEqualToString:@""] ){
+                NSLog(@"新密码不能为空");
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                hud.mode = MBProgressHUDModeAnnularDeterminate;
+                hud.label.text = @"新密码不能为空";
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    hud.hidden = YES;
+                });
+            }else if ([_newPD.text isEqualToString:_oldPD.text]) {
+                NSLog(@"新密码不能和旧密码相同");
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                hud.mode = MBProgressHUDModeAnnularDeterminate;
+                hud.label.text = @"新密码不能和旧密码相同";
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    hud.hidden = YES;
+                });
+            }else if (![_surePD.text isEqualToString:_newPD.text]) {
+                NSLog(@"两次输入的密码不相同");
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                hud.mode = MBProgressHUDModeAnnularDeterminate;
+                hud.label.text = @"两次输入的密码不相同";
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    hud.hidden = YES;
+                });
+            }else {
+                //上传数据
                 NSString *urlStr = @"http://192.168.0.117/api/staff/changePassword.html";
-                NSDictionary *userInfoDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
-                NSDictionary *parm = @{@"account":userInfoDic[@"staffAccount"],@"oldPassword":_oldPD.text,@"newPassword":_surePD.text,@"token":userInfoDic[@"token"]};
-                
+                NSString *account = [[NSUserDefaults standardUserDefaults]objectForKey:@"saveAccount"];
+                NSDictionary *userInfoDic = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserInfo"];
+                NSDictionary *parm = @{@"account":account,@"oldPassword":_oldPD.text,@"newPassword":_surePD.text,@"token":userInfoDic[@"token"]};
                 [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
-                    //成功
-                    NSLog(@"密码修改成功");
+                    NSLog(@"修改成功%@",responseObject);
+                    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                    hud.mode = MBProgressHUDModeAnnularDeterminate;
+                    hud.label.text = @"修改失败";
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        hud.hidden = YES;
+                        //修改成功后跳到登录界面
+                        [[NSNotificationCenter defaultCenter]postNotificationName:@"setLoginVc" object:nil];
+                    });
                 } failture:^(NSError *error) {
-                    //失败
-                    NSLog(@"密码修改失败");
+                    
+                    NSLog(@"修改失败");
+                    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                    hud.mode = MBProgressHUDModeAnnularDeterminate;
+                    hud.label.text = @"修改失败";
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        hud.hidden = YES;
+                    });
                 }];
             }
         }];

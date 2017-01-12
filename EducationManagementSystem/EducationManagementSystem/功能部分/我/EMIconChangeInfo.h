@@ -12,6 +12,6 @@
 
 @property(nonatomic,strong)ButtomClickedWithSender btnClicked;
 
--(instancetype)initWithFrame:(CGRect)frame withImageName:(NSString *)imageName withBtnBlock:(ButtomClickedWithSender)btnClicked;
+-(instancetype)initWithFrame:(CGRect)frame withBtnBlock:(ButtomClickedWithSender)btnClicked;
 
 @end
