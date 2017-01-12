@@ -22,10 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    EMSearchBarView *searchV = [[EMSearchBarView alloc] initWithFrame:CGRectMake(0, 64/AAdaptionWidth(), 750, 120)];
-    _searchMaxY = CGRectGetMaxY(searchV.frame);
-    [self.view addSubview:searchV];
-
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -33,6 +30,18 @@
     [super didReceiveMemoryWarning];
 }
 
+
+- (void)addSearchView {
+    
+    EMSearchBarView *searchV = [[EMSearchBarView alloc] initWithFrame:CGRectMake(0, 64/AAdaptionWidth(), 750, 120) WithTextChangeBlock:^(NSString *text) {
+        //搜索的网络请求
+        NSLog(@"%@",text);
+    }];
+    
+    _searchMaxY = CGRectGetMaxY(searchV.frame);
+    [self.view addSubview:searchV];
+
+}
 
 #pragma mark - 自定义cell的代理方法
 -(void)cellBtnClick:(UIButton *)btn {

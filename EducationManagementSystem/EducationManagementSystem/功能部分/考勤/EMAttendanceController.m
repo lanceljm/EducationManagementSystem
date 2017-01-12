@@ -16,21 +16,46 @@
 @property(nonatomic,strong) EMIconMarkLabel *timeL;
 @property(nonatomic,strong) EMIconMarkLabel *workL;
 @property(nonatomic,strong) EMIconMarkLabel *markL;
+@property(nonatomic,strong) NSTimer *timer;
+
 
 
 @end
 
 @implementation EMAttendanceController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self startTimer];
     self.view.backgroundColor = [UIColor whiteColor];
     [self addBtn];
-    _timeL.text = @"9:23:23";
+    
+}
+
+- (void)dealloc {
+    [self stopTimer];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)startTimer {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timeFunc) userInfo:nil repeats:YES];
+}
+
+- (void)stopTimer {
+    [_timer invalidate];
+    _timer = nil;
+}
+
+- (void)timeFunc {
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm:ss"];
+    NSString *locationStr = [formatter stringFromDate:date];
+    _timeL.text = locationStr;
 }
 
 - (void)addBtn {

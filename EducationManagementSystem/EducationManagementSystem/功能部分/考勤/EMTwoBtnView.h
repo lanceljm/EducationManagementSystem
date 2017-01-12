@@ -10,6 +10,8 @@
 
 @interface EMTwoBtnView : UIView
 
+
+
 - (instancetype)initWithLeftDirectionFrame:(CGRect)frame WithBKColor:(UIColor*)bgCol btnNames:(NSArray *)btnNames TitleCols:(UIColor*)TCol WithImages:(NSArray*)imgArr WithFont:(CGFloat)font WithSelectorBtnBlock:(void(^)(UIButton*))btn;
 
 @end

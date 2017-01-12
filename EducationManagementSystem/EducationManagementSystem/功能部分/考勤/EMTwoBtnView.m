@@ -20,7 +20,7 @@
         CGFloat btnH = self.frame.size.height;
         
         for (int i = 0; i < 2; i++) {
-            EMIconDirectionButton *leftBtn = [[EMIconDirectionButton alloc] initWithFrame:CGRectMake(btnW + btnW*i*2, 0,btnW, btnH) withTag:100 +i withTitle:btnNames[i] withTitleColor:TCol withImage:imgArr[i] withFont:font withDirection:left withBlock:^(id sender) {
+            EMIconDirectionButton *leftBtn = [[EMIconDirectionButton alloc] initWithFrame:CGRectMake(btnW + btnW*i*2, 0,btnW, btnH) withTag:100 + i withTitle:btnNames[i] withTitleColor:TCol withImage:imgArr[i] withFont:font withDirection:left withBlock:^(id sender) {
                 UIButton *btnS = sender;
                 if (btnS.tag == 100) {
                     UIButton *b = (UIButton*)[self viewWithTag:101];
@@ -30,7 +30,6 @@
                     b.selected = NO;
                 }
                 [btnS setTitleColor:[UIColor cz_colorWithHex:0x2269d5] forState:UIControlStateSelected];
-                
                 
                 btn(btnS);
             }];
