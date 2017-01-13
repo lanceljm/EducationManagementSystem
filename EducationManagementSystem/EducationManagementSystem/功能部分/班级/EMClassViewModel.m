@@ -25,17 +25,17 @@
     NSDictionary *paramters = @{@"staffId":staffId,@"teacher":administrationId,@"token":token};
     [NetRequest GET:getClassList parameters:paramters success:^(id responseObject) {
         NSArray *result = responseObject[@"result"];
-        NSLog(@"%@",result);
+       // NSLog(@"%@",result);
         for (NSDictionary *dic in result) {
             EMClassModel *model = [EMClassModel mj_objectWithKeyValues:dic];
             [_viewModelArr addObject:model];
         }
-        for (EMClassModel *model in _viewModelArr) {
-            //NSLog(@"%@",model.className);
-            for (EMTeacherList *Tm in model.staffList) {
-            //NSLog(@"%@---------/n--------%@",Tm.staffName,Tm.curriculum);
-            }
-        }
+//        for (EMClassModel *model in _viewModelArr) {
+//            //NSLog(@"%@",model.className);
+//            for (EMTeacherList *Tm in model.staffList) {
+//            //NSLog(@"%@---------/n--------%@",Tm.staffName,Tm.curriculum);
+//            }
+//        }
         
         isSuccess(YES);
     } failture:^(NSError *error) {
