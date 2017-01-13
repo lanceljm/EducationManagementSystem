@@ -25,10 +25,10 @@
         [self addSubview:leftImage];
         
         //文字
-        UILabel *label = [[UILabel alloc]initWithFrame:AAdaptionRect(116, 30, self.frame.size.width/AAdaptionWidth(), 40)];
+        UILabel *label = [[UILabel alloc]initWithFrame:AAdaptionRect(CGRectGetMaxX(leftImage.frame)/AAdaptionWidth() + 20, 30, 200, 40)];
         label.text = text;
         label.textColor = textColor;
-        label.font = [UIFont systemFontOfSize:textFontSize];
+        label.font = AAFont(textFontSize);
         [self addSubview:label];
         
         //右边图片

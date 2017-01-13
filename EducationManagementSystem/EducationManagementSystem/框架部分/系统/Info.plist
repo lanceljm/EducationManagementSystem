@@ -8,8 +8,13 @@
 	<string>yes</string>
 	<key>NSCameraUsageDescription</key>
 	<string>yes</string>
+
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>使用应用期间允许访问位置信息</string>
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>使用应用期间允许访问位置信息</string>
+
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

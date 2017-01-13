@@ -9,14 +9,37 @@
 #ifndef URL_h
 #define URL_h
 
+//登录
+#define getLoginUrl @"http://192.168.0.117/api/staff/login.html"
+
+//根URL
+#define BASE_URL @"http://192.168.0.117"
+
 //班级列表
 #define getClassList @"http://192.168.0.117/api/staff/getClassList.html"
-//用户信息UD_key
-#define UserInfoKey @"UserInfo"
+
 //班级同学列表
 #define getStudentList @"http://192.168.0.117/api/staff/getStudentList.html"
 
 //学生搜索
 #define getStudentByName @"http://192.168.0.117/api/staff/getStudentByName.html"
+
+//上传头像
+#define sendIconUrl @"http://192.168.0.117/api/staff/setStaffPicture.html"
+
+//修改密码
+#define changePasswordUrl @"http://192.168.0.117/api/staff/changePassword.html"
+
+//关于我们
+#define AboutUsUrl @"http://192.168.0.117/api/aboutus/getAboutUs.html"
+
+//用户反馈
+#define feedbackUrl @"http://192.168.0.117/api/advice/saveAdvice.html"
+
+//用户信息UD_key
+#define UserInfoKey @"UserInfo"
+
+//用户信息
+#define USER_INFO [[NSUserDefaults standardUserDefaults] objectForKey:UserInfoKey]
 
 #endif /* URL_h */

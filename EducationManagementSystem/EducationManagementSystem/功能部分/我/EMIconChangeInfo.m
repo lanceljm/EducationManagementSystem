@@ -24,19 +24,19 @@
         changeLabel.text = @"修改头像";
         changeLabel.textColor = [UIColor cz_colorWithHex:0xb7b7b7];
         changeLabel.textAlignment = NSTextAlignmentCenter;
-        changeLabel.font = [UIFont systemFontOfSize:20];
+        changeLabel.font = AAFont(32);
         [self addSubview:changeLabel];
         
         UIImageView *iconImage = [[UIImageView alloc]initWithFrame:AAdaptionRect(20, 17, 112, 112)];
-        NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
-        if ([staffDic[@"staffPicture"] isEqualToString:@""]) {
-            if ([staffDic[@"staffSex"] isEqualToString:@"男"]) {
+//        NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
+        if ([USER_INFO[@"staffPicture"] isEqualToString:@""]) {
+            if ([USER_INFO[@"staffSex"] isEqualToString:@"男"]) {
                 iconImage.image = [UIImage imageNamed:@"默认头像男"];
             }else {
                 iconImage.image = [UIImage imageNamed:@"默认头像女"];
             }
         }else {
-            NSString *pictureUrl = [NSString stringWithFormat:@"http://192.168.0.117%@",staffDic[@"staffPicture"]];
+            NSString *pictureUrl = [NSString stringWithFormat:@"%@%@",BASE_URL,USER_INFO[@"staffPicture"]];
             NSURL *picUrl = [NSURL URLWithString:pictureUrl];
             iconImage.layer.cornerRadius = 112/4;
             iconImage.layer.masksToBounds = YES;

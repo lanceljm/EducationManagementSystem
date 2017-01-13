@@ -63,21 +63,21 @@
 //头像
 -(EMIconViewBtn *)iconImageBtn {
     if (!_iconImageBtn) {
-        _iconImageBtn = [[EMIconViewBtn alloc]initWithFrame:AAdaptionRect(290, 174, 170, 170) withTag:1010 withClickBlock:^(id sender) {
+        _iconImageBtn = [[EMIconViewBtn alloc]initWithFrame:AAdaptionRect(290, CGRectGetMinY(self.bgUpImageView.frame)/AAdaptionWidth() + 50, 170, 170) withTag:1010 withClickBlock:^(id sender) {
             EMChangeIconView *iconVC = [[EMChangeIconView alloc]init];
             iconVC.title = @"个人信息";
             [self.navigationController pushViewController:iconVC animated:YES];
         }];
         
-        NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
-        if ([staffDic[@"staffPicture"] isEqualToString:@""]) {
-            if ([staffDic[@"staffSex"] isEqualToString:@"男"]) {
+//        NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:UserInfoKey];
+        if ([USER_INFO[@"staffPicture"] isEqualToString:@""]) {
+            if ([USER_INFO[@"staffSex"] isEqualToString:@"男"]) {
                 [_iconImageBtn setImage:[UIImage imageNamed:@"默认头像男"] forState:UIControlStateNormal];
             }else {
                 [_iconImageBtn setImage:[UIImage imageNamed:@"默认头像女"] forState:UIControlStateNormal];
             }
         }else {
-            NSString *pictureUrl = [NSString stringWithFormat:@"http://192.168.0.117%@",staffDic[@"staffPicture"]];
+            NSString *pictureUrl = [NSString stringWithFormat:@"%@%@",BASE_URL,USER_INFO[@"staffPicture"]];
             NSURL *picUrl = [NSURL URLWithString:pictureUrl];
             UIImageView *iconImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 85, 85)];
             iconImage.layer.cornerRadius = 85/2;
@@ -94,8 +94,9 @@
 //姓名
 -(EMUserinfoLabel *)nameLabel {
     if (!_nameLabel) {
-        NSString *text = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"][@"staffName"];
-        _nameLabel = [[EMUserinfoLabel alloc]initWithFrame:AAdaptionRect(290, 376, 160, 40) withText:text withTextColor:[UIColor blackColor] withTextCenter:NSTextAlignmentCenter withTextFontSize:20];
+//        NSString *text = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"][@"staffName"];
+
+        _nameLabel = [[EMUserinfoLabel alloc]initWithFrame:AAdaptionRect(CGRectGetMinX(self.iconImageBtn.frame)/AAdaptionWidth(), CGRectGetMaxY(self.iconImageBtn.frame)/AAdaptionWidth() + 20, CGRectGetWidth(self.iconImageBtn.frame)/AAdaptionWidth(), 40) withText:USER_INFO[@"staffName"] withTextColor:[UIColor blackColor] withTextCenter:NSTextAlignmentCenter withTextFontSize:36];
     }
     return _nameLabel;
 }
@@ -103,8 +104,8 @@
 //职位
 -(EMUserinfoLabel *)postionLabel {
     if (!_postionLabel) {
-        NSString *text = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"][@"staffPost"];
-        _postionLabel = [[EMUserinfoLabel alloc]initWithFrame:AAdaptionRect(310, 426, 120, 40) withText:text withTextColor:[UIColor blackColor] withTextCenter:NSTextAlignmentCenter withTextFontSize:16];
+//        NSString *text = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"][@"staffPost"];
+        _postionLabel = [[EMUserinfoLabel alloc]initWithFrame:AAdaptionRect(CGRectGetMinX(self.nameLabel.frame)/AAdaptionWidth(), CGRectGetMaxY(self.nameLabel.frame)/AAdaptionWidth() + 20, CGRectGetWidth(self.nameLabel.frame)/AAdaptionWidth(), 40) withText:USER_INFO[@"staffPost"] withTextColor:[UIColor blackColor] withTextCenter:NSTextAlignmentCenter withTextFontSize:28];
     }
     return _postionLabel;
 }
@@ -112,7 +113,7 @@
 //修改密码
 -(EMMineAboutBtn *)changePassword {
     if (!_changePassword) {
-        _changePassword = [[EMMineAboutBtn alloc]initWithFrame:AAdaptionRect(0, 500, kBaseWidth, 100) withTag:1011 withLeftImageName:@"Locked" withTextLabel:@"修改密码" withTextColor:[UIColor cz_colorWithHex:0x4f4f4f] withTextFontSize:18 withRightName:@"向右箭头" withClickedBlock:^(id sender) {
+        _changePassword = [[EMMineAboutBtn alloc]initWithFrame:AAdaptionRect(0, CGRectGetMaxY(self.bgUpImageView.frame)/AAdaptionWidth(), kBaseWidth, 100) withTag:1011 withLeftImageName:@"Locked" withTextLabel:@"修改密码" withTextColor:[UIColor cz_colorWithHex:0x4f4f4f] withTextFontSize:32 withRightName:@"向右箭头" withClickedBlock:^(id sender) {
             EMChangePassword *chpVC = [[EMChangePassword alloc]init];
             chpVC.title = @"修改密码";
             [self.navigationController pushViewController:chpVC animated:YES];
@@ -124,7 +125,7 @@
 //关于我们
 -(EMMineAboutBtn *)aboutUs {
     if (!_aboutUs) {
-        _aboutUs = [[EMMineAboutBtn alloc]initWithFrame:AAdaptionRect(0, 600, kBaseWidth, 100) withTag:1012 withLeftImageName:@"about" withTextLabel:@"关于我们" withTextColor:[UIColor cz_colorWithHex:0x4f4f4f] withTextFontSize:18 withRightName:@"向右箭头" withClickedBlock:^(id sender) {
+        _aboutUs = [[EMMineAboutBtn alloc]initWithFrame:AAdaptionRect(0, CGRectGetMaxY(self.changePassword.frame)/AAdaptionWidth(), kBaseWidth, 100) withTag:1012 withLeftImageName:@"about" withTextLabel:@"关于我们" withTextColor:[UIColor cz_colorWithHex:0x4f4f4f] withTextFontSize:32 withRightName:@"向右箭头" withClickedBlock:^(id sender) {
             EMChangeAboutUs *chaVC = [[EMChangeAboutUs alloc]init];
             chaVC.title = @"关于我们";
             [self.navigationController pushViewController:chaVC animated:YES];
@@ -136,7 +137,7 @@
 //意见反馈
 -(EMMineAboutBtn *)adviceFeedback {
     if (!_adviceFeedback) {
-        _adviceFeedback = [[EMMineAboutBtn alloc]initWithFrame:AAdaptionRect(0, 700, kBaseWidth, 100) withTag:1013 withLeftImageName:@"feedBack" withTextLabel:@"意见反馈" withTextColor:[UIColor cz_colorWithHex:0x4f4f4f] withTextFontSize:18 withRightName:@"向右箭头" withClickedBlock:^(id sender) {
+        _adviceFeedback = [[EMMineAboutBtn alloc]initWithFrame:AAdaptionRect(0, CGRectGetMaxY(self.aboutUs.frame)/AAdaptionWidth(), kBaseWidth, 100) withTag:1013 withLeftImageName:@"feedBack" withTextLabel:@"意见反馈" withTextColor:[UIColor cz_colorWithHex:0x4f4f4f] withTextFontSize:32 withRightName:@"向右箭头" withClickedBlock:^(id sender) {
             EMAdvicesFeedback *adfeedVC = [[EMAdvicesFeedback alloc]init];
             adfeedVC.title = @"意见反馈";
             [self.navigationController pushViewController:adfeedVC animated:YES];
