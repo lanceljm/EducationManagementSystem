@@ -25,6 +25,7 @@
 		1A2093101E2664A500BEF63A /* EMPasswordUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A20930F1E2664A500BEF63A /* EMPasswordUnderLineTextF.m */; };
 		1A2093131E267A3400BEF63A /* EMIconChangeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2093121E267A3400BEF63A /* EMIconChangeInfo.m */; };
 		1A2093191E27A58300BEF63A /* EMBaseInfoLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2093181E27A58300BEF63A /* EMBaseInfoLabel.m */; };
+		1AAB66181E28C38900C5CA61 /* EMNotificationVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB66171E28C38900C5CA61 /* EMNotificationVM.m */; };
 		1AEB3F921E27D6320000EE87 /* EMFeedBackTV.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB3F911E27D6320000EE87 /* EMFeedBackTV.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
@@ -115,6 +116,8 @@
 		1A2093171E27A58300BEF63A /* EMBaseInfoLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBaseInfoLabel.h; sourceTree = "<group>"; };
 		1A2093181E27A58300BEF63A /* EMBaseInfoLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseInfoLabel.m; sourceTree = "<group>"; };
 		1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAB66161E28C38900C5CA61 /* EMNotificationVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNotificationVM.h; sourceTree = "<group>"; };
+		1AAB66171E28C38900C5CA61 /* EMNotificationVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNotificationVM.m; sourceTree = "<group>"; };
 		1AEB3F901E27D6320000EE87 /* EMFeedBackTV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFeedBackTV.h; sourceTree = "<group>"; };
 		1AEB3F911E27D6320000EE87 /* EMFeedBackTV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFeedBackTV.m; sourceTree = "<group>"; };
 		260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -280,6 +283,15 @@
 				1A2092FF1E26305300BEF63A /* EMAdvicesFeedback.m */,
 			);
 			name = Detail;
+			sourceTree = "<group>";
+		};
+		1AAB66151E28C34B00C5CA61 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				1AAB66161E28C38900C5CA61 /* EMNotificationVM.h */,
+				1AAB66171E28C38900C5CA61 /* EMNotificationVM.m */,
+			);
+			name = VM;
 			sourceTree = "<group>";
 		};
 		1AEB3F931E27DDA90000EE87 /* method */ = {
@@ -526,6 +538,7 @@
 		CF59C1981E1F80790081833A /* 通知 */ = {
 			isa = PBXGroup;
 			children = (
+				1AAB66151E28C34B00C5CA61 /* VM */,
 				CF59C1B01E1F89D80081833A /* EMNoticeViewController.h */,
 				CF59C1B11E1F89D80081833A /* EMNoticeViewController.m */,
 			);
@@ -937,6 +950,7 @@
 				CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */,
 				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
 				CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */,
+				1AAB66181E28C38900C5CA61 /* EMNotificationVM.m in Sources */,
 				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
 				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,
 				CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */,

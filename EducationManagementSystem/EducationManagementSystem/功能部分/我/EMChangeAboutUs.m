@@ -8,9 +8,9 @@
 
 #import "EMChangeAboutUs.h"
 
-@interface EMChangeAboutUs ()
+@interface EMChangeAboutUs ()<UITextViewDelegate>
     
-    @property(nonatomic,strong)UILabel *aboutUsContents;
+    @property(nonatomic,strong)UITextView *aboutUsContents;
 
 @end
 
@@ -30,11 +30,13 @@
     [super viewDidLoad];
     
     [self setupUI];
+    self.view.backgroundColor = [UIColor cz_colorWithRed:238 green:239 blue:241];
 }
     
     -(void)setupUI {
         [self setNavi];
         [self.view addSubview:self.aboutUsContents];
+        
     }
 
 -(void)setNavi {
@@ -52,15 +54,20 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
     
--(UILabel *)aboutUsContents {
+-(UITextView *)aboutUsContents {
     if (!_aboutUsContents) {
-        _aboutUsContents = [[UILabel alloc]initWithFrame:AAdaptionRect(0, 64*2, kBaseWidth, kBaseHeight - 64*2)];
+        _aboutUsContents = [[UITextView alloc]initWithFrame:AAdaptionRect(0, 0, kBaseWidth, kBaseHeight)];
+        _aboutUsContents.textColor = [UIColor blackColor];
+//        _aboutUsContents.textAlignment = NSTextAlignmentLeft;
+        _aboutUsContents.font = AAFont(32);
         [NetRequest GET:AboutUsUrl parameters:nil success:^(id responseObject) {
-            NSString *contents = responseObject[@"aboutusContent"];
-            if ([contents isEqualToString:@""]) {
-                _aboutUsContents.text = @"这里是关于我们…………";
+            NSString *contents = responseObject[@"result"][@"aboutusContent"];
+            if (contents == nil) {
+                _aboutUsContents.text = @"  这里是关于我们…………";
             }else {
-                _aboutUsContents.text = responseObject[@"aboutusContent"];
+                NSString *contentStr = [contents substringFromIndex:3];
+                NSString *newStr = [contentStr substringToIndex:22];
+                _aboutUsContents.text = [NSString stringWithFormat:@"   %@",newStr];
             }
         } failture:^(NSError *error) {
             NSLog(@"网络错误");

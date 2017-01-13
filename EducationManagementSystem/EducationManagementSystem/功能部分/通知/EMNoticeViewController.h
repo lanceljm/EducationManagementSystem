@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface EMNoticeViewController : BaseViewController
+@interface EMNoticeViewController : UITableViewController
 
 @end

@@ -39,6 +39,8 @@
     
     [self  setupUI];
     
+    self.view.backgroundColor = [UIColor cz_colorWithRed:238 green:239 blue:241];
+    
 }
 
 -(void)setupUI {
@@ -79,8 +81,8 @@
         }else {
             NSString *pictureUrl = [NSString stringWithFormat:@"%@%@",BASE_URL,USER_INFO[@"staffPicture"]];
             NSURL *picUrl = [NSURL URLWithString:pictureUrl];
-            UIImageView *iconImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 85, 85)];
-            iconImage.layer.cornerRadius = 85/2;
+            UIImageView *iconImage = [[UIImageView alloc]initWithFrame:AAdaptionRect(290, 64/AAdaptionWidth() + 45, 170, 170)];
+            iconImage.layer.cornerRadius = self.iconImageBtn.frame.size.width/2;
             iconImage.layer.masksToBounds = YES;
             [iconImage setImageWithURL:picUrl];
             
