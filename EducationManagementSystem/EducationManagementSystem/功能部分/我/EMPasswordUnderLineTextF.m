@@ -21,15 +21,19 @@
     if (self) {
         self.backgroundColor = [UIColor cz_colorWithRed:255 green:255 blue:255];
         
+        UILabel *lineMinLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(-180, 98, 180, 2)];
+        lineMinLabel.backgroundColor = [UIColor cz_colorWithHex:0xf4f4f4];
+        
         UILabel *label = [[UILabel alloc]initWithFrame:AAdaptionRect(-180, 0, 180, 100)];
         label.backgroundColor = [UIColor cz_colorWithRed:255 green:255 blue:255];
         label.text = title;
         label.textColor = titleColor;
         label.textAlignment = NSTextAlignmentRight;
-        label.font = [UIFont systemFontOfSize:titleFontSize];
+        label.font = AAFont(titleFontSize);
+        [label addSubview:lineMinLabel];
         [self addSubview:label];
         
-        UILabel *lineLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(0, 100, kBaseWidth, 2)];
+        UILabel *lineLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(0, 98, kBaseWidth, 2)];
         lineLabel.backgroundColor = [UIColor cz_colorWithHex:0xf4f4f4];
         [self addSubview:lineLabel];
         self.delegate = self;

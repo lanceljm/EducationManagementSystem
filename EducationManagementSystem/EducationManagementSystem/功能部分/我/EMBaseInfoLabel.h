@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EMBaseInfoLabel : UILabel
+@interface EMBaseInfoLabel : UIView
 
 -(instancetype)initWithFrame:(CGRect)frame withTitle:(NSString *)title withContent:(NSString *)content;
 

@@ -24,7 +24,7 @@
         changeLabel.text = @"修改头像";
         changeLabel.textColor = [UIColor cz_colorWithHex:0xb7b7b7];
         changeLabel.textAlignment = NSTextAlignmentCenter;
-        changeLabel.font = [UIFont systemFontOfSize:20];
+        changeLabel.font = AAFont(32);
         [self addSubview:changeLabel];
         
         UIImageView *iconImage = [[UIImageView alloc]initWithFrame:AAdaptionRect(20, 17, 112, 112)];

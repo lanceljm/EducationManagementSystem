@@ -70,7 +70,7 @@
 
 -(EMPasswordUnderLineTextF *)oldPD {
     if (!_oldPD) {
-        _oldPD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, 60*2, kBaseWidth, 102) withTitle:@"旧密码" withTitleColor:[UIColor blackColor] withTitleFontSize:20];
+        _oldPD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, 64/AAdaptionWidth(), kBaseWidth - 180, 100) withTitle:@"旧密码" withTitleColor:[UIColor blackColor] withTitleFontSize:32];
         _oldPD.secureTextEntry = YES;
     }
     return _oldPD;
@@ -78,7 +78,7 @@
 
 -(EMPasswordUnderLineTextF *)newPD {
     if (!_newPD) {
-        _newPD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, 62*2 + 100, kBaseWidth, 102) withTitle:@"新密码" withTitleColor:[UIColor blackColor] withTitleFontSize:20];
+        _newPD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, CGRectGetMaxY(self.oldPD.frame)/AAdaptionWidth(), kBaseWidth, 100) withTitle:@"新密码" withTitleColor:[UIColor blackColor] withTitleFontSize:32];
         _newPD.secureTextEntry = YES;
 
     }
@@ -87,7 +87,7 @@
 
 -(EMPasswordUnderLineTextF *)surePD {
     if (!_surePD) {
-        _surePD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, 64*2 + 200, kBaseWidth, 102) withTitle:@"确认密码" withTitleColor:[UIColor blackColor] withTitleFontSize:20];
+        _surePD = [[EMPasswordUnderLineTextF alloc]initWithFrame:AAdaptionRect(180, CGRectGetMaxY(self.newPD.frame)/AAdaptionWidth(), kBaseWidth, 100) withTitle:@"确认密码" withTitleColor:[UIColor blackColor] withTitleFontSize:32];
         _surePD.secureTextEntry = YES;
 
     }

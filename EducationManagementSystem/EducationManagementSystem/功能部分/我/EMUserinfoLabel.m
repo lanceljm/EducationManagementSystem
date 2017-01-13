@@ -16,7 +16,7 @@
         [self setText:text];
         [self setTextColor:textColor];
         [self setTextAlignment:textCenter];
-        [self setFont:[UIFont systemFontOfSize:textFontSize]];
+        [self setFont:AAFont(textFontSize)];
     }
     return self;
 }

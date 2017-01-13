@@ -47,7 +47,7 @@
     UILabel *baseLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(30, 300 + 20, 150, 28)];
     baseLabel.text = @"基础信息";
     baseLabel.textColor = [UIColor cz_colorWithHex:0x1e1e1e];
-    baseLabel.font = [UIFont systemFontOfSize:16];
+    baseLabel.font = AAFont(28);
     [self.view addSubview:baseLabel];
     
     [self.view addSubview:self.name];
@@ -121,30 +121,30 @@
 -(EMBaseInfoLabel *)name {
     if (!_name) {
 //        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
-        _name = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 380, kBaseWidth, 100) withTitle:@"姓名" withContent:USER_INFO[@"staffName"]];
+        _name = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, CGRectGetMaxY(self.changeIconImage.frame)/AAdaptionWidth() + 68, kBaseWidth, 100) withTitle:@"姓名" withContent:USER_INFO[@"staffName"]];
     }
     return _name;
 }
 
 -(EMBaseInfoLabel *)telephone {
     if (!_telephone) {
-        _telephone = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 480, kBaseWidth, 100) withTitle:@"电话" withContent:USER_INFO[@"staffTelphone"]];
+        _telephone = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, CGRectGetMaxY(self.name.frame)/AAdaptionWidth(), kBaseWidth, 100) withTitle:@"电话" withContent:USER_INFO[@"staffTelphone"]];
     }
     return _telephone;
 }
     
 -(EMBaseInfoLabel *)postion {
     if (!_postion) {
-        _postion = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 580, kBaseWidth, 100) withTitle:@"职务" withContent:USER_INFO[@"staffPost"]];
+        _postion = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, CGRectGetMaxY(self.telephone.frame)/AAdaptionWidth(), kBaseWidth, 100) withTitle:@"职务" withContent:USER_INFO[@"staffPost"]];
     }
     return _postion;
 }
     
 -(EMBaseInfoLabel *)classWithGarde {
     if (!_classWithGarde) {
-        NSString *classSub = [USER_INFO[@"staffYear"] substringToIndex:3];
+        NSString *classSub = [USER_INFO[@"staffYear"] substringToIndex:4];
         NSString *classString = [NSString stringWithFormat:@"%@届%@班",classSub,USER_INFO[@"staffId"]];
-        _classWithGarde = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 680, kBaseWidth, 100) withTitle:@"班级" withContent:classString];
+        _classWithGarde = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, CGRectGetMaxY(self.postion.frame)/AAdaptionWidth(), kBaseWidth, 100) withTitle:@"班级" withContent:classString];
     }
     return _classWithGarde;
 }
