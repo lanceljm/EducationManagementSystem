@@ -24,9 +24,8 @@
 		1A20930A1E26479400BEF63A /* EMLeftBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2093091E26479400BEF63A /* EMLeftBarBtn.m */; };
 		1A2093101E2664A500BEF63A /* EMPasswordUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A20930F1E2664A500BEF63A /* EMPasswordUnderLineTextF.m */; };
 		1A2093131E267A3400BEF63A /* EMIconChangeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2093121E267A3400BEF63A /* EMIconChangeInfo.m */; };
-		1A2093161E267DEF00BEF63A /* EMIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2093151E267DEF00BEF63A /* EMIconView.m */; };
 		1A2093191E27A58300BEF63A /* EMBaseInfoLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2093181E27A58300BEF63A /* EMBaseInfoLabel.m */; };
-		1A20931C1E27ACA900BEF63A /* EMMySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A20931B1E27ACA900BEF63A /* EMMySingleton.m */; };
+		1AEB3F921E27D6320000EE87 /* EMFeedBackTV.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB3F911E27D6320000EE87 /* EMFeedBackTV.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
 		CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */; };
@@ -113,13 +112,11 @@
 		1A20930F1E2664A500BEF63A /* EMPasswordUnderLineTextF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMPasswordUnderLineTextF.m; sourceTree = "<group>"; };
 		1A2093111E267A3400BEF63A /* EMIconChangeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMIconChangeInfo.h; sourceTree = "<group>"; };
 		1A2093121E267A3400BEF63A /* EMIconChangeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconChangeInfo.m; sourceTree = "<group>"; };
-		1A2093141E267DEF00BEF63A /* EMIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMIconView.h; sourceTree = "<group>"; };
-		1A2093151E267DEF00BEF63A /* EMIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconView.m; sourceTree = "<group>"; };
 		1A2093171E27A58300BEF63A /* EMBaseInfoLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBaseInfoLabel.h; sourceTree = "<group>"; };
 		1A2093181E27A58300BEF63A /* EMBaseInfoLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseInfoLabel.m; sourceTree = "<group>"; };
-		1A20931A1E27ACA900BEF63A /* EMMySingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMySingleton.h; sourceTree = "<group>"; };
-		1A20931B1E27ACA900BEF63A /* EMMySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMySingleton.m; sourceTree = "<group>"; };
 		1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AEB3F901E27D6320000EE87 /* EMFeedBackTV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFeedBackTV.h; sourceTree = "<group>"; };
+		1AEB3F911E27D6320000EE87 /* EMFeedBackTV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFeedBackTV.m; sourceTree = "<group>"; };
 		260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests.release.xcconfig"; sourceTree = "<group>"; };
 		2ABB39BBFAD6962E81ACE2B3 /* Pods-EducationManagementSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystem/Pods-EducationManagementSystem.release.xcconfig"; sourceTree = "<group>"; };
 		327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,8 +255,6 @@
 				1A2093011E2630B300BEF63A /* Detail */,
 				CF59C1B31E1F8AB80081833A /* EMAboutMeViewController.h */,
 				CF59C1B41E1F8AB80081833A /* EMAboutMeViewController.m */,
-				1A2093141E267DEF00BEF63A /* EMIconView.h */,
-				1A2093151E267DEF00BEF63A /* EMIconView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,6 +269,7 @@
 		1A2093011E2630B300BEF63A /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				1AEB3F931E27DDA90000EE87 /* method */,
 				1A2093021E263B6E00BEF63A /* EMChangeIconView.h */,
 				1A2093031E263B6E00BEF63A /* EMChangeIconView.m */,
 				1A2092F51E262EF100BEF63A /* EMChangePassword.h */,
@@ -282,14 +278,23 @@
 				1A2092FC1E26303D00BEF63A /* EMChangeAboutUs.m */,
 				1A2092FE1E26305300BEF63A /* EMAdvicesFeedback.h */,
 				1A2092FF1E26305300BEF63A /* EMAdvicesFeedback.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		1AEB3F931E27DDA90000EE87 /* method */ = {
+			isa = PBXGroup;
+			children = (
 				1A2093081E26479400BEF63A /* EMLeftBarBtn.h */,
 				1A2093091E26479400BEF63A /* EMLeftBarBtn.m */,
 				1A2093111E267A3400BEF63A /* EMIconChangeInfo.h */,
 				1A2093121E267A3400BEF63A /* EMIconChangeInfo.m */,
 				1A2093171E27A58300BEF63A /* EMBaseInfoLabel.h */,
 				1A2093181E27A58300BEF63A /* EMBaseInfoLabel.m */,
+				1AEB3F901E27D6320000EE87 /* EMFeedBackTV.h */,
+				1AEB3F911E27D6320000EE87 /* EMFeedBackTV.m */,
 			);
-			name = Detail;
+			name = method;
 			sourceTree = "<group>";
 		};
 		1EE61A05D3CF04EED1CDEDA8 /* Frameworks */ = {
@@ -549,8 +554,6 @@
 				CF2A387F1E2474A800118059 /* URL.h */,
 				CFAFBC7C1E25DBFD00F4A020 /* EMBaseCell.h */,
 				CFAFBC7D1E25DBFD00F4A020 /* EMBaseCell.m */,
-				1A20931A1E27ACA900BEF63A /* EMMySingleton.h */,
-				1A20931B1E27ACA900BEF63A /* EMMySingleton.m */,
 			);
 			path = "公用";
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AEB3F921E27D6320000EE87 /* EMFeedBackTV.m in Sources */,
 				CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */,
 				1A2092E61E24BE6400BEF63A /* EMMineAboutBtn.m in Sources */,
 				CFED49371E23622600750CBA /* EMClassViewCell.m in Sources */,
@@ -915,7 +919,6 @@
 				CFED49331E232EC500750CBA /* EMIconDirectionButton.m in Sources */,
 				CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */,
 				1A2093001E26305300BEF63A /* EMAdvicesFeedback.m in Sources */,
-				1A2093161E267DEF00BEF63A /* EMIconView.m in Sources */,
 				CF5D4F0C1E23A508004713A2 /* EMStuOrTeacherViewController.m in Sources */,
 				1A2092E91E24D58400BEF63A /* EMLoginModel.m in Sources */,
 				1A2093131E267A3400BEF63A /* EMIconChangeInfo.m in Sources */,
@@ -927,17 +930,13 @@
 				CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */,
 				CF5110CB1E24DAD7007062C5 /* EMLikeCellView.m in Sources */,
 				1A2093041E263B6E00BEF63A /* EMChangeIconView.m in Sources */,
-
 				1A2093191E27A58300BEF63A /* EMBaseInfoLabel.m in Sources */,
-
 				CF89E17B1E2770660085F664 /* EMStuModel.m in Sources */,
-
 				CFAFBC811E260F2800F4A020 /* EMTwoBtnView.m in Sources */,
 				CFAFBC7E1E25DBFD00F4A020 /* EMBaseCell.m in Sources */,
 				CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */,
 				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
 				CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */,
-				1A20931C1E27ACA900BEF63A /* EMMySingleton.m in Sources */,
 				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
 				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,
 				CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */,

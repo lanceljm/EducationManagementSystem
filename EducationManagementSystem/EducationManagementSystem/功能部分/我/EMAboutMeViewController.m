@@ -69,15 +69,15 @@
             [self.navigationController pushViewController:iconVC animated:YES];
         }];
         
-        NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
-        if ([staffDic[@"staffPicture"] isEqualToString:@""]) {
-            if ([staffDic[@"staffSex"] isEqualToString:@"男"]) {
+//        NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:UserInfoKey];
+        if ([USER_INFO[@"staffPicture"] isEqualToString:@""]) {
+            if ([USER_INFO[@"staffSex"] isEqualToString:@"男"]) {
                 [_iconImageBtn setImage:[UIImage imageNamed:@"默认头像男"] forState:UIControlStateNormal];
             }else {
                 [_iconImageBtn setImage:[UIImage imageNamed:@"默认头像女"] forState:UIControlStateNormal];
             }
         }else {
-            NSString *pictureUrl = [NSString stringWithFormat:@"http://192.168.0.117%@",staffDic[@"staffPicture"]];
+            NSString *pictureUrl = [NSString stringWithFormat:@"%@%@",BASE_URL,USER_INFO[@"staffPicture"]];
             NSURL *picUrl = [NSURL URLWithString:pictureUrl];
             UIImageView *iconImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 85, 85)];
             iconImage.layer.cornerRadius = 85/2;
@@ -94,8 +94,9 @@
 //姓名
 -(EMUserinfoLabel *)nameLabel {
     if (!_nameLabel) {
-        NSString *text = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"][@"staffName"];
-        _nameLabel = [[EMUserinfoLabel alloc]initWithFrame:AAdaptionRect(290, 376, 160, 40) withText:text withTextColor:[UIColor blackColor] withTextCenter:NSTextAlignmentCenter withTextFontSize:20];
+//        NSString *text = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"][@"staffName"];
+
+        _nameLabel = [[EMUserinfoLabel alloc]initWithFrame:AAdaptionRect(290, 376, 160, 40) withText:USER_INFO[@"staffName"] withTextColor:[UIColor blackColor] withTextCenter:NSTextAlignmentCenter withTextFontSize:20];
     }
     return _nameLabel;
 }
@@ -103,8 +104,8 @@
 //职位
 -(EMUserinfoLabel *)postionLabel {
     if (!_postionLabel) {
-        NSString *text = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"][@"staffPost"];
-        _postionLabel = [[EMUserinfoLabel alloc]initWithFrame:AAdaptionRect(310, 426, 120, 40) withText:text withTextColor:[UIColor blackColor] withTextCenter:NSTextAlignmentCenter withTextFontSize:16];
+//        NSString *text = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"][@"staffPost"];
+        _postionLabel = [[EMUserinfoLabel alloc]initWithFrame:AAdaptionRect(310, 426, 120, 40) withText:USER_INFO[@"staffPost"] withTextColor:[UIColor blackColor] withTextCenter:NSTextAlignmentCenter withTextFontSize:16];
     }
     return _postionLabel;
 }

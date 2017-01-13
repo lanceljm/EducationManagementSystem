@@ -115,13 +115,13 @@
                 NSLog(@"密码不能为空");
             }else{
             //网络请求
-            NSString *urlStr = @"http://192.168.0.117/api/staff/login.html";
             NSDictionary *parm = @{@"account":_accountTF.text,@"password":_passwordTF.text};
-            [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
+            [NetRequest POST:getLoginUrl parameters:parm success:^(id responseObject) {
                 NSDictionary *userInfo = responseObject[@"result"];
                 NSLog(@"用户信息：%@",userInfo);
                 //保存用户登录字典
-                [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:@"UserInfo"];
+                [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:UserInfoKey];
+                
                 //保存登录状态
                 [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"isLogin"];
                 

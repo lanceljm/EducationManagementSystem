@@ -18,7 +18,7 @@
 @property(nonatomic,strong)EMBaseInfoLabel *name;
 @property(nonatomic,strong)EMBaseInfoLabel *telephone;
 @property(nonatomic,strong)EMBaseInfoLabel *postion;
-@property(nonatomic,strong)EMBaseInfoLabel *class;
+@property(nonatomic,strong)EMBaseInfoLabel *classWithGarde;
 
 @end
 
@@ -50,6 +50,10 @@
     baseLabel.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:baseLabel];
     
+    [self.view addSubview:self.name];
+    [self.view addSubview:self.telephone];
+    [self.view addSubview:self.postion];
+    [self.view addSubview:self.classWithGarde];
     
 }
 
@@ -116,10 +120,33 @@
 
 -(EMBaseInfoLabel *)name {
     if (!_name) {
-        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
-        _name = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 380, kBaseWidth, 100) withTitle:@"姓名" withContent:userInfo[@"staffName"]];
+//        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
+        _name = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 380, kBaseWidth, 100) withTitle:@"姓名" withContent:USER_INFO[@"staffName"]];
     }
     return _name;
+}
+
+-(EMBaseInfoLabel *)telephone {
+    if (!_telephone) {
+        _telephone = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 480, kBaseWidth, 100) withTitle:@"电话" withContent:USER_INFO[@"staffTelphone"]];
+    }
+    return _telephone;
+}
+    
+-(EMBaseInfoLabel *)postion {
+    if (!_postion) {
+        _postion = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 580, kBaseWidth, 100) withTitle:@"职务" withContent:USER_INFO[@"staffPost"]];
+    }
+    return _postion;
+}
+    
+-(EMBaseInfoLabel *)classWithGarde {
+    if (!_classWithGarde) {
+        NSString *classSub = [USER_INFO[@"staffYear"] substringToIndex:3];
+        NSString *classString = [NSString stringWithFormat:@"%@届%@班",classSub,USER_INFO[@"staffId"]];
+        _classWithGarde = [[EMBaseInfoLabel alloc]initWithFrame:AAdaptionRect(0, 680, kBaseWidth, 100) withTitle:@"班级" withContent:classString];
+    }
+    return _classWithGarde;
 }
 
 //保存相册的图片到本地
@@ -145,11 +172,11 @@
     
     NSLog(@"图片：%@",filePath);
     
-    NSString *urlStr = @"http://192.168.0.117/api/staff/setStaffPicture.html";
-    NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
-    NSDictionary *parm = @{@"staffId":staffDic[@"staffId"],@"file":filePath,@"token":staffDic[@"token"]};
+//    NSString *urlStr = @"http://192.168.0.117/api/staff/setStaffPicture.html";
+//    NSDictionary *staffDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
+    NSDictionary *parm = @{@"staffId":USER_INFO[@"staffId"],@"file":filePath,@"token":USER_INFO[@"token"]};
     NSLog(@"上传需要参数：%@",parm);
-    [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
+    [NetRequest POST:sendIconUrl parameters:parm success:^(id responseObject) {
         NSLog(@"上传头像成功");
     } failture:^(NSError *error) {
         //上传失败

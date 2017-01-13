@@ -9,7 +9,6 @@
 #import "EMChangePassword.h"
 #import "EMPasswordUnderLineTextF.h"
 #import "EMSysButton.h"
-#import "NetRequest.h"
 #import <MBProgressHUD.h> 
 
 @interface EMChangePassword ()
@@ -133,11 +132,11 @@
                 });
             }else {
                 //上传数据
-                NSString *urlStr = @"http://192.168.0.117/api/staff/changePassword.html";
+//                NSString *urlStr = @"http://192.168.0.117/api/staff/changePassword.html";
                 NSString *account = [[NSUserDefaults standardUserDefaults]objectForKey:@"saveAccount"];
-                NSDictionary *userInfoDic = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserInfo"];
-                NSDictionary *parm = @{@"account":account,@"oldPassword":_oldPD.text,@"newPassword":_surePD.text,@"token":userInfoDic[@"token"]};
-                [NetRequest POST:urlStr parameters:parm success:^(id responseObject) {
+//                NSDictionary *userInfoDic = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserInfo"];
+                NSDictionary *parm = @{@"account":account,@"oldPassword":_oldPD.text,@"newPassword":_surePD.text,@"token":USER_INFO[@"token"]};
+                [NetRequest POST:changePasswordUrl parameters:parm success:^(id responseObject) {
                     NSLog(@"修改成功%@",responseObject);
                     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                     hud.mode = MBProgressHUDModeAnnularDeterminate;
