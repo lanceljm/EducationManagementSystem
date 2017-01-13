@@ -29,6 +29,7 @@
 		1A20931C1E27ACA900BEF63A /* EMMySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A20931B1E27ACA900BEF63A /* EMMySingleton.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
+		CF249E441E28A31800336339 /* EMStatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF249E431E28A31800336339 /* EMStatisticsController.m */; };
 		CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */; };
 		CF26F8E61E20E91700880FDF /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */; };
 		CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38761E246DC800118059 /* EMClassViewModel.m */; };
@@ -127,6 +128,8 @@
 		79CDD02F1747C54AF552E5F1 /* Pods-EducationManagementSystemUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7050075BC698E9A4C56BAC0 /* libPods-EducationManagementSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADBA55640BD0B597751D549 /* Pods-EducationManagementSystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF249E421E28A31800336339 /* EMStatisticsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStatisticsController.h; sourceTree = "<group>"; };
+		CF249E431E28A31800336339 /* EMStatisticsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStatisticsController.m; sourceTree = "<group>"; };
 		CF26F8E11E20E53300880FDF /* EMIconUnderLineTextF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMIconUnderLineTextF.h; sourceTree = "<group>"; };
 		CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconUnderLineTextF.m; sourceTree = "<group>"; };
 		CF26F8E41E20E91700880FDF /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
@@ -392,6 +395,8 @@
 				CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */,
 				CF89E1791E2770660085F664 /* EMStuModel.h */,
 				CF89E17A1E2770660085F664 /* EMStuModel.m */,
+				CF249E421E28A31800336339 /* EMStatisticsController.h */,
+				CF249E431E28A31800336339 /* EMStatisticsController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -927,16 +932,14 @@
 				CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */,
 				CF5110CB1E24DAD7007062C5 /* EMLikeCellView.m in Sources */,
 				1A2093041E263B6E00BEF63A /* EMChangeIconView.m in Sources */,
-
 				1A2093191E27A58300BEF63A /* EMBaseInfoLabel.m in Sources */,
-
 				CF89E17B1E2770660085F664 /* EMStuModel.m in Sources */,
-
 				CFAFBC811E260F2800F4A020 /* EMTwoBtnView.m in Sources */,
 				CFAFBC7E1E25DBFD00F4A020 /* EMBaseCell.m in Sources */,
 				CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */,
 				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
 				CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */,
+				CF249E441E28A31800336339 /* EMStatisticsController.m in Sources */,
 				1A20931C1E27ACA900BEF63A /* EMMySingleton.m in Sources */,
 				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
 				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,

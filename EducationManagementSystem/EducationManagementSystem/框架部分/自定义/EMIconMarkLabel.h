@@ -12,4 +12,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame withTitle:(NSString *)title TitleCol:(UIColor *)titleCol imageName:(NSString *)imgName Font:(CGFloat)font;
 
+
+
 @end
