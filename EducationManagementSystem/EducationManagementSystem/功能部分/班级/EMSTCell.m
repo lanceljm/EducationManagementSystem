@@ -19,6 +19,18 @@
 
 @implementation EMSTCell
 
+- (void)setDetailModel:(EMDetailModel *)detailModel {
+    
+    _teaNaame.text = detailModel.student.studentName;
+    if ([detailModel.student.studentSex isEqualToString:@"男"]) {
+        _iconImgV.image = [UIImage imageNamed:@"men"];
+    }else
+        _iconImgV.image = [UIImage imageNamed:@"women"];
+    
+    _sourceOrClassName.text = detailModel.rollcallStudentType;
+    _sourceOrClassName.textColor = [UIColor redColor];
+}
+
 - (void)setModel:(EMTeacherList *)model {
     _teaNaame.text = model.staffName;
     if ([model.staffSex isEqualToString:@"男"]) {

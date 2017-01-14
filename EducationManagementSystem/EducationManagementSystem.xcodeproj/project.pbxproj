@@ -29,6 +29,11 @@
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
 		CF249E441E28A31800336339 /* EMStatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF249E431E28A31800336339 /* EMStatisticsController.m */; };
+		CF249E471E28A8F000336339 /* EMStatisticsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF249E461E28A8F000336339 /* EMStatisticsCell.m */; };
+		CF249E4A1E28B45800336339 /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF249E491E28B45800336339 /* PieView.m */; };
+		CF249E4D1E28BF6000336339 /* EMDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF249E4C1E28BF6000336339 /* EMDetailController.m */; };
+		CF249E531E28CB6700336339 /* EMStatisticsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF249E521E28CB6700336339 /* EMStatisticsModel.m */; };
+		CF249E571E28D4DA00336339 /* EMDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF249E561E28D4DA00336339 /* EMDetailModel.m */; };
 		CF26F8E31E20E53300880FDF /* EMIconUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */; };
 		CF26F8E61E20E91700880FDF /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */; };
 		CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38761E246DC800118059 /* EMClassViewModel.m */; };
@@ -127,6 +132,16 @@
 		CADBA55640BD0B597751D549 /* Pods-EducationManagementSystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemUITests/Pods-EducationManagementSystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF249E421E28A31800336339 /* EMStatisticsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStatisticsController.h; sourceTree = "<group>"; };
 		CF249E431E28A31800336339 /* EMStatisticsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStatisticsController.m; sourceTree = "<group>"; };
+		CF249E451E28A8F000336339 /* EMStatisticsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStatisticsCell.h; sourceTree = "<group>"; };
+		CF249E461E28A8F000336339 /* EMStatisticsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStatisticsCell.m; sourceTree = "<group>"; };
+		CF249E481E28B45800336339 /* PieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieView.h; sourceTree = "<group>"; };
+		CF249E491E28B45800336339 /* PieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
+		CF249E4B1E28BF6000336339 /* EMDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMDetailController.h; sourceTree = "<group>"; };
+		CF249E4C1E28BF6000336339 /* EMDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMDetailController.m; sourceTree = "<group>"; };
+		CF249E511E28CB6700336339 /* EMStatisticsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStatisticsModel.h; sourceTree = "<group>"; };
+		CF249E521E28CB6700336339 /* EMStatisticsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStatisticsModel.m; sourceTree = "<group>"; };
+		CF249E551E28D4DA00336339 /* EMDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMDetailModel.h; sourceTree = "<group>"; };
+		CF249E561E28D4DA00336339 /* EMDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMDetailModel.m; sourceTree = "<group>"; };
 		CF26F8E11E20E53300880FDF /* EMIconUnderLineTextF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMIconUnderLineTextF.h; sourceTree = "<group>"; };
 		CF26F8E21E20E53300880FDF /* EMIconUnderLineTextF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMIconUnderLineTextF.m; sourceTree = "<group>"; };
 		CF26F8E41E20E91700880FDF /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
@@ -323,6 +338,52 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CF249E4E1E28C75C00336339 /* 学生和老师 */ = {
+			isa = PBXGroup;
+			children = (
+				CF5D4F0A1E23A508004713A2 /* EMStuOrTeacherViewController.h */,
+				CF5D4F0B1E23A508004713A2 /* EMStuOrTeacherViewController.m */,
+				CF89E1791E2770660085F664 /* EMStuModel.h */,
+				CF89E17A1E2770660085F664 /* EMStuModel.m */,
+			);
+			name = "学生和老师";
+			sourceTree = "<group>";
+		};
+		CF249E4F1E28C78500336339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFAFBC761E25CEEF00F4A020 /* EMSTCell.h */,
+				CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */,
+				CF249E481E28B45800336339 /* PieView.h */,
+				CF249E491E28B45800336339 /* PieView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CF249E501E28C7A800336339 /* 扇形图TVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF249E421E28A31800336339 /* EMStatisticsController.h */,
+				CF249E431E28A31800336339 /* EMStatisticsController.m */,
+				CF249E451E28A8F000336339 /* EMStatisticsCell.h */,
+				CF249E461E28A8F000336339 /* EMStatisticsCell.m */,
+				CF249E511E28CB6700336339 /* EMStatisticsModel.h */,
+				CF249E521E28CB6700336339 /* EMStatisticsModel.m */,
+			);
+			name = "扇形图TVC";
+			sourceTree = "<group>";
+		};
+		CF249E541E28D08D00336339 /* 学生考勤详情 */ = {
+			isa = PBXGroup;
+			children = (
+				CF249E4B1E28BF6000336339 /* EMDetailController.h */,
+				CF249E4C1E28BF6000336339 /* EMDetailController.m */,
+				CF249E551E28D4DA00336339 /* EMDetailModel.h */,
+				CF249E561E28D4DA00336339 /* EMDetailModel.m */,
+			);
+			name = "学生考勤详情";
+			sourceTree = "<group>";
+		};
 		CF26F8DC1E20E4CA00880FDF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,14 +455,10 @@
 		CF37D5E71E232CEF0019E9A0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CF5D4F0A1E23A508004713A2 /* EMStuOrTeacherViewController.h */,
-				CF5D4F0B1E23A508004713A2 /* EMStuOrTeacherViewController.m */,
-				CFAFBC761E25CEEF00F4A020 /* EMSTCell.h */,
-				CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */,
-				CF89E1791E2770660085F664 /* EMStuModel.h */,
-				CF89E17A1E2770660085F664 /* EMStuModel.m */,
-				CF249E421E28A31800336339 /* EMStatisticsController.h */,
-				CF249E431E28A31800336339 /* EMStatisticsController.m */,
+				CF249E4E1E28C75C00336339 /* 学生和老师 */,
+				CF249E501E28C7A800336339 /* 扇形图TVC */,
+				CF249E4F1E28C78500336339 /* View */,
+				CF249E541E28D08D00336339 /* 学生考勤详情 */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -507,12 +564,12 @@
 		CF59C1961E1F80790081833A /* 班级 */ = {
 			isa = PBXGroup;
 			children = (
+				CF59C1AA1E1F87760081833A /* EMClassViewController.h */,
+				CF59C1AB1E1F87760081833A /* EMClassViewController.m */,
 				CF2A38781E246E5800118059 /* model */,
 				CF2A38741E246DA600118059 /* viewModel */,
 				CFED49341E23620200750CBA /* view */,
 				CF37D5E71E232CEF0019E9A0 /* Controller */,
-				CF59C1AA1E1F87760081833A /* EMClassViewController.h */,
-				CF59C1AB1E1F87760081833A /* EMClassViewController.m */,
 			);
 			path = "班级";
 			sourceTree = "<group>";
@@ -910,6 +967,7 @@
 				CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */,
 				1A2092E61E24BE6400BEF63A /* EMMineAboutBtn.m in Sources */,
 				CFED49371E23622600750CBA /* EMClassViewCell.m in Sources */,
+				CF249E4D1E28BF6000336339 /* EMDetailController.m in Sources */,
 				1A007EAF1E2363B2001907AE /* AppDelegate.m in Sources */,
 				1A2092F71E262EF100BEF63A /* EMChangePassword.m in Sources */,
 				CF59C1A01E1F83DE0081833A /* BaseViewController.m in Sources */,
@@ -917,6 +975,7 @@
 				CF5110C51E24CB15007062C5 /* EMHistoryController.m in Sources */,
 				1A20930A1E26479400BEF63A /* EMLeftBarBtn.m in Sources */,
 				CF26F8E61E20E91700880FDF /* UIColor+CZAddition.m in Sources */,
+				CF249E571E28D4DA00336339 /* EMDetailModel.m in Sources */,
 				CFAFBC841E2621BA00F4A020 /* EMIconMarkLabel.m in Sources */,
 				CF59C1AF1E1F899B0081833A /* EMAttendanceController.m in Sources */,
 				CF59C1A31E1F850A0081833A /* EMTabBarController.m in Sources */,
@@ -932,6 +991,8 @@
 				CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */,
 				1A007EA31E2330B2001907AE /* EMSysButton.m in Sources */,
 				CF5D4F091E238309004713A2 /* LogCategory.m in Sources */,
+				CF249E4A1E28B45800336339 /* PieView.m in Sources */,
+				CF249E471E28A8F000336339 /* EMStatisticsCell.m in Sources */,
 				CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */,
 				CF5110CB1E24DAD7007062C5 /* EMLikeCellView.m in Sources */,
 				1A2093041E263B6E00BEF63A /* EMChangeIconView.m in Sources */,
@@ -943,7 +1004,6 @@
 				CF59C1BE1E1F90D00081833A /* EMLuanchViewController.m in Sources */,
 				CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */,
 				CF249E441E28A31800336339 /* EMStatisticsController.m in Sources */,
-				1A20931C1E27ACA900BEF63A /* EMMySingleton.m in Sources */,
 				CF59C1CE1E1FAC830081833A /* NetRequest.m in Sources */,
 				CF59C1BB1E1F90700081833A /* EMLoginViewController.m in Sources */,
 				CF59C1A91E1F87600081833A /* EMLeaveViewController.m in Sources */,
@@ -953,6 +1013,7 @@
 				CF5110C81E24D174007062C5 /* EMLeaveDetailController.m in Sources */,
 				CF59C1621E1F7EA40081833A /* main.m in Sources */,
 				CF89E1781E275BD70085F664 /* EMTeacherList.m in Sources */,
+				CF249E531E28CB6700336339 /* EMStatisticsModel.m in Sources */,
 				CFAFBC781E25CEEF00F4A020 /* EMSTCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

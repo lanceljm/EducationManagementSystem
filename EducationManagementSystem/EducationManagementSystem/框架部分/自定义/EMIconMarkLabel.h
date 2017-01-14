@@ -10,8 +10,11 @@
 
 @interface EMIconMarkLabel : UILabel
 
+//带图片,带下划线,带标题label  新密码：XXXX
 - (instancetype)initWithFrame:(CGRect)frame withTitle:(NSString *)title TitleCol:(UIColor *)titleCol imageName:(NSString *)imgName Font:(CGFloat)font;
 
 
+//不带图片
+-(instancetype)initWithFrame:(CGRect)frame withTitle:(NSString *)title;
 
 @end

@@ -7,8 +7,14 @@
 //
 
 #import "EMStatisticsController.h"
+#import "EMStatisticsCell.h"
+#import "EMDetailController.h"
+#import "EMStatisticsModel.h"
 
-@interface EMStatisticsController ()
+@interface EMStatisticsController ()<cellDelegate>
+
+@property(nonatomic,strong) NSMutableArray *dataArray;
+
 
 @end
 
@@ -16,83 +22,84 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.rowHeight = AAdaption(560);
+    self.tableView.separatorColor = BLUE_COLOR;
+    self.title = @"上课考勤";
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self downLoadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)downLoadData {
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [NetRequest GET:getCurriculumList parameters:self.para success:^(id responseObject) {
+            
+            //NSLog(@"------------学生考勤情况---------------\n%@",responseObject);
+            NSArray *result = responseObject[@"result"];
+            for (NSDictionary *dict in result) {
+                EMStatisticsModel *model = [EMStatisticsModel mj_objectWithKeyValues:dict];
+                [self.dataArray addObject:model];
+            }
+            [self.tableView.mj_header endRefreshing];
+            [self.tableView reloadData];
+        } failture:^(NSError *error) {
+            
+        }];
+        
+    }];
+    [self.tableView.mj_header beginRefreshing];
+}
+
+#pragma mark - cell代理
+
+- (void)cellWithcell:(EMStatisticsCell *)cell {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSLog(@"扇形图所在cell第几行:%ld",indexPath.row);
+    
+    EMStatisticsModel *model = self.dataArray[indexPath.row];
+    
+    NSDictionary *para = @{@"curriculumId":model.curriculumId,@"className":model.curriculumName,@"time":model.curriculumStartTime,@"time":model.curriculumStartTime,@"token":USER_INFO[@"token"]};
+    EMDetailController *detailVC = [[EMDetailController alloc]  init];
+    detailVC.para = para;
+    [self.navigationController pushViewController:detailVC animated:YES];
+    
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.dataArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString *cellID = @"StatisticsID";
     
+    EMStatisticsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[EMStatisticsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    cell.delegateWithCell = self;
+    EMStatisticsModel *model = self.dataArray[indexPath.row];
+    cell.model = model;
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - getters
+
+- (NSMutableArray *)dataArray {
+    
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray new];
+    }
+    return _dataArray;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
