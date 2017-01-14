@@ -8,7 +8,7 @@
 
 #import "EMNoticeViewController.h"
 
-@interface EMNoticeViewController ()
+@interface EMNoticeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 

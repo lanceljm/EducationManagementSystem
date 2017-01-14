@@ -44,6 +44,8 @@
     [self setNavi];
     [self.view addSubview:self.changeIconImage];
     
+    self.view.backgroundColor = [UIColor cz_colorWithRed:238 green:239 blue:241];
+    
     UILabel *baseLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(30, 300 + 20, 150, 28)];
     baseLabel.text = @"基础信息";
     baseLabel.textColor = [UIColor cz_colorWithHex:0x1e1e1e];
@@ -76,7 +78,7 @@
 -(EMIconChangeInfo *)changeIconImage {
     if (!_changeIconImage) {
 //        __weak typeof(self)weakself = self;
-        _changeIconImage = [[EMIconChangeInfo alloc]initWithFrame:AAdaptionRect(0, 64*2 + 32, kBaseWidth, 146)  withBtnBlock:^(id sender) {
+        _changeIconImage = [[EMIconChangeInfo alloc]initWithFrame:AAdaptionRect(0, 64/AAdaptionWidth() + 32, kBaseWidth, 146)  withBtnBlock:^(id sender) {
             //修改头像
             UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择图像" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
                 [alertVC addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

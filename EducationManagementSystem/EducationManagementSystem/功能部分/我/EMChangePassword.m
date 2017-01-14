@@ -132,15 +132,13 @@
                 });
             }else {
                 //上传数据
-//                NSString *urlStr = @"http://192.168.0.117/api/staff/changePassword.html";
                 NSString *account = [[NSUserDefaults standardUserDefaults]objectForKey:@"saveAccount"];
-//                NSDictionary *userInfoDic = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserInfo"];
                 NSDictionary *parm = @{@"account":account,@"oldPassword":_oldPD.text,@"newPassword":_surePD.text,@"token":USER_INFO[@"token"]};
                 [NetRequest POST:changePasswordUrl parameters:parm success:^(id responseObject) {
                     NSLog(@"修改成功%@",responseObject);
                     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                     hud.mode = MBProgressHUDModeAnnularDeterminate;
-                    hud.label.text = @"修改失败";
+                    hud.label.text = @"修改成功";
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         hud.hidden = YES;
                         //修改成功后跳到登录界面
