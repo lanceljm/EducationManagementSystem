@@ -13,10 +13,7 @@
 #import "EMStuOrTeacherViewController.h"
 #import "EMClassModel.h"
 #import "EMStuModel.h"
-#import <MJRefresh.h>
-#import <MBProgressHUD.h>
-#import <MJExtension.h>
-#import "URL.h"
+#import "EMStatisticsController.h"
 
 @interface EMClassViewController ()<cellBtnClickedDelegate>
 
@@ -73,13 +70,13 @@
     NSString *token = userInfo[@"token"];
     
     EMStuOrTeacherViewController *sTVc = [[EMStuOrTeacherViewController alloc] init];
+    NSDictionary *para = @{@"staffId":sstaffId,@"className":className,@"token":token};
 
     switch (btn.tag) {
         case 100:{
             sTVc.btnTag = btn.tag;
             //学生界面
             NSMutableArray *stuArr = [NSMutableArray new];
-                NSDictionary *para = @{@"staffId":sstaffId,@"className":className,@"token":token};
                 [NetRequest GET:getStudentList parameters:para success:^(id responseObject) {
                     NSLog(@"-------------学生列表----------%@",responseObject);
                     NSArray *result = responseObject[@"result"];
@@ -114,6 +111,9 @@
         }
         default: {
             //统计
+           EMStatisticsController *vc = [[EMStatisticsController alloc] init];
+            vc.para = para;
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
     }

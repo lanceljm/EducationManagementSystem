@@ -1,5 +1,5 @@
 //
-//  EMStatisticsController.h
+//  EMDetailController.h
 //  EducationManagementSystem
 //
 //  Created by 花花蔡 on 2017/1/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EMStatisticsController : UITableViewController
+@interface EMDetailController : UITableViewController
 
 @property(nonatomic,strong) NSDictionary *para;
 

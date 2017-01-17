@@ -10,8 +10,6 @@
 #import "EMSearchBarView.h"
 #import "EMSTCell.h"
 #import "EMTeacherList.h"
-#import "URL.h"
-#import <MJExtension.h>
 
 @interface EMStuOrTeacherViewController ()<UITableViewDelegate,UITableViewDataSource,cellBtnClickedDelegate>
 

@@ -27,6 +27,11 @@
 //学生搜索
 #define getStudentByName @"http://192.168.0.117/api/staff/getStudentByName.html"
 
+//上课考勤情况
+#define getCurriculumList @"http://192.168.0.117/api/staff/getCurriculumList.html"
+
+//学生考勤详情
+#define getStuRollcallList @"http://192.168.0.117/api/staff/getStuRollcallList.html"
 //上传头像
 #define sendIconUrl @"http://192.168.0.117/api/staff/setStaffPicture.html"
 
