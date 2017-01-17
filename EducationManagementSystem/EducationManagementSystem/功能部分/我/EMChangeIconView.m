@@ -46,7 +46,7 @@
     
     self.view.backgroundColor = [UIColor cz_colorWithRed:238 green:239 blue:241];
     
-    UILabel *baseLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(30, 300 + 20, 150, 28)];
+    UILabel *baseLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(30, CGRectGetMaxY(self.changeIconImage.frame)/AAdaptionWidth()  + 20, 150, 28)];
     baseLabel.text = @"基础信息";
     baseLabel.textColor = [UIColor cz_colorWithHex:0x1e1e1e];
     baseLabel.font = AAFont(28);

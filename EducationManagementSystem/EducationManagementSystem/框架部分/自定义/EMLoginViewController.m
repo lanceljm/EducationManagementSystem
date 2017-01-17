@@ -10,6 +10,7 @@
 #import "EMIconUnderLineTextF.h"
 #import "EMSysButton.h"
 #import "EMIconDirectionButton.h"
+#import <MBProgressHUD.h>
 
 @interface EMLoginViewController ()
 
@@ -49,6 +50,17 @@
     [self.view addSubview:self.passwordTF];
     [self.view addSubview:self.loginBtn];
     [self.view addSubview:self.forgetBtn];
+    
+    [self setTipLabel];
+}
+
+-(void)setTipLabel {
+    UILabel *tip = [[UILabel alloc]initWithFrame:AAdaptionRect(CGRectGetMinX(self.loginBtn.frame)/AAdaptionWidth(), kheight/AAdaptionWidth() - 120, CGRectGetWidth(self.loginBtn.frame)/AAdaptionWidth(), 45)];
+    tip.text = @"五芯教育科技和绵阳师范信息学院共同开发";
+    tip.textColor = [UIColor cz_colorWithRed:0 green:0 blue:0];
+    tip.textAlignment = NSTextAlignmentCenter;
+    tip.font = AAFont(28);
+    [self.view addSubview:tip];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -111,8 +123,20 @@
             //
             if ([_accountTF.text  isEqualToString: @""]) {
                 NSLog(@"账号不能为空");
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                hud.mode = MBProgressHUDModeAnnularDeterminate;
+                hud.label.text = @"账号不能为空";
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    hud.hidden = YES;
+                });
             }else if ([_passwordTF.text isEqualToString:@""]) {
                 NSLog(@"密码不能为空");
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                hud.mode = MBProgressHUDModeAnnularDeterminate;
+                hud.label.text = @"密码不能为空";
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    hud.hidden = YES;
+                });
             }else{
             //网络请求
             NSDictionary *parm = @{@"account":_accountTF.text,@"password":_passwordTF.text};
@@ -129,6 +153,12 @@
                     [self.view removeFromSuperview];
                     [self removeFromParentViewController];
                     NSLog(@"登录成功");
+//                    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//                    hud.mode = MBProgressHUDModeAnnularDeterminate;
+//                    hud.label.text = @"登录成功";
+//                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                        hud.hidden = YES;
+//                    });
                     
                     //保存账号
                     [[NSUserDefaults standardUserDefaults]setValue:_accountTF.text forKey:@"saveAccount"];
@@ -137,9 +167,23 @@
                     
                     [[NSNotificationCenter defaultCenter]postNotificationName:@"networking" object:nil];
                     
+                }else {
+                    NSLog(@"账号或密码错误");
+                    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                    hud.mode = MBProgressHUDModeAnnularDeterminate;
+                    hud.label.text = @"账号或密码错误";
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        hud.hidden = YES;
+                    });
                 }
             } failture:^(NSError *error) {
                 NSLog(@"error:%@,登录失败",error);
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                hud.mode = MBProgressHUDModeAnnularDeterminate;
+                hud.label.text = @"登录失败，网络错误";
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    hud.hidden = YES;
+                });
             }];
             }
         }];

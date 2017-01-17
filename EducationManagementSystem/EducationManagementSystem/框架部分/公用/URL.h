@@ -9,6 +9,9 @@
 #ifndef URL_h
 #define URL_h
 
+//获得通知信息
+#define getNotificationUrl @"http://192.168.0.117/api/notice/getNoticeList.html"
+
 //登录
 #define getLoginUrl @"http://192.168.0.117/api/staff/login.html"
 
