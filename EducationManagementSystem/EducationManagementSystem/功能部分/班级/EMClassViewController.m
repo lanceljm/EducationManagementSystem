@@ -44,7 +44,7 @@
         
         [weakSelf.classVM loadDataWithFinish:^(BOOL isOk) {
         
-        [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf.tableView.mj_header endRefreshing];
             [weakSelf.tableView reloadData];
         }];
         

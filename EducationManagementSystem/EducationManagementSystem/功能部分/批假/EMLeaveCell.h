@@ -7,6 +7,10 @@
 //
 
 #import "EMBaseCell.h"
+#import "EMleaveModel.h"
+
 @interface EMLeaveCell : EMBaseCell
+
+@property(nonatomic,strong) EMleaveModel *model;
 
 @end

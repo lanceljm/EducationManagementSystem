@@ -26,9 +26,14 @@
 
 //上课考勤情况
 #define getCurriculumList @"http://192.168.0.117/api/staff/getCurriculumList.html"
+//处理学生请假信息
+#define dealAskLeave @"http://192.168.0.117/api/staff/dealAskLeave.html"
 
 //学生考勤详情
 #define getStuRollcallList @"http://192.168.0.117/api/staff/getStuRollcallList.html"
+
+//教师批假端口
+#define getStaffList @"http://192.168.0.117/api/staff/getStaffList.html"
 //上传头像
 #define sendIconUrl @"http://192.168.0.117/api/staff/setStaffPicture.html"
 

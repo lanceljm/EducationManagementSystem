@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "EMleaveModel.h"
 @interface EMLeaveDetailController : UIViewController
+
+@property(nonatomic,strong) EMleaveModel *model;
 
 @end

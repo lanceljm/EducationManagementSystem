@@ -39,6 +39,8 @@
 		CF26F8E61E20E91700880FDF /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26F8E51E20E91700880FDF /* UIColor+CZAddition.m */; };
 		CF2A38771E246DC800118059 /* EMClassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A38761E246DC800118059 /* EMClassViewModel.m */; };
 		CF2A387B1E246E7200118059 /* EMClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A387A1E246E7200118059 /* EMClassModel.m */; };
+		CF2C98D21E29B50300F10891 /* EMleaveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C98D11E29B50300F10891 /* EMleaveModel.m */; };
+		CF2C98D81E29B6BA00F10891 /* EMLeaveListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C98D71E29B6BA00F10891 /* EMLeaveListViewModel.m */; };
 		CF5110C21E24C25C007062C5 /* EMLeaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5110C11E24C25C007062C5 /* EMLeaveCell.m */; };
 		CF5110C51E24CB15007062C5 /* EMHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5110C41E24CB15007062C5 /* EMHistoryController.m */; };
 		CF5110C81E24D174007062C5 /* EMLeaveDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5110C71E24D174007062C5 /* EMLeaveDetailController.m */; };
@@ -154,6 +156,10 @@
 		CF2A38791E246E7200118059 /* EMClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClassModel.h; sourceTree = "<group>"; };
 		CF2A387A1E246E7200118059 /* EMClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMClassModel.m; sourceTree = "<group>"; };
 		CF2A387F1E2474A800118059 /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
+		CF2C98D01E29B50300F10891 /* EMleaveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMleaveModel.h; sourceTree = "<group>"; };
+		CF2C98D11E29B50300F10891 /* EMleaveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMleaveModel.m; sourceTree = "<group>"; };
+		CF2C98D61E29B6BA00F10891 /* EMLeaveListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLeaveListViewModel.h; sourceTree = "<group>"; };
+		CF2C98D71E29B6BA00F10891 /* EMLeaveListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLeaveListViewModel.m; sourceTree = "<group>"; };
 		CF37D5E61E231B6B0019E9A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CF5110C01E24C25C007062C5 /* EMLeaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLeaveCell.h; sourceTree = "<group>"; };
 		CF5110C11E24C25C007062C5 /* EMLeaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLeaveCell.m; sourceTree = "<group>"; };
@@ -361,17 +367,6 @@
 			name = "学生和老师";
 			sourceTree = "<group>";
 		};
-		CF249E4F1E28C78500336339 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CFAFBC761E25CEEF00F4A020 /* EMSTCell.h */,
-				CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */,
-				CF249E481E28B45800336339 /* PieView.h */,
-				CF249E491E28B45800336339 /* PieView.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		CF249E501E28C7A800336339 /* 扇形图TVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,12 +459,44 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		CF2C98D31E29B50800F10891 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C98D01E29B50300F10891 /* EMleaveModel.h */,
+				CF2C98D11E29B50300F10891 /* EMleaveModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CF2C98D41E29B51500F10891 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF59C1A71E1F87600081833A /* EMLeaveViewController.h */,
+				CF59C1A81E1F87600081833A /* EMLeaveViewController.m */,
+				CF5110C31E24CB15007062C5 /* EMHistoryController.h */,
+				CF5110C41E24CB15007062C5 /* EMHistoryController.m */,
+				CF5110C61E24D174007062C5 /* EMLeaveDetailController.h */,
+				CF5110C71E24D174007062C5 /* EMLeaveDetailController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		CF2C98D51E29B52B00F10891 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CF5110C01E24C25C007062C5 /* EMLeaveCell.h */,
+				CF5110C11E24C25C007062C5 /* EMLeaveCell.m */,
+				CF5110C91E24DAD7007062C5 /* EMLikeCellView.h */,
+				CF5110CA1E24DAD7007062C5 /* EMLikeCellView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		CF37D5E71E232CEF0019E9A0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CF249E4E1E28C75C00336339 /* 学生和老师 */,
 				CF249E501E28C7A800336339 /* 扇形图TVC */,
-				CF249E4F1E28C78500336339 /* View */,
 				CF249E541E28D08D00336339 /* 学生考勤详情 */,
 			);
 			name = Controller;
@@ -559,16 +586,11 @@
 		CF59C1951E1F80790081833A /* 批假 */ = {
 			isa = PBXGroup;
 			children = (
-				CF59C1A71E1F87600081833A /* EMLeaveViewController.h */,
-				CF59C1A81E1F87600081833A /* EMLeaveViewController.m */,
-				CF5110C01E24C25C007062C5 /* EMLeaveCell.h */,
-				CF5110C11E24C25C007062C5 /* EMLeaveCell.m */,
-				CF5110C31E24CB15007062C5 /* EMHistoryController.h */,
-				CF5110C41E24CB15007062C5 /* EMHistoryController.m */,
-				CF5110C61E24D174007062C5 /* EMLeaveDetailController.h */,
-				CF5110C71E24D174007062C5 /* EMLeaveDetailController.m */,
-				CF5110C91E24DAD7007062C5 /* EMLikeCellView.h */,
-				CF5110CA1E24DAD7007062C5 /* EMLikeCellView.m */,
+				CF2C98D61E29B6BA00F10891 /* EMLeaveListViewModel.h */,
+				CF2C98D71E29B6BA00F10891 /* EMLeaveListViewModel.m */,
+				CF2C98D51E29B52B00F10891 /* view */,
+				CF2C98D41E29B51500F10891 /* controller */,
+				CF2C98D31E29B50800F10891 /* model */,
 			);
 			path = "批假";
 			sourceTree = "<group>";
@@ -688,6 +710,10 @@
 				CFED49361E23622500750CBA /* EMClassViewCell.m */,
 				CF5D4F0D1E23A6DD004713A2 /* EMSearchBarView.h */,
 				CF5D4F0E1E23A6DD004713A2 /* EMSearchBarView.m */,
+				CFAFBC761E25CEEF00F4A020 /* EMSTCell.h */,
+				CFAFBC771E25CEEF00F4A020 /* EMSTCell.m */,
+				CF249E481E28B45800336339 /* PieView.h */,
+				CF249E491E28B45800336339 /* PieView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1001,11 +1027,13 @@
 				1A2093131E267A3400BEF63A /* EMIconChangeInfo.m in Sources */,
 				CF5110C21E24C25C007062C5 /* EMLeaveCell.m in Sources */,
 				1A2093101E2664A500BEF63A /* EMPasswordUnderLineTextF.m in Sources */,
+				CF2C98D21E29B50300F10891 /* EMleaveModel.m in Sources */,
 				CF59C1B81E1F8C8A0081833A /* RootViewController.m in Sources */,
 				1A007EA31E2330B2001907AE /* EMSysButton.m in Sources */,
 				CF5D4F091E238309004713A2 /* LogCategory.m in Sources */,
 				CF249E4A1E28B45800336339 /* PieView.m in Sources */,
 				CF249E471E28A8F000336339 /* EMStatisticsCell.m in Sources */,
+				CF2C98D81E29B6BA00F10891 /* EMLeaveListViewModel.m in Sources */,
 				CF5D4F0F1E23A6DD004713A2 /* EMSearchBarView.m in Sources */,
 				CF5110CB1E24DAD7007062C5 /* EMLikeCellView.m in Sources */,
 				1A2093041E263B6E00BEF63A /* EMChangeIconView.m in Sources */,

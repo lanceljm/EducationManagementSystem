@@ -23,6 +23,7 @@
     NSString *token = userInfo[@"token"];
     
     NSDictionary *paramters = @{@"staffId":staffId,@"teacher":administrationId,@"token":token};
+    
     [NetRequest GET:getClassList parameters:paramters success:^(id responseObject) {
         NSArray *result = responseObject[@"result"];
        // NSLog(@"%@",result);
@@ -42,11 +43,6 @@
         isSuccess(NO);
 
     }];
-    
-    
-    //    NSString *urlStr = @"http://192.168.0.117/api/staff/login.html";
-    //    NSDictionary *para = @{@"account":@"Q16078856",@"password":@"888888"};
-    //    NSString *urlStr = @"http://192.168.0.117/api/staff/getClassList.html";
     
 }
 

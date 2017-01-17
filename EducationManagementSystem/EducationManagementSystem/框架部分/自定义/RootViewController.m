@@ -37,8 +37,8 @@
 
 - (void)setControllerS {
     [self setTabVc];
-    [self setLoginVc];
-    [self setLuanchVc];
+    //[self setLoginVc];
+    //[self setLuanchVc];
 }
 
 - (void)setLoginVc {

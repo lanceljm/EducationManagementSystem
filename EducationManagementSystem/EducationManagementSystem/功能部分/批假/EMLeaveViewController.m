@@ -10,7 +10,13 @@
 #import "EMLeaveCell.h"
 #import "EMHistoryController.h"
 #import "EMLeaveDetailController.h"
+#import "EMLeaveListViewModel.h"
+#import "EMleaveModel.h"
+
 @interface EMLeaveViewController ()
+
+@property(nonatomic,strong) EMLeaveListViewModel *leaveVM;
+
 
 @end
 
@@ -25,10 +31,27 @@
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.rowHeight = AAdaption(140);
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+
+- (void)loadData {
+    
+    __weak typeof(self) weakSelf = self;
+   
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [weakSelf.leaveVM downLoadDataWithStatus:@1 withFinish:^(BOOL success) {
+            [weakSelf.tableView reloadData];
+            [weakSelf.tableView.mj_header endRefreshing];
+        }];
+    }];
+    
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)btnClicked {
@@ -40,7 +63,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return  10;
+    return  self.leaveVM.listViewModel.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -50,16 +73,27 @@
     if (!cell) {
         cell = [[EMLeaveCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"leaveID"];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    EMleaveModel *model = self.leaveVM.listViewModel[indexPath.row];
+    cell.model = model;
     return cell;
     
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    EMleaveModel *model = self.leaveVM.listViewModel[indexPath.row];
     EMLeaveDetailController *vc =  [[EMLeaveDetailController alloc] init];
+    vc.model = model;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - getters
+- (EMLeaveListViewModel *)leaveVM {
+    
+    if (!_leaveVM) {
+        _leaveVM = [[EMLeaveListViewModel alloc] init];
+    }
+    return _leaveVM;
 }
 
 

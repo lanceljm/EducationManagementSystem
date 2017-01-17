@@ -12,14 +12,18 @@
 #import "EMIconMarkLabel.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
 #import "EMSysButton.h"
-@interface EMAttendanceController ()
+
+@interface EMAttendanceController ()<AMapLocationManagerDelegate>
 
 @property(nonatomic,strong) EMIconMarkLabel *timeL;
 @property(nonatomic,strong) EMIconMarkLabel *workL;
 @property(nonatomic,strong) EMIconMarkLabel *markL;
 @property(nonatomic,strong) NSTimer *timer;
 @property(nonatomic,strong) MAMapView *mapView;
+@property(nonatomic,strong) AMapLocationManager *locationManager;
+
 
 @end
 
@@ -53,6 +57,15 @@
         WithImages:@[@"形状-1",@"形状-2"] WithFont:36
         WithSelectorBtnBlock:^(UIButton* btn) {
             btn.selected = YES;
+            
+            if (btn.tag == 100) {
+                 //办公
+                
+            }else {
+                //外出
+                
+            }
+            
         }];
     [self.view addSubview:Btnview];
 
@@ -79,6 +92,8 @@
     
 }
 
+#pragma mark - 地图定位相关
+
 - (void)addMapView {
     
     CGFloat mapY = CGRectGetMaxY(_markL.frame) + AAdaption(20);
@@ -89,8 +104,33 @@
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
     
     [self.view addSubview:_mapView];
+    
+    // 带逆地理（返回坐标和地址信息）。将下面代码中的 YES 改成 NO ，则不会返回地址信息。
+    [self.locationManager requestLocationWithReGeocode:YES completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
+        
+//        if (error)
+//        {
+//            NSLog(@"locError:{%ld - %@};", (long)error.code, error.localizedDescription);
+//            
+//            if (error.code == AMapLocationErrorLocateFailed)
+//            {
+//                return;
+//            }
+//        }
+        
+        NSLog(@"-----------location:-----------\n<%f,%f>", location.coordinate.latitude,location.coordinate.longitude);
+        
+        if (regeocode)
+        {
+            NSLog(@"reGeocode:%@", regeocode);
+        }
+    }];
+    
 }
 
+
+
+//签到签退按钮
 - (void)addEndBtn {
     
     CGFloat btnY = CGRectGetMaxY(_mapView.frame) + AAdaption(34);
@@ -109,6 +149,9 @@
     
 }
 
+
+#pragma mark - 定时器相关
+
 - (void)startTimer {
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timeFunc) userInfo:nil repeats:YES];
 }
@@ -125,6 +168,25 @@
     NSString *locationStr = [formatter stringFromDate:date];
     _timeL.text = locationStr;
 }
+
+#pragma mark - getters
+-(AMapLocationManager *)locationManager {
+    
+    if (!_locationManager) {
+        _locationManager = [[AMapLocationManager alloc] init];
+        _locationManager.delegate = self;
+        // 带逆地理信息的一次定位（返回坐标和地址信息）
+        [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        //   定位超时时间，最低2s，此处设置为10s
+        _locationManager.locationTimeout = 10;
+        //   逆地理请求超时时间，最低2s，此处设置为10s
+        _locationManager.reGeocodeTimeout = 10;
+        
+    }
+    return _locationManager;
+}
+
+
 
 
 @end
