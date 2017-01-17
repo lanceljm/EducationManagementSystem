@@ -10,4 +10,8 @@
 
 @interface EMNotificationVM : NSObject
 
+@property(nonatomic,strong)NSMutableArray *dataSourceArr;
+
+-(void)loadNetData:(void(^)(BOOL))isSuccess;
+
 @end

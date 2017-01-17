@@ -38,7 +38,7 @@
         }else {
             NSString *pictureUrl = [NSString stringWithFormat:@"%@%@",BASE_URL,USER_INFO[@"staffPicture"]];
             NSURL *picUrl = [NSURL URLWithString:pictureUrl];
-            iconImage.layer.cornerRadius = 112/4;
+            iconImage.layer.cornerRadius = 112/2*AAdaptionWidth();
             iconImage.layer.masksToBounds = YES;
             [iconImage setImageWithURL:picUrl];
         }

@@ -65,7 +65,7 @@
 //头像
 -(EMIconViewBtn *)iconImageBtn {
     if (!_iconImageBtn) {
-        _iconImageBtn = [[EMIconViewBtn alloc]initWithFrame:AAdaptionRect(290, CGRectGetMinY(self.bgUpImageView.frame)/AAdaptionWidth() + 50, 170, 170) withTag:1010 withClickBlock:^(id sender) {
+        _iconImageBtn = [[EMIconViewBtn alloc]initWithFrame:AAdaptionRect(kwidth/AAdaptionWidth()/2 - 170/2 ,64/AAdaptionWidth() + 20, 170, 170) withTag:1010 withClickBlock:^(id sender) {
             EMChangeIconView *iconVC = [[EMChangeIconView alloc]init];
             iconVC.title = @"个人信息";
             [self.navigationController pushViewController:iconVC animated:YES];
@@ -81,7 +81,7 @@
         }else {
             NSString *pictureUrl = [NSString stringWithFormat:@"%@%@",BASE_URL,USER_INFO[@"staffPicture"]];
             NSURL *picUrl = [NSURL URLWithString:pictureUrl];
-            UIImageView *iconImage = [[UIImageView alloc]initWithFrame:AAdaptionRect(290, 64/AAdaptionWidth() + 45, 170, 170)];
+            UIImageView *iconImage = [[UIImageView alloc]initWithFrame:AAdaptionRect(0, 0, 170, 170)];
             iconImage.layer.cornerRadius = self.iconImageBtn.frame.size.width/2;
             iconImage.layer.masksToBounds = YES;
             [iconImage setImageWithURL:picUrl];
