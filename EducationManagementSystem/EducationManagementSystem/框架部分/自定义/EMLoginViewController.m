@@ -128,6 +128,7 @@
                 hud.label.text = @"账号不能为空";
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     hud.hidden = YES;
+                    [hud removeFromSuperViewOnHide];
                 });
             }else if ([_passwordTF.text isEqualToString:@""]) {
                 NSLog(@"密码不能为空");
@@ -136,6 +137,8 @@
                 hud.label.text = @"密码不能为空";
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     hud.hidden = YES;
+                    [hud removeFromSuperViewOnHide];
+                    
                 });
             }else{
             //网络请求
@@ -145,6 +148,7 @@
                 NSDictionary *userInfo = responseObject[@"result"];
                 NSLog(@"用户信息：%@",userInfo);
                 //保存用户登录字典
+                [[NSUserDefaults standardUserDefaults]removeObjectForKey:UserInfoKey];
                 [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:UserInfoKey];
                 
                 //保存登录状态
