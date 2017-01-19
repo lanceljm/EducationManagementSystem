@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import <MBProgressHUD.h>
 @interface AppDelegate ()
 
 @end
@@ -48,22 +49,38 @@
         // 设置通知的提醒时间
         NSDate *currentDate   = setDate;//[NSDate date];
         notification.timeZone = [NSTimeZone defaultTimeZone]; // 使用本地时区
-        notification.fireDate = currentDate;
-        // 设置重复间隔
-        notification.repeatInterval = kCFCalendarUnitMinute;
-        // 设置提醒的文字内容
-        notification.alertBody   = @"哈喽，那个男孩！起床了啊";
-        notification.alertAction = NSLocalizedString(@"起床了", nil);
-        // 通知提示音 使用默认的
-        notification.soundName= UILocalNotificationDefaultSoundName;
-        // 设置应用程序右上角的提醒个数
-        notification.applicationIconBadgeNumber++;
-        // 设定通知的userInfo，用来标识该通知
-        NSMutableDictionary *aUserInfo = [[NSMutableDictionary alloc] init];
         
-        //        aUserInfo[kLocalNotificationID] = @"LocalNotificationID";
+        if (currentDate == setDate) {
+            
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.window animated:YES];
+            hud.mode = MBProgressHUDModeIndeterminate;
+            hud.label.text = @"通知";
+            hud.detailsLabel.text = @"查看详情";
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                hud.hidden = YES;
+            });
+            
+            notification.fireDate = currentDate;
+            // 设置重复间隔
+            notification.repeatInterval = kCFCalendarUnitMinute;
+            // 设置提醒的文字内容
+            notification.alertBody   = @"哈喽，那个男孩！起床了啊";
+            notification.alertAction = NSLocalizedString(@"起床了", nil);
+            // 通知提示音 使用默认的
+            notification.soundName= UILocalNotificationDefaultSoundName;
+            // 设置应用程序右上角的提醒个数
+            notification.applicationIconBadgeNumber++;
+            // 设定通知的userInfo，用来标识该通知
+            NSMutableDictionary *aUserInfo = [[NSMutableDictionary alloc] init];
+            
+            //        aUserInfo[kLocalNotificationID] = @"LocalNotificationID";
+            
+            notification.userInfo = aUserInfo;
+        }
         
-        notification.userInfo = aUserInfo;
+//        notification.fireDate = currentDate;
+
+
         // 将通知添加到系统中
         [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     }
