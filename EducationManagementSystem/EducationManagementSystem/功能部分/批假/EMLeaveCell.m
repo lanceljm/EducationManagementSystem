@@ -16,7 +16,6 @@
 @property(nonatomic,strong) UILabel *endTime;
 @property(nonatomic,strong) UILabel *status;
 
-
 @end
 
 @implementation EMLeaveCell
@@ -67,12 +66,12 @@
         _reson.textColor = [UIColor cz_colorWithHex:0xffffff];
         [self.contentView addSubview:_reson];
 
-        _startTime = [[UILabel alloc] initWithFrame:AAdaptionRect(20, 80, 200, 40)];
+        _startTime = [[UILabel alloc] initWithFrame:AAdaptionRect(20, 80, 260, 40)];
         _startTime.font = AAFont(24);
         _startTime.textColor = [UIColor cz_colorWithHex:0x999999];
         [self.contentView addSubview:_startTime];
         
-        _endTime = [[UILabel alloc] initWithFrame:AAdaptionRect(260, 80, 200, 40)];
+        _endTime = [[UILabel alloc] initWithFrame:AAdaptionRect(300, 80, 300, 40)];
         _endTime.font = _startTime.font;
         _endTime.textColor = _startTime.textColor;
         [self.contentView addSubview:_endTime];
