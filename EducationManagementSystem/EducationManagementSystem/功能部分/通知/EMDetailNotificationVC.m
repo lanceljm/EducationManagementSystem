@@ -78,8 +78,6 @@
         _notificationView = [[UIWebView alloc]initWithFrame:self.view.bounds];
         NSString *webContents = self.contents;
         [_notificationView loadHTMLString:webContents baseURL:nil];
-        
-        
     }
     return _notificationView;
 }
