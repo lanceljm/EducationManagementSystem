@@ -32,11 +32,11 @@
     [self setTabVc];
     [self setLoginVc];
 }
-
--(void)dealloc {
-    //移除通知
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
+//
+//-(void)dealloc {
+//    //移除通知
+//    [[NSNotificationCenter defaultCenter]removeObserver:self];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -141,8 +141,10 @@
                     hud.label.text = @"修改成功";
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         hud.hidden = YES;
+                        
                         //修改成功后跳到登录界面
-                        [[NSNotificationCenter defaultCenter]postNotificationName:@"setLoginVc" object:nil];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"againLoginVc" object:nil];
+                        
                     });
                 } failture:^(NSError *error) {
                     
