@@ -42,6 +42,12 @@
 
 //修改密码
 #define changePasswordUrl @"http://192.168.0.117/api/staff/changePassword.html"
+//获取办公地点
+#define attendance @"http://192.168.0.117/api/staff/attendance.html"
+//获取外出办公地点
+#define outAttendance @"http://192.168.0.117/api/staff/outAttendance.html"
+//教师签到
+#define saveRollcallStaff @"http://192.168.0.117/api/staff/saveRollcallStaff.html"
 
 //关于我们
 #define AboutUsUrl @"http://192.168.0.117/api/aboutus/getAboutUs.html"

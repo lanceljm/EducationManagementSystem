@@ -18,15 +18,18 @@
     _viewModelArr = [NSMutableArray new];
     
     NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:UserInfoKey];
+    if (!userInfo) {
+        return;
+    }
     NSNumber *staffId = userInfo[@"staffId"];
     NSNumber *administrationId = userInfo[@"administrationId"];
     NSString *token = userInfo[@"token"];
-    
+    //NSLog(@"%@",userInfo);
     NSDictionary *paramters = @{@"staffId":staffId,@"teacher":administrationId,@"token":token};
     
     [NetRequest GET:getClassList parameters:paramters success:^(id responseObject) {
         NSArray *result = responseObject[@"result"];
-       // NSLog(@"%@",result);
+        NSLog(@"-----result-----%@",result);
         for (NSDictionary *dic in result) {
             EMClassModel *model = [EMClassModel mj_objectWithKeyValues:dic];
             [_viewModelArr addObject:model];

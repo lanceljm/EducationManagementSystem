@@ -140,6 +140,7 @@
             }else{
             //网络请求
             NSDictionary *parm = @{@"account":_accountTF.text,@"password":_passwordTF.text};
+                NSLog(@"parm:%@",parm);
             [NetRequest POST:getLoginUrl parameters:parm success:^(id responseObject) {
                 NSDictionary *userInfo = responseObject[@"result"];
                 NSLog(@"用户信息：%@",userInfo);

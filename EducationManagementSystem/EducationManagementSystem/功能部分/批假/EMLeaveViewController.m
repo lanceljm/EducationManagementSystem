@@ -45,7 +45,7 @@
    
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         
-        [weakSelf.leaveVM downLoadDataWithStatus:@1 withFinish:^(BOOL success) {
+        [weakSelf.leaveVM downLoadDataWithStatus:@0 withFinish:^(BOOL success) {
             [weakSelf.tableView reloadData];
             [weakSelf.tableView.mj_header endRefreshing];
         }];

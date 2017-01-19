@@ -24,21 +24,48 @@
 @property(nonatomic,strong) MAMapView *mapView;
 @property(nonatomic,strong) AMapLocationManager *locationManager;
 
+@property(nonatomic,assign) CGFloat rollcallStaffLongitude;
+@property(nonatomic,assign) CGFloat rollcallStaffLatitude;
+
 
 @end
 
 @implementation EMAttendanceController
+{
+    NSString *houseLatitude;
+    NSString *houseLongitude;
+    NSString *POIName;
+}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self loadAttendanceWithStr:attendance];
     [self startTimer];
     [self addBtn];
     [self addMapView];
     [self addEndBtn];
     
     
+}
+
+- (void)loadAttendanceWithStr:(NSString *)str {
+    
+    NSDictionary *parameter = @{@"staffId":USER_INFO[@"staffId"],@"token":USER_INFO[@"token"]};
+    [NetRequest GET: str parameters:parameter success:^(id responseObject) {
+        if ([str isEqualToString:attendance]) {
+            NSDictionary *house = responseObject[@"result"][@"house"];
+            NSLog(@"house ---  %@",house);
+            _workL.text = house[@"houseName"];
+        }else {
+            NSLog(@"%@",responseObject);
+            _workL.text = @"无外出任务";
+        }
+        
+    } failture:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (void)dealloc {
@@ -53,6 +80,7 @@
 
 - (void)addBtn {
     
+    __weak typeof(self)weakSelf = self;
     EMTwoBtnView *Btnview = [[EMTwoBtnView alloc] initWithLeftDirectionFrame:CGRectMake(0, 64/AAdaptionWidth(), 750, 120) WithBKColor:[UIColor whiteColor] btnNames:@[@"办公",@"外出"] TitleCols:Color_4F4F4F
         WithImages:@[@"形状-1",@"形状-2"] WithFont:36
         WithSelectorBtnBlock:^(UIButton* btn) {
@@ -60,10 +88,11 @@
             
             if (btn.tag == 100) {
                  //办公
-                
+                [weakSelf loadAttendanceWithStr:attendance];
+
             }else {
                 //外出
-                
+                [weakSelf loadAttendanceWithStr:outAttendance];
             }
             
         }];
@@ -75,7 +104,7 @@
     NSArray *imgArr = @[@"01",@"02",@"03"];
     
     for (int i = 0; i < 3; i++) {
-        EMIconMarkLabel *label = [[EMIconMarkLabel alloc] initWithFrame:CGRectMake(AAdaption(244), btnViewY + AAdaption(80) * i, AAdaption(200), AAdaption(80)) withTitle:titleArr[i] TitleCol:Color_4F4F4F imageName:imgArr[i] Font:28];
+        EMIconMarkLabel *label = [[EMIconMarkLabel alloc] initWithFrame:CGRectMake(AAdaption(244), btnViewY + AAdaption(80) * i, AAdaption(400), AAdaption(80)) withTitle:titleArr[i] TitleCol:Color_4F4F4F imageName:imgArr[i] Font:24];
         switch (i) {
             case 0:
                 _timeL = label;
@@ -120,9 +149,13 @@
         
         NSLog(@"-----------location:-----------\n<%f,%f>", location.coordinate.latitude,location.coordinate.longitude);
         
+        _rollcallStaffLatitude = location.coordinate.latitude;
+        _rollcallStaffLongitude = location.coordinate.longitude;
+        
         if (regeocode)
         {
-            NSLog(@"reGeocode:%@", regeocode);
+            //NSLog(@"reGeocode:%@", regeocode.POIName);
+            POIName = regeocode.POIName;
         }
     }];
     
@@ -136,19 +169,59 @@
     CGFloat btnY = CGRectGetMaxY(_mapView.frame) + AAdaption(34);
     UIColor *btnCol = [UIColor colorWithRed:0 green:212/255.0 blue:159/255.0 alpha:0.9];
     
+    __weak typeof(self)weakSelf = self;
     EMSysButton *btn = [[EMSysButton alloc] initWithFrame:AAdaptionRect(20, btnY/AAdaptionWidth(), 710, 90) withTag:300 withTitle:@"签到" withTitleColor:[UIColor whiteColor] withBackgrougdColor: btnCol withCornerRadious:0.1 withClickedBlock:^(id sender) {
         
         UIButton *b = (UIButton *)sender;
         if ([b.titleLabel.text isEqualToString:@"签到"]) {
-            [b setTitle:@"签退" forState:normal];
+            [weakSelf saveRollcallStaffWithType:@"签到" finish:^(BOOL success) {
+                if (success)
+                    [b setTitle:@"签退" forState:normal];
+            }];
+            
         }else
-            [b setTitle:@"签到" forState:normal];
+            [weakSelf saveRollcallStaffWithType:@"签退" finish:^(BOOL success) {
+                if(success)
+                    [b setTitle:@"签到" forState:normal];
+            }];
     }];;
     
     [self.view addSubview:btn];
     
 }
 
+- (void)saveRollcallStaffWithType:(NSString *)type finish:(void(^)(BOOL success))finished {
+    
+    NSDictionary *para = @{
+                           @"staffId":                  USER_INFO[@"staffId"],
+                           @"rollcallStaffTime":        _timeL.text,
+                           @"rollcallStaffLongitude":   @(_rollcallStaffLongitude),
+                           @"rollcallStaffLatitude":    @(_rollcallStaffLatitude),
+                           @"rollcallType":             type,
+                           @"rollcallStaffType":        @"办公",
+                           @"rollcallStaffId":          @0,
+                           @"token":                    USER_INFO[@"token"]
+                           };
+    
+    __weak typeof(self)weakSelf = self;
+    [NetRequest POST:saveRollcallStaff parameters:para success:^(id responseObject) {
+        
+        NSString *message = responseObject[@"message"];
+        //NSLog(@"--- -----%@",message);
+        if (POIName)   _markL.text = POIName;
+        
+        [weakSelf showAlertWithTitle:message AndMessage:nil];
+        
+        if ([message isEqualToString:@"已签到"] || [message isEqualToString:@"已签退"]) {
+            finished(YES);
+        }else
+            finished(NO);
+        
+    } failture:^(NSError *error) {
+        finished(NO);
+    }];
+    
+}
 
 #pragma mark - 定时器相关
 
@@ -181,12 +254,20 @@
         _locationManager.locationTimeout = 10;
         //   逆地理请求超时时间，最低2s，此处设置为10s
         _locationManager.reGeocodeTimeout = 10;
-        
     }
     return _locationManager;
 }
 
 
-
+- (void)showAlertWithTitle:(NSString *)title AndMessage:(NSString *)message {
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
+    
+}
 
 @end
