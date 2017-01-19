@@ -40,6 +40,7 @@
     [self setupUI];
 }
 
+
 -(void)setupUI {
     [self setNavi];
     [self.view addSubview:self.changeIconImage];
@@ -61,10 +62,10 @@
 
 -(void)setNavi {
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftBtn.frame = CGRectMake(0, 0, 40, 40);
+    leftBtn.frame = CGRectMake(0, 0, 40/AAdaptionWidth(), 40/AAdaptionWidth());
     [leftBtn setTitle:@"" forState:UIControlStateNormal];
     [leftBtn setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
-    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
+    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -40/AAdaptionWidth(), 0, 0);
     [leftBtn addTarget:self action:@selector(dismissVC) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = btn;
@@ -167,6 +168,9 @@
     
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     //保存图片到本地
+    
+    
+    
     [self saveImage:image withName:@"avator.png"];
     NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avator.png"];
     

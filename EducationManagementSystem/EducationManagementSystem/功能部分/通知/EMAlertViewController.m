@@ -42,20 +42,18 @@
 
 -(void)setNavi {
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftBtn.frame = CGRectMake(0, 0, 40, 40);
+    leftBtn.frame = CGRectMake(0, 0,40/AAdaptionWidth(), 40/AAdaptionWidth());
     //    [leftBtn setTitle:@"" forState:UIControlStateNormal];
     [leftBtn setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
-    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
+    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -40/AAdaptionWidth(), 0, 0);
     [leftBtn addTarget:self action:@selector(dismissVC) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *btnL = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = btnL;
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightBtn.frame = CGRectMake(0, 0, 40, 40);
+    rightBtn.frame = CGRectMake(0, 0, 40/AAdaptionWidth(), 40/AAdaptionWidth());
     [rightBtn setTitle:@"保存" forState:UIControlStateNormal];
-//    [rightBtn setImage:[UIImage imageNamed:@"闹钟"] forState:UIControlStateNormal];
-//    rightBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -20);
-    rightBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -20);
+    rightBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -20/AAdaptionWidth());
     [rightBtn addTarget:self action:@selector(saveAlert) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *btnR = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = btnR;
@@ -105,10 +103,9 @@
 
         _tipView = [[EMTipView alloc]initWithFrame:AAdaptionRect(0, 64/AAdaptionWidth(), kwidth/AAdaptionWidth(), 140) withTipTitle:self.titleStr withTime:self.timeStr withBlock:^(id sender) {
             if (((UIButton *)sender).selected) {
+                
                 imageView.image = [UIImage imageNamed:@"蓝圆圈"];
-                [_tipView addSubview:imageView];
-                
-                
+                [self.tipView addSubview:imageView];
                 NSDateFormatter *formatter = [NSDateFormatter new];
                 [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
                 
@@ -123,9 +120,12 @@
                 
             }else{
                 imageView.image = [UIImage imageNamed:@"圆圈"];
-                [_tipView addSubview:imageView];
+                [self.tipView addSubview:imageView];
                 
                 [_picker removeFromSuperview];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"cancelNSnotif" object:nil];
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"cancelAlert"];
                 
                 MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                 hud.mode = MBProgressHUDModeIndeterminate;

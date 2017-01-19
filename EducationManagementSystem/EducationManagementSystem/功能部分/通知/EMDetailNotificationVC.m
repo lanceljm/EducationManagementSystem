@@ -39,18 +39,18 @@
 
 -(void)setNavi {
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftBtn.frame = CGRectMake(0, 0, 40, 40);
+    leftBtn.frame = CGRectMake(0, 0, 40/AAdaptionWidth(), 40/AAdaptionWidth());
 //    [leftBtn setTitle:@"" forState:UIControlStateNormal];
     [leftBtn setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
-    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
+    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -40/AAdaptionWidth(), 0, 0);
     [leftBtn addTarget:self action:@selector(dismissVC) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *btnL = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = btnL;
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightBtn.frame = CGRectMake(0, 0, 40, 40);
+    rightBtn.frame = CGRectMake(0, 0, 40/AAdaptionWidth(), 40/AAdaptionWidth());
     [rightBtn setImage:[UIImage imageNamed:@"闹钟"] forState:UIControlStateNormal];
-    rightBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -20);
+    rightBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -20/AAdaptionWidth());
     [rightBtn addTarget:self action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *btnR = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = btnR;
