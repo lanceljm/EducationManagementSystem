@@ -16,6 +16,8 @@
 //@property(nonatomic,strong)NSString *noticeObject;
 @property(nonatomic,strong)NSString *noticeDate;
 
+@property(nonatomic,assign)BOOL status;
+
 @end
 
 

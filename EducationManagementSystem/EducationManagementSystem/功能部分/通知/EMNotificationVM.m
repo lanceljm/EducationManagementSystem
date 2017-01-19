@@ -26,6 +26,7 @@
     [NetRequest GET:getNotificationUrl parameters:parm success:^(id responseObject) {
         NSArray *resultArr = [NSArray arrayWithArray: responseObject[@"result"]];
         //循环遍历，给模型赋值
+        NSLog(@"%@",responseObject);
         for (NSDictionary *dic in resultArr) {
             //使用三方循环转换
             EMNotificationModel *model = [EMNotificationModel mj_objectWithKeyValues:dic];

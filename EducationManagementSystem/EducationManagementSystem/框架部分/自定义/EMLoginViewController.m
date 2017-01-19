@@ -147,7 +147,7 @@
                 [[NSUserDefaults standardUserDefaults]setValue:userInfo forKey:UserInfoKey];
                 
                 //保存登录状态
-                [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"isLogin"];
+//                [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"isLogin"];
                 
                 if ([responseObject[@"message"] isEqualToString:@"Success"]) {
                     [self.view removeFromSuperview];

@@ -25,11 +25,12 @@
 		1A2093101E2664A500BEF63A /* EMPasswordUnderLineTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A20930F1E2664A500BEF63A /* EMPasswordUnderLineTextF.m */; };
 		1A2093131E267A3400BEF63A /* EMIconChangeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2093121E267A3400BEF63A /* EMIconChangeInfo.m */; };
 		1A2093191E27A58300BEF63A /* EMBaseInfoLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2093181E27A58300BEF63A /* EMBaseInfoLabel.m */; };
+		1A264D621E2F29B600F28F4A /* EMEntificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A264D611E2F29B600F28F4A /* EMEntificationCell.m */; };
+		1A264D651E2F488F00F28F4A /* EMAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A264D641E2F488F00F28F4A /* EMAlertViewController.m */; };
+		1A264D681E2F4C1300F28F4A /* EMTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A264D671E2F4C1300F28F4A /* EMTipView.m */; };
 		1AAB66181E28C38900C5CA61 /* EMNotificationVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB66171E28C38900C5CA61 /* EMNotificationVM.m */; };
-		1AAB661E1E28D31300C5CA61 /* EMNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB661D1E28D31300C5CA61 /* EMNotificationCell.m */; };
 		1AAB66211E28F13E00C5CA61 /* EMNotificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB66201E28F13E00C5CA61 /* EMNotificationModel.m */; };
 		1AAB66271E2A0D9400C5CA61 /* EMDetailNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB66261E2A0D9400C5CA61 /* EMDetailNotificationVC.m */; };
-		1AAB662B1E2A118500C5CA61 /* EMSelfNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB662A1E2A118500C5CA61 /* EMSelfNotificationView.m */; };
 		1AEB3F921E27D6320000EE87 /* EMFeedBackTV.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB3F911E27D6320000EE87 /* EMFeedBackTV.m */; };
 		347E2042DD3C5936660F6318 /* libPods-EducationManagementSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */; };
 		693C82BCAD68D99BF6226E08 /* libPods-EducationManagementSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327481F1B41C4416FE4D24B0 /* libPods-EducationManagementSystemUITests.a */; };
@@ -126,16 +127,18 @@
 		1A2093171E27A58300BEF63A /* EMBaseInfoLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBaseInfoLabel.h; sourceTree = "<group>"; };
 		1A2093181E27A58300BEF63A /* EMBaseInfoLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseInfoLabel.m; sourceTree = "<group>"; };
 		1A238829813986585BDA2000 /* libPods-EducationManagementSystemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EducationManagementSystemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A264D601E2F29B500F28F4A /* EMEntificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMEntificationCell.h; sourceTree = "<group>"; };
+		1A264D611E2F29B600F28F4A /* EMEntificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMEntificationCell.m; sourceTree = "<group>"; };
+		1A264D631E2F488F00F28F4A /* EMAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAlertViewController.h; sourceTree = "<group>"; };
+		1A264D641E2F488F00F28F4A /* EMAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAlertViewController.m; sourceTree = "<group>"; };
+		1A264D661E2F4C1300F28F4A /* EMTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTipView.h; sourceTree = "<group>"; };
+		1A264D671E2F4C1300F28F4A /* EMTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMTipView.m; sourceTree = "<group>"; };
 		1AAB66161E28C38900C5CA61 /* EMNotificationVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNotificationVM.h; sourceTree = "<group>"; };
 		1AAB66171E28C38900C5CA61 /* EMNotificationVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNotificationVM.m; sourceTree = "<group>"; };
-		1AAB661C1E28D31300C5CA61 /* EMNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNotificationCell.h; sourceTree = "<group>"; };
-		1AAB661D1E28D31300C5CA61 /* EMNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNotificationCell.m; sourceTree = "<group>"; };
 		1AAB661F1E28F13E00C5CA61 /* EMNotificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNotificationModel.h; sourceTree = "<group>"; };
 		1AAB66201E28F13E00C5CA61 /* EMNotificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNotificationModel.m; sourceTree = "<group>"; };
 		1AAB66251E2A0D9400C5CA61 /* EMDetailNotificationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMDetailNotificationVC.h; sourceTree = "<group>"; };
 		1AAB66261E2A0D9400C5CA61 /* EMDetailNotificationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMDetailNotificationVC.m; sourceTree = "<group>"; };
-		1AAB66291E2A118500C5CA61 /* EMSelfNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSelfNotificationView.h; sourceTree = "<group>"; };
-		1AAB662A1E2A118500C5CA61 /* EMSelfNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSelfNotificationView.m; sourceTree = "<group>"; };
 		1AEB3F901E27D6320000EE87 /* EMFeedBackTV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFeedBackTV.h; sourceTree = "<group>"; };
 		1AEB3F911E27D6320000EE87 /* EMFeedBackTV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFeedBackTV.m; sourceTree = "<group>"; };
 		260E80734B3C9044945AB2BA /* Pods-EducationManagementSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationManagementSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationManagementSystemTests/Pods-EducationManagementSystemTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -334,8 +337,8 @@
 		1AAB661A1E28D25600C5CA61 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1AAB661C1E28D31300C5CA61 /* EMNotificationCell.h */,
-				1AAB661D1E28D31300C5CA61 /* EMNotificationCell.m */,
+				1A264D601E2F29B500F28F4A /* EMEntificationCell.h */,
+				1A264D611E2F29B600F28F4A /* EMEntificationCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -354,6 +357,10 @@
 			children = (
 				1AAB66251E2A0D9400C5CA61 /* EMDetailNotificationVC.h */,
 				1AAB66261E2A0D9400C5CA61 /* EMDetailNotificationVC.m */,
+				1A264D631E2F488F00F28F4A /* EMAlertViewController.h */,
+				1A264D641E2F488F00F28F4A /* EMAlertViewController.m */,
+				1A264D661E2F4C1300F28F4A /* EMTipView.h */,
+				1A264D671E2F4C1300F28F4A /* EMTipView.m */,
 			);
 			name = DetailVC;
 			sourceTree = "<group>";
@@ -653,8 +660,6 @@
 				1AAB66151E28C34B00C5CA61 /* VM */,
 				CF59C1B01E1F89D80081833A /* EMNoticeViewController.h */,
 				CF59C1B11E1F89D80081833A /* EMNoticeViewController.m */,
-				1AAB66291E2A118500C5CA61 /* EMSelfNotificationView.h */,
-				1AAB662A1E2A118500C5CA61 /* EMSelfNotificationView.m */,
 			);
 			path = "通知";
 			sourceTree = "<group>";
@@ -1029,7 +1034,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AEB3F921E27D6320000EE87 /* EMFeedBackTV.m in Sources */,
-				1AAB662B1E2A118500C5CA61 /* EMSelfNotificationView.m in Sources */,
 				CF59C1AC1E1F87760081833A /* EMClassViewController.m in Sources */,
 				1A2092E61E24BE6400BEF63A /* EMMineAboutBtn.m in Sources */,
 				CFED49371E23622600750CBA /* EMClassViewCell.m in Sources */,
@@ -1045,6 +1049,7 @@
 				CFAFBC841E2621BA00F4A020 /* EMIconMarkLabel.m in Sources */,
 				CF59C1AF1E1F899B0081833A /* EMAttendanceController.m in Sources */,
 				CF59C1A31E1F850A0081833A /* EMTabBarController.m in Sources */,
+				1A264D621E2F29B600F28F4A /* EMEntificationCell.m in Sources */,
 				1A2092EE1E260B2E00BEF63A /* EMUserinfoLabel.m in Sources */,
 				CFED49331E232EC500750CBA /* EMIconDirectionButton.m in Sources */,
 				CF59C1B51E1F8AB80081833A /* EMAboutMeViewController.m in Sources */,
@@ -1080,8 +1085,9 @@
 				CF59C1B21E1F89D80081833A /* EMNoticeViewController.m in Sources */,
 				1A2092F41E2627F900BEF63A /* EMIconViewBtn.m in Sources */,
 				CF5110C81E24D174007062C5 /* EMLeaveDetailController.m in Sources */,
+				1A264D651E2F488F00F28F4A /* EMAlertViewController.m in Sources */,
 				CF59C1621E1F7EA40081833A /* main.m in Sources */,
-				1AAB661E1E28D31300C5CA61 /* EMNotificationCell.m in Sources */,
+				1A264D681E2F4C1300F28F4A /* EMTipView.m in Sources */,
 				CF89E1781E275BD70085F664 /* EMTeacherList.m in Sources */,
 				CF249E531E28CB6700336339 /* EMStatisticsModel.m in Sources */,
 				CFAFBC781E25CEEF00F4A020 /* EMSTCell.m in Sources */,

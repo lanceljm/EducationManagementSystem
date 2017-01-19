@@ -7,10 +7,12 @@
 //
 
 #import "EMDetailNotificationVC.h"
+#import "EMAlertViewController.h"
+#import <UIWebView+BFKit.h>
 
 @interface EMDetailNotificationVC ()
 
-@property(nonatomic,strong)UIView *notificationView;
+@property(nonatomic,strong)UIWebView *notificationView;
 
 @end
 
@@ -26,7 +28,11 @@
 
 -(void)setupUI {
     [self setNavi];
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.notificationView];
+    
+
 }
 
 
@@ -34,26 +40,49 @@
 -(void)setNavi {
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.frame = CGRectMake(0, 0, 40, 40);
-    [leftBtn setTitle:@"" forState:UIControlStateNormal];
+//    [leftBtn setTitle:@"" forState:UIControlStateNormal];
     [leftBtn setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
     leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
     [leftBtn addTarget:self action:@selector(dismissVC) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
-    self.navigationItem.leftBarButtonItem = btn;
+    UIBarButtonItem *btnL = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = btnL;
+    
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 40, 40);
+    [rightBtn setImage:[UIImage imageNamed:@"闹钟"] forState:UIControlStateNormal];
+    rightBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -20);
+    [rightBtn addTarget:self action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *btnR = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = btnR;
 }
 
 -(void)dismissVC {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(UIView *)notificationView {
+//发送通知
+-(void)sendMessage {
+    EMAlertViewController *alertVC = [[EMAlertViewController alloc]init];
+    alertVC.title = @"闹钟提醒";
+    
+    alertVC.titleStr = self.titleString;
+    alertVC.timeStr = self.timeString;
+
+    alertVC.model = self.model;
+    
+    [self.navigationController pushViewController:alertVC animated:YES];
+}
+
+-(UIWebView *)notificationView {
     if (!_notificationView) {
-        _notificationView = [[UIView alloc]initWithFrame:AAdaptionRect(0, 64/AAdaptionWidth(), kwidth/AAdaptionWidth(), 600)];
+        _notificationView = [[UIWebView alloc]initWithFrame:self.view.bounds];
+        NSString *webContents = self.contents;
+        [_notificationView loadHTMLString:webContents baseURL:nil];
+        
+        
     }
     return _notificationView;
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

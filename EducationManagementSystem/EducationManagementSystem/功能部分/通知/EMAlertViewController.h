@@ -1,16 +1,18 @@
 //
-//  EMNotificationCell.h
+//  EMAlertViewController.h
 //  EducationManagementSystem
 //
-//  Created by ljm on 2017/1/13.
+//  Created by ljm on 2017/1/18.
 //  Copyright © 2017年 com.HuaHuaCai. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "EMBaseCell.h"
 #import "EMNotificationModel.h"
 
-@interface EMNotificationCell : EMBaseCell
+@interface EMAlertViewController : UIViewController
+
+@property(nonatomic,strong)NSString *titleStr;
+@property(nonatomic,strong)NSString *timeStr;
 
 @property(nonatomic,strong)EMNotificationModel *model;
 

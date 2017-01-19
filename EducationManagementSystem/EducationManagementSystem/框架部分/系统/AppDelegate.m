@@ -17,16 +17,69 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[RootViewController alloc]init];
     [self.window makeKeyAndVisible];
     
     [AMapServices sharedServices].apiKey = @"4cf61caa3709d177eb7bbe9683f8b36c";
     
+    
+    //注册本地通知设置
+    UIUserNotificationType types = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [application registerUserNotificationSettings:settings];
+    
+    //添加本地通知
+    [self addLocalNotification];
+    
     return YES;
 }
 
+-(void)addLocalNotification{
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    // 初始化本地通知对象
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    if (notification) {
+        
+        //获得闹钟设定的时间
+        NSDate *setDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"setTipDate"];
+        
+        // 设置通知的提醒时间
+        NSDate *currentDate   = setDate;//[NSDate date];
+        notification.timeZone = [NSTimeZone defaultTimeZone]; // 使用本地时区
+        notification.fireDate = currentDate;
+        // 设置重复间隔
+        notification.repeatInterval = kCFCalendarUnitMinute;
+        // 设置提醒的文字内容
+        notification.alertBody   = @"哈喽，那个男孩！起床了啊";
+        notification.alertAction = NSLocalizedString(@"起床了", nil);
+        // 通知提示音 使用默认的
+        notification.soundName= UILocalNotificationDefaultSoundName;
+        // 设置应用程序右上角的提醒个数
+        notification.applicationIconBadgeNumber++;
+        // 设定通知的userInfo，用来标识该通知
+        NSMutableDictionary *aUserInfo = [[NSMutableDictionary alloc] init];
+        
+        //        aUserInfo[kLocalNotificationID] = @"LocalNotificationID";
+        
+        notification.userInfo = aUserInfo;
+        // 将通知添加到系统中
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    }
+    NSArray *localNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    
+    NSLog(@"%@", localNotifications);
+    
+}
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    
+    NSLog(@"Application did receive local notifications");
+    //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"welcome" delegate:nil
+    //                                          cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    //    [alert show];
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

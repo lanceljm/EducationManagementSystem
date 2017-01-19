@@ -156,7 +156,10 @@
             UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"退出登录" message:nil preferredStyle:UIAlertControllerStyleAlert];
             [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 //确定退出
-                [[NSNotificationCenter defaultCenter]postNotificationName:@"setLoginVc" object:nil];
+                [[NSNotificationCenter defaultCenter]postNotificationName:@"againLoginVc" object:nil];
+                
+                //退出登录，删除单例里面的信息
+                [[NSUserDefaults standardUserDefaults] removeObjectForKey:UserInfoKey];
                 
             }]];
             [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

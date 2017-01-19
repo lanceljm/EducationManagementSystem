@@ -24,8 +24,15 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     //注册通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(setLoginVc) name:@"setLoginVc" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(againLogin) name:@"againLoginVc" object:nil];
 }
+
+//重新登录
+-(void)againLogin {
+    [self setTabVc];
+    [self setLoginVc];
+}
+
 -(void)dealloc {
     //移除通知
     [[NSNotificationCenter defaultCenter]removeObserver:self];
