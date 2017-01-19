@@ -104,9 +104,11 @@
             break;
         case 102:{
             //签到
+            [self showAlertWithTitle:@"暂时还不能签到哦" AndMessage:nil];
         }
         case 103:{
             //签退
+            [self showAlertWithTitle:@"暂时还不能签到哦" AndMessage:nil];
         }
         default: {
             //统计
@@ -120,6 +122,20 @@
     
 }
 
+
+
+#pragma mark - 弹窗
+
+- (void)showAlertWithTitle:(NSString *)title AndMessage:(NSString *)message {
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
+    
+}
 
 #pragma mark - tableview delegate and dataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
