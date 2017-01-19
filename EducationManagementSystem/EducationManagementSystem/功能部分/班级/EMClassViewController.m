@@ -29,7 +29,6 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.rowHeight = AAdaption(280);
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(downLoadData) name:@"networking" object:nil];
-
 }
 
 
@@ -44,7 +43,7 @@
         
         [weakSelf.classVM loadDataWithFinish:^(BOOL isOk) {
         
-        [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf.tableView.mj_header endRefreshing];
             [weakSelf.tableView reloadData];
         }];
         
