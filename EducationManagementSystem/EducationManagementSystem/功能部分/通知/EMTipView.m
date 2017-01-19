@@ -20,9 +20,13 @@
         
         self.backgroundColor = [UIColor cz_colorWithRed:255 green:255 blue:255];
         
-//        UIImageView *imageView = [[UIImageView alloc]initWithFrame:AAdaptionRect(20, 45, 50, 50)];
-//        imageView.image = [UIImage imageNamed:@"圆圈"];
-//        [self addSubview:imageView];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:AAdaptionRect(20, 45, 50, 50)];
+        if (self.model.status) {
+            imageView.image = [UIImage imageNamed:@"蓝圆圈"];
+        }else {
+            imageView.image = [UIImage imageNamed:@"圆圈"];
+        }
+        [self addSubview:imageView];
         
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:AAdaptionRect(90, 20, kwidth/AAdaptionWidth() - 90 -30, 50)];
         titleLabel.text = title;

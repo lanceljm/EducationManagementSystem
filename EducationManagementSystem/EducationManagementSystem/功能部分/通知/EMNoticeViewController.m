@@ -28,16 +28,23 @@
     self = [super init];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:@"alertTip" object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelNSnotif) name:@"cancelNSnotif" object:nil];
     }
     return self;
 }
 
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"alertTip" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"cancelNSnotif" object:nil];
 }
 
 -(void)refresh {
     [self.tableView reloadData];
+}
+
+-(void)cancelNSnotif {
+    
 }
 
 - (void)viewDidLoad {
@@ -62,7 +69,6 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"返回多少行：%ld",self.notificationVM.dataSourceArr.count);
     return self.notificationVM.dataSourceArr.count;
 }
 

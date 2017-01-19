@@ -17,6 +17,7 @@
 @property(nonatomic,strong)NSString *noticeDate;
 
 @property(nonatomic,assign)BOOL status;
+@property(nonatomic,strong)UIImageView *alertImageView;
 
 @end
 

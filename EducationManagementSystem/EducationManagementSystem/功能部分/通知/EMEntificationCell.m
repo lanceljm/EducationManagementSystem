@@ -28,18 +28,11 @@
         lineView.backgroundColor = [UIColor lightGrayColor];
         [self.contentView addSubview:lineView];
         
-         _alertImage = [[UIImageView alloc]initWithFrame:AAdaptionRect(kBaseWidth - 20 - 30, 60, 30, 30)];
+        _alertImage = [[UIImageView alloc]initWithFrame:AAdaptionRect(kBaseWidth - 20 - 30, 60, 30, 30)];
         _alertImage.image = [UIImage imageNamed:@"蓝闹钟"];
-
-        
-//        NSDate *date = [[NSUserDefaults standardUserDefaults] objectForKey:@"setTipDate"];
-//        
-//        NSLog(@"设置闹钟成功后的时间%@",date);
-//        if (date != nil) {
-//            alertImage.hidden = NO;
-//        }else {
-//            alertImage.hidden = YES;
-//        }
+        if ( [[NSUserDefaults standardUserDefaults] objectForKey:@"cancelAlert"] == NO){
+            self.alertImage.hidden = YES;
+        }
         [self.contentView addSubview:_alertImage];
         
 
@@ -51,11 +44,14 @@
     self.title_label.text = model.noticeTitle;
     self.time_label.text = model.noticeDate;
     
-    if (!model.status) {
-        _alertImage.hidden = YES;
+    if (model.status) {
+        self.alertImage.hidden = NO;
+        self.alertImage = model.alertImageView;
     }else {
-        _alertImage.hidden = NO;
+        self.alertImage.hidden = YES;
     }
+    
+
 }
 
 - (void)awakeFromNib {
